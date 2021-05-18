@@ -76,9 +76,10 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 7. Populate the service binding fields as shown.
 
   - Name : **weather-db**
+  - Binding type : **Azure Database for MySQL**
   - Resource name : **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Database name : **azure-sprig-cloud-training**
-  - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/**
+  - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Password : **Password.1!!**
 
 8. Click on `Create` to create the database binding
