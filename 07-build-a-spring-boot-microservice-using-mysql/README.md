@@ -75,11 +75,11 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 
 7. Populate the service binding fields as shown.
 
-  - Name : `weather-db`
-  - The username will be displayed in last line of output from the section above.
-  - The password can be retrieved from the environment details tab under `SQL Database Password`.
-
-    ![password](media/sql-password.png)
+  - Name : **weather-db**
+  - Resource name : **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
+  - Database name : **azure-sprig-cloud-training**
+  - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/**
+  - Password : **Password.1!!**
 
 8. Click on `Create` to create the database binding
 
