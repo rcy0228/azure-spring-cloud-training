@@ -118,6 +118,9 @@ There are many other [events that trigger GitHub actions](https://help.github.co
 
 ![GitHub workflow](media/01-github-workflow.png)
 
+
+> **NOTE!** If the Build fails, delete the exisiting `azure-spring-cloud.yml` from `.github/workflows` and create it again, make sure to substitute the name of your Azure Spring Cloud instance and resource group. 
+
 Congratulations! Each time you `git push` your code, your microservice is now automatically deployed to production.
 
 ---
