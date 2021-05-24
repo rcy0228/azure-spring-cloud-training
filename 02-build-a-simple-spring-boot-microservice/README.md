@@ -130,21 +130,22 @@ cd ..
 ![Error](media/endpoint-error.png)
 
 ![Error2](media/error02.png)
-   Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
+   
+8. Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
 
 ![assign endpoint](media/simple-microservice-endpoint-assign.png)
 
-8. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
+9. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
 
 ![Endpoint](media/hello-from-spring-cloud.png)
 
-9. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
+10. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
 
 ```bash
 curl https://primary:...simple-microservice/default/hello/
 ```
 
-10. If successful, you should see the message: `Hello from Azure Spring Cloud`.
+11. If successful, you should see the message: `Hello from Azure Spring Cloud`.
 
 ![Endpoint](media/curl-hello-from-spring-cloud.png)
 
