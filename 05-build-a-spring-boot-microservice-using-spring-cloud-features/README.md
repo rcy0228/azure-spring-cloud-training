@@ -165,7 +165,7 @@ _Please be aware it might take a couple of minutes for the logs to show up._
 
 1. Streaming the console output as we just did may be helpful in understanding the immediate state of a microservice. However, sometimes it's necessary to look further into the past or to look for something specific. This is easily done with Log Analytics. In exercise 3, we enabled log aggregation in Azure Log Analytics. Such settings changes can take 1-2 minutes to apply, so by now, you should be able to query Azure Log Analytics.
 
-2. Open the Azure Portal (https://portal.azure.com) and navigate to your Azure Spring Cloud instance. Click on "Logs". This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
+2. Open the Azure Portal and navigate to your Azure Spring Cloud instance. Click on **Logs**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
 
 3. This workspace allows you to run queries on the aggregated logs. The most common query is to get the latest log from a specific application:
 
