@@ -70,7 +70,7 @@ kill %1
 
 This section shows how to create an app instance and then deploy your code to it.
 
-1.In order to create the app instance graphically, you can use navigate back to Azure portal and Look for your Azure Spring Cloud instance in your resource group.
+1. In order to create the app instance graphically, you can use navigate back to Azure portal and Look for your Azure Spring Cloud instance in your resource group.
 
 ![Cloud Spring in rg](media/spring-cloud.png)
 
