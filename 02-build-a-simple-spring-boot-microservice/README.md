@@ -125,10 +125,11 @@ cd ..
    `https://primary:BBQM6nsYnmmdQREXQINityNx63kWUbjsP7SIvqKhOcWDfP6HJTqg27klMLaSfpTB@rwo1106f.test.azuremicroservices.io/simple-microservice/default/`
    >💡 Note the text between `https://` and `@`.  These are the basic authentication credentials, without which you will not be authorized to access the service.
 
-7. If you get an "503 Service Temporarily Unavailable" error as shown below,
+7. If you get **"503 Service Temporarily Unavailable"** or **"WhiteLabel Error"** Page as shown below,
 
 ![Error](media/endpoint-error.png)
 
+![Error2](media/error02.png)
    Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
 
 ![assign endpoint](media/simple-microservice-endpoint-assign.png)
