@@ -20,7 +20,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
 
 ![Path](media/folder-path.png)
 
-2. Search for notepad from the start menu and paste the following content :
+2. Search for notepad from the start menu, then remove and paste with the following content :
 
 
 ```java
@@ -68,35 +68,32 @@ kill %1
 
 ## Task 4 : Create and deploy the application on Azure Spring Cloud
 
-1. This section shows how to create an app instance and then deploy your code to it.
+This section shows how to create an app instance and then deploy your code to it.
 
-2. In order to create the app instance graphically, you can use [the Azure portal](https://portal.azure.com):
-
-3. Look for your Azure Spring Cloud instance in your resource group
+1.In order to create the app instance graphically, you can use navigate back to Azure portal and Look for your Azure Spring Cloud instance in your resource group.
 
 ![Cloud Spring in rg](media/spring-cloud.png)
 
-4. Click on the "Apps" link under "Settings" on the navigation sidebar.
+2. Click on the "Apps" link under "Settings" on the navigation sidebar.
 
 ![Apps under cloud spring ](media/spring-cloud-apps.png)
 
-5. Click on "Create App" link at the top of the Apps page.
+3. Click on "Create App" link at the top of the Apps page.
 
 ![App creation ](media/spring-cloud-app-creation.png)
 
-6. Create a new application named "simple-microservice"
+4. Create a new application named "simple-microservice"
 
 ![Create application](media/01-create-application.png)
 
-7. Click on "Create".
+5. Click on "Create".
 
-8. Alternatively, you can use the command line to create the app instance, which is easier:
+>💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier:
 
 ```bash
 az spring-cloud app create -n simple-microservice
 ```
-
-9. You can now build your "simple-microservice" project and deploy it to Azure Spring Cloud:
+6. Navigate back to Git Bash and now you can build your "simple-microservice" project and deploy it to Azure Spring Cloud by running the below command:
 
 ```bash
 cd simple-microservice
@@ -105,13 +102,11 @@ az spring-cloud app deploy -n simple-microservice --jar-path target/demo-0.0.1-S
 cd ..
 ```
 
-10. This creates a jar file on your local disk and uploads it to the app instance you created in the preceding step.  The `az` command will output a result in JSON.  You don't need to pay attention to this output right now, but in the future, you will find it useful for diagnostic and testing purposes.
+7. This creates a jar file on your local disk and uploads it to the app instance you created in the preceding step.  The `az` command will output a result in JSON.  You don't need to pay attention to this output right now, but in the future, you will find it useful for diagnostic and testing purposes.
 
 ## Task 5 : Test the project in the cloud
 
-1. Go to [the Azure portal](https://portal.azure.com):
-
-2. Look for your Azure Spring Cloud instance in your resource group
+2. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
 ![Cloud Spring in rg](media/spring-cloud.png)
 
