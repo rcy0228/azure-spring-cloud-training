@@ -16,9 +16,9 @@ There are actually three ways to access your application's logs: [Azure Storage]
 
 ![Diagnostic Settings](media/01-diagnostic-settings.png)
 
-- Click on "Add diagnostic setting" and configure your instance to send all its logs to the Log analytics workspace that we just created.
-- Name : write-to-log-analytics
-- Fill in the rest of the values as shown here and click "Save".
+2. Click on "Add diagnostic setting" and configure your instance to send all its logs to the Log analytics workspace that we just created.
+  - Name : write-to-log-analytics
+  - Fill in the rest of the values as shown below and click "Save".
 
 ![Send logs to the log analytics workspace](media/log-analytics-setting.png)
 
