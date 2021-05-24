@@ -19,7 +19,7 @@ A key feature of cloud-native applications is *externalized configuration* - the
 
 ## Task 1 : Create a Git repository for storing the application configuration
 
-1. On your [GitHub account](https://github.com), create a new **private** repository named **spring-cloud-config**, where the Spring Boot configurations will be stored.
+1. Browse to your **GitHub account** using the link `https://github.com` and create a new **private** repository named **spring-cloud-config**, where the Spring Boot configurations will be stored.
 
 ![Add a repository](media/create-a-repo.png)
 
