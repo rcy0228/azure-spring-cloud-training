@@ -39,7 +39,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-
 
 ![Path](media/folder-path.png)
 
-2. Search for notepad from the start menu and paste the following content in a new file:
+2. Open with notepad, then remove and paste the content with the below code in a new file:
 
 ```java
 package com.example.demo;
