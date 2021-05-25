@@ -53,7 +53,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 
 ## Task 3 : Add the Cosmos DB API
 
-1. Navigate to the path `C:\Users\demouser\city-service`, in the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency:
+1. Navigate to the path `C:\Users\demouser\city-service`, in the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency and Save.
 
 ![pom](media/pom-edit.png)
 
