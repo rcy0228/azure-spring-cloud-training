@@ -37,9 +37,9 @@ public class WeatherController {
 }
 ```
 
-## Task 1 : Deploy the new application to a new "green" deployment
+## Task 2 : Deploy the new application to a new "green" deployment
 
-1. Build a new version of the application and deploy it to a new `deployment` called `green`:
+1. Navigate to Git Bash and build a new version of the application and deploy it to a new `deployment` called `green`:
 
 ```bash
 cd weather-service
