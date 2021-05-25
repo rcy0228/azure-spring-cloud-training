@@ -56,7 +56,7 @@ cd ..
 
 5. Click "Deployments" under "Settings" and you should now see "green" deployment in **Staging** state.
 
-![Deployment Pane](media/02-deployment-pane1.png)
+   ![Deployment Pane](media/02-deployment-pane1.png)
 
 4. You can test the `green` deployment by invoking the same URL as in exercise 7, but replacing the deployment name `default` with `green`:
 
@@ -66,11 +66,10 @@ curl https://***.test.azuremicroservices.io/weather-service/green/weather/city?n
 
 5. And you should see the result of the recent modification:
 
-```json
-{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"}
-```
+   > **{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"}**
 
-Note: we're not testing the green deployment through the `gateway` application. The purpose of a green deployment is to test changes to a microservice before routing production traffic to it. Therefore, if you access `weather-service` through the public Gateway URL, as you did in exercise 8, you will be routed to the original version of the service.
+
+   > **Note**: we're not testing the green deployment through the `gateway` application. The purpose of a green deployment is to test changes to a microservice before routing production traffic to it. Therefore, if you access `weather-service` through the public Gateway URL, as you did in exercise 8, you will be routed to the original version of the service.
 
 6. To put this `green` deployment into production, you can use the command line:
 
@@ -78,7 +77,7 @@ Note: we're not testing the green deployment through the `gateway` application. 
 az spring-cloud app set-deployment -n weather-service --deployment green
 ```
 
-7. Another solution is to use [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
+7. Another solution is to use [the Azure portal](https://portal.azure.com/):
 
 - Find your Azure Spring Cloud instance
 
@@ -94,6 +93,6 @@ az spring-cloud app set-deployment -n weather-service --deployment green
 
 8. Once you have swapped deployments and see that `green` is active, you need to wait a few seconds for the Spring Cloud Service Registry to synchronize and use this new version from the `gateway` application. You will then be able to see the new modified data:
 
-![Green deployment](media/01-green-deployment.png)
+   ![Green deployment](media/01-green-deployment.png)
 
 ---
