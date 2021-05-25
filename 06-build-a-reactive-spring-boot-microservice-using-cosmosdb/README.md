@@ -184,7 +184,9 @@ cd ..
 
 ## Task 8 : Test the project in the cloud
 
-1. Go to "Apps" in your Azure Spring Cloud instance.
+1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+
+1. Select `Apps` under `Settings`and click on **city service** app.
 
 2. Verify that `city-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
