@@ -114,7 +114,7 @@ cd ..
 
 1. Navigate back to Azure Portal.
 
-2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Cloud instance named **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
+2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 ![Cloud Spring in rg](media/spring-cloud.png)
 
