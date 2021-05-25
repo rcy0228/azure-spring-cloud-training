@@ -194,7 +194,7 @@ cd ..
 
 3. Select `city-service` to have more information on the microservice.
 
-4. Copy the "Test Endpoint" that is provided.
+4. Click on **see more** under overview blade, if the Test endpoint is not visible and copy the "Test Endpoint" that is provided.
 
 5. Append `/cities` at the end. Now you can now use CURL to test the `/cities` endpoint, and it should give you the list of cities you created. For example, if you only created `Paris, France` and `London, UK` like it is shown in this guide, you should get:
 
