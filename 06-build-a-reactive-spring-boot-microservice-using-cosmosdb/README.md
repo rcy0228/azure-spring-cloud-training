@@ -20,7 +20,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 4. In that container, expand the container named `City`.
 
-5. Click on "Items" and use the "New Item" button to create some sample items:
+5. Click on "Items" and use the "New Item" button to create some sample items and **Save**:
 
     ```json
     {
