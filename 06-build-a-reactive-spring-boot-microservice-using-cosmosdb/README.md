@@ -164,7 +164,8 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 5. Click on `+ Create service binding`
 
   - Give your binding a name, for example `cosmosdb-city`
-  - Select the Cosmos DB account and database we created and keep the default `sql` API type
+  - Select the available `Subscription` in the drop down list
+  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-coud-cosmosdb` for the Database name we created and keep the default `sql` API type
   - In the drop-down list, select the primary master key
   - Click on `Create` to create the database binding
 
