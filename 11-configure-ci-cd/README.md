@@ -12,18 +12,17 @@ We are going to automate the deployment of the `weather-service` microservice th
 
 1. [Create a new GitHub repository](https://github.com/new) with the name `weather-service` and commit the code from the `weather-service` microservice into that repository:
 
-![New Repo](media/new-repo.png)
+   ![New Repo](media/new-repo.png)
 
 2. Open a fresh instance of Git Bash and login to your azure account using ```az login``` command.
 
 3. Enter the following commands and substitute the username/email of your Github account.
 
-```
-git config --global user.email "user@mail.com"
-git config --global user.name "username"
+   ```
+    git config --global user.email "user@mail.com"
+    git config --global user.name "username"
 
-```
-
+   ```
 
 > 🛑 Make sure you substitute the Git URL from your own github repository (make sure you use the HTTPS URL, not the SSH URL). This should be a different repository than the one you used to store configuration in exercise 4. If a login dialog appears, log in with your regular GitHub credentials.
 
@@ -43,7 +42,7 @@ cd ..
 AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
 ```
 
-> Where DID is your DeploymentID (Unique Id) which can be found from the Environment Details page.
+> Please ensure to replace the *DID* with the unique **Deployment ID**, it can be obtained from the **Environmnet Details** tab.
 
 ```bash
 # Prevents a Git bash issue. Not necessary outside of Windows:
@@ -116,7 +115,7 @@ There are many other [events that trigger GitHub actions](https://help.github.co
 
 2. Going to the `Actions` tab of your  GitHub project, you should see that your project is automatically built and deployed to your Azure Spring Cloud instance:
 
-![GitHub workflow](media/01-github-workflow.png)
+   ![GitHub workflow](media/01-github-workflow.png)
 
 
 > **NOTE!** If the Build fails, delete the exisiting `azure-spring-cloud.yml` from `.github/workflows` and create it again, make sure to substitute the name of your Azure Spring Cloud instance and resource group. 
