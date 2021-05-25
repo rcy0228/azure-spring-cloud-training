@@ -20,8 +20,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
 
 ![Path](media/folder-path.png)
 
-2. Search for notepad from the start menu, then remove and paste with the following content :
-
+2. Open with notepad, then remove and paste with the following content :
 
 ```java
 package com.example.demo;
