@@ -6,7 +6,7 @@ In this section, we'll build another data-driven microservice. This time, we wil
 
 ## Task 1 : Create the application on Azure Spring Cloud
 
-1. Create a specific `weather-service` application in your Azure Spring Cloud instance:
+1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Cloud instance:
 
 ```bash
 az spring-cloud app create -n weather-service
@@ -14,7 +14,7 @@ az spring-cloud app create -n weather-service
 
 ## Task 2 : Configure the MySQL Server instance
 
-1. You should have a Azure Database for MySQL instance named `sclabm-DID` in the resource group `spring-cloud-workshop-DID`.
+1. Navigate to Azure Database for MySQL instance named **sclabm-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
 ![Sql](media/sql-in-rg.png)
 
@@ -24,7 +24,7 @@ az spring-cloud app create -n weather-service
     - Create a MySQL firewall rule to allow connections from Azure Services. This will enable connections from Azure Spring Cloud.
     - Create a MySQL database.
  
-3. Run the following commands in Git Bash. Make sure you are logged in to your Azure account. If not log in using `az login`.
+3. Run the following commands in **Git Bash**. Make sure you are logged in to your Azure account. If not log in using `az login`.
 
 ```bash
 # Obtain the info on the MYSQL server in our resource group:
@@ -57,23 +57,19 @@ az mysql db create \
 echo "Your MySQL username is: ${MYSQL_USERNAME}"
 
 ```
-4. Note down your MySql username in notepad, we will need it in the next section. 
-
 ## Task 3 : Bind the MySQL database to the application
 
-1. As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Cloud microservices.
+As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Cloud microservices.
 
-2. In the [Azure Portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
+1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-3. Navigate to your Azure Spring Cloud instance.
+2. Click on Apps under **Settings**.
 
-4. Click on Apps.
+3. Click on `weather-service`.
 
-5. Click on `weather-service`.
+4. Click on "Service Bindings" under "Settings" and then select "+ Create Service Binding".
 
-6. Click on "Service Bindings" and then on "Create Service Binding".
-
-7. Populate the service binding fields as shown.
+5. Populate the service binding fields as shown.
 
   - Name : **weather-db**
   - Binding type : **Azure Database for MySQL**
@@ -82,20 +78,20 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
   - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Password : **Password.1!!**
 
-8. Click on `Create` to create the database binding
+6. Click on `Create` to create the database binding
 
 ![MySQL Service Binding](media/01-create-service-binding-mysql.png)
 
 ## Task 4 : Create a Spring Boot microservice
 
-1. Now that we've provisioned the Azure Spring Cloud instance and configured the service binding, let's get the code for `weather-service` ready.
+Now that we've provisioned the Azure Spring Cloud instance and configured the service binding, let's get the code for `weather-service` ready.
 
-2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d baseDir=weather-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
-3. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
+2. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
 
 ![city service](media/weather-service.png)
 
@@ -200,7 +196,7 @@ INSERT INTO `azure-spring-cloud-training`.`weather` (`city`, `description`, `ico
 
 ## Task 7 : Deploy the application
 
-1. You can now build your "weather-service" project and send it to Azure Spring Cloud:
+1. Navigate back to Gitbash and run the below commands to now build your "weather-service" project and send it to Azure Spring Cloud.
 
 ```bash
 cd weather-service
