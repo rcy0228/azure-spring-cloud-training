@@ -38,7 +38,9 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 ## Task 2 : Create a Spring Webflux microservice
 
-1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+1. Minimise the browser and navigate back to Git Bash.
+
+2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
