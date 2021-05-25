@@ -21,7 +21,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=cloud-feign,web,cloud-e
 ```
 2. Navigate to the path `C:\Users\demouser\all-cities-weather-service` to find the all-cities-weather-service
 
-![all-cities-weather-service](media/all-cities-weather-service.png)
+   ![all-cities-weather-service](media/all-cities-weather-service.png)
 
 ## Task 2 : Add Spring code to call other microservices
 
@@ -190,7 +190,7 @@ public class AllCitiesWeatherController {
 
 7. You should have the following files in the demo folder 
     
-![all files](media/all-cities-weather-service-all-java-files.png)
+   ![all files](media/all-cities-weather-service-all-java-files.png)
 
 ## Task 3 : Add time-out settings
 
@@ -238,6 +238,6 @@ https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
 [{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"},
 {"city":"London, UK","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"}]
 ```
-![output](media/all-cities-weather-service-output.png)
+   ![output](media/all-cities-weather-service-output.png)
 
 ---
