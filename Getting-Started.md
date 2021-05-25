@@ -43,13 +43,13 @@
    
 1. On **Sign in to Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
    
      ![](media/azure-login-enter-email.png "Enter Email")
      
 1. Now enter the following password and click on **Sign in**.
 
-   * Password: <inject key="AzureAdUserPassword"></inject>
+   * Password: **<inject key="AzureAdUserPassword"></inject>**
    
      ![](media/azure-login-enter-password.png "Enter Password")
      
