@@ -50,9 +50,13 @@ cd ..
 
 2. Once the application is deployed, if you go to `https://spring-training.azureedge.net/` you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
 
-3. Navigate to the Azure Spring Cloud instance in [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois) and click on "Deployments" (under Settings). You should now see the "green" deployment in the "Staging Deployment" column:
+3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-![Deployment Pane](media/02-deployment-pane.png)
+4. Click "Apps" in the "Settings" section of the navigation pane and select "weather-service".
+
+5. Click "Deployments" under "Settings" and you should now see "green" deployment in **Staging** state.
+
+![Deployment Pane](media/02-deployment-pane1.png)
 
 4. You can test the `green` deployment by invoking the same URL as in exercise 7, but replacing the deployment name `default` with `green`:
 
