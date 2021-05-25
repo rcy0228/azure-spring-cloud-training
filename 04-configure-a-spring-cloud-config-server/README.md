@@ -52,9 +52,9 @@ application:
 
 ## Task 3 : Configure Azure Spring Cloud to access the Git repository
 
-1. Go to [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois).
+1. Navigate to Azure Portal (```https://portal.azure.com```).From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud Instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-2. Go to the overview page of your Azure Spring Cloud server and select "Config server" in the menu
+2. Go to the **Overview** page of Azure Spring Cloud server and select `Config server` in the menu under `Settings`
 
 ![Config server](media/config-server.png)
 
