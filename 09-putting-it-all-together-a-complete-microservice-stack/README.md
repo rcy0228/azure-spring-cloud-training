@@ -28,9 +28,9 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 4. Go to ```https://spring-training.azureedge.net/```, input your Spring Cloud Gateway's public URL (It should look like this ```https://azure-spring-cloud-lab-DID-gateway.azuremicroservices.io```), in the text field and click on "Go". You should see the following screen:
 
-> Note: You can find the Spring Cloud Gateway's public URL in the *gateway* apps overview pane under **URL**
+   > **Note**: You can find the Spring Cloud Gateway's public URL in the *gateway* apps overview pane as **URL**
 
-![VueJS front-end](media/01-vuejs-frontend.png)
+    ![VueJS front-end](media/01-vuejs-frontend.png)
 
 ## Task 2 : Review the distributed tracing to better understand the architecture
 
@@ -42,11 +42,11 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select "Application Insights"
 
-![App insights](media/application-insights.png)
+   ![App insights](media/application-insights.png)
 
 4. In the "Application Insights" menu in Azure Portal, you should now have access to a full application map, as well as a search engine that allows you to find performance bottlenecks.
 
-![Distributed tracing](media/application-map.png)
+   ![Distributed tracing](media/application-map.png)
 
 > 💡 If your application map looks different from the one above, select the hierarchical view from the layout switch in the top-right corner:
 >
@@ -56,7 +56,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 1. Open a more holistic view at the `Performance` blade where you can see response times and request counts for operations exposed by your applications.
 
-![Trace detail](media/03-trace-detail.png)
+   ![Trace detail](media/03-trace-detail.png)
 
 2. For even more detailed data, navigate to the `Dependencies` tab in the `Performance` blade where you can see all your dependencies and their response times and request counts.
 
@@ -68,10 +68,10 @@ Now that distributed tracing is enabled, we can scale applications depending on 
   
 2. Select one service and click on "Scale Out" in the menu. Select the service that you want to scale out.  
 
-![Application scaling](media/04-scale-out.png)
+   ![Application scaling](media/04-scale-out.png)
 
 5. Modify the number of instances to manually scale the service. You can also set custom auto scaling based on metrics. 
 
-![Application scaling](media/04b-auto-scaling.png)
+   ![Application scaling](media/04b-auto-scaling.png)
 
 ---
