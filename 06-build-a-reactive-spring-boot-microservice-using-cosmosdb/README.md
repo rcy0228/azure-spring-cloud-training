@@ -173,7 +173,7 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
 ## Task 7 : Deploy the application
 
-1. You can now build your "city-service" project and send it to Azure Spring Cloud by running the below command on **Git Bash**
+1. Navigate to Git Bash and now you can build your "city-service" project and send it to Azure Spring Cloud
 
 ```bash
 cd city-service
