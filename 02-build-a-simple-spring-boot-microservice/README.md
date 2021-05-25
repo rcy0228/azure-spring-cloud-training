@@ -18,7 +18,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
 
 1. Navigate to the path `C:\Users\demouser\simple-microservice\src\main\java\com\example\demo`
 
-![Path](media/folder-path.png)
+   ![Path](media/folder-path.png)
 
 2. Open with notepad, then remove and paste the content with the below code :
 
@@ -40,7 +40,7 @@ public class HelloController {
 
 3. Save the file next to `DemoApplication.java` in the `C:\Users\demouser\simple-microservice\src\main\java\com\example\demo` as `HelloController.java` by changing the **save as type** to all files and then **save** as shown below.
 
-![HelloController](media/hello-controller-java.png)
+   ![HelloController](media/hello-controller-java.png)
 
 
 ## Task 3 : Test the project locally
@@ -71,19 +71,19 @@ This section shows how to create an app instance and then deploy your code to it
 
 1. In order to create the app instance graphically, you can use navigate back to Azure portal and Look for your Azure Spring Cloud instance in your resource group.
 
-![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](media/spring-cloud.png)
 
 2. Click on the "Apps" link under "Settings" on the navigation sidebar.
 
-![Apps under cloud spring ](media/spring-cloud-apps.png)
+   ![Apps under cloud spring ](media/spring-cloud-apps.png)
 
 3. Click on "Create App" link at the top of the Apps page.
 
-![App creation ](media/spring-cloud-app-creation.png)
+   ![App creation ](media/spring-cloud-app-creation.png)
 
 4. Create a new application named "simple-microservice"
 
-![Create application](media/01-create-application.png)
+   ![Create application](media/01-create-application.png)
 
 5. Click on "Create".
 
@@ -107,17 +107,17 @@ cd ..
 
 2. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](media/spring-cloud.png)
 
 3. Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
 
 4. Click on 'See more' to see "Test Endpoint"
 
-![See More](media/02-seemore.png)
+   ![See More](media/02-seemore.png)
 
 5. Mouse over the URL labeled as "Test Endpoint" and click the clipboard icon that appears.  
 
-![Endpoint](media/microservice-endpoint.png)
+   ![Endpoint](media/microservice-endpoint.png)
     
 6. This will give you something like:
 
@@ -126,17 +126,17 @@ cd ..
 
 7. If you get **"503 Service Temporarily Unavailable"** or **"WhiteLabel Error"** Page as shown below,
 
-![Error](media/endpoint-error.png)
+   ![Error](media/endpoint-error.png)
 
-![Error2](media/error02.png)
+   ![Error2](media/error02.png)
    
 8. Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
 
-![assign endpoint](media/simple-microservice-endpoint-assign.png)
+   ![assign endpoint](media/simple-microservice-endpoint-assign.png)
 
 9. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
 
-![Endpoint](media/hello-from-spring-cloud.png)
+   ![Endpoint](media/hello-from-spring-cloud.png)
 
 10. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
 
@@ -146,7 +146,7 @@ curl https://primary:...simple-microservice/default/hello/
 
 11. If successful, you should see the message: `Hello from Azure Spring Cloud`.
 
-![Endpoint](media/curl-hello-from-spring-cloud.png)
+    ![Endpoint](media/curl-hello-from-spring-cloud.png)
 
 ## Conclusion
 
