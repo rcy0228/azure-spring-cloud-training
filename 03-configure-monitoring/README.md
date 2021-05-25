@@ -14,12 +14,12 @@ There are actually three ways to access your application's logs: [Azure Storage]
 
 1. Navigate to the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** in Azure Portal and select "Diagnostic settings" in the "Monitoring" section of the navigation pane:
 
-![Diagnostic Settings](media/01-diagnostic-settings.png)
+   ![Diagnostic Settings](media/01-diagnostic-settings.png)
 
 2. Click on "Add diagnostic setting" and configure your instance to send all its logs to the Log analytics workspace that we just created.
   - Name : write-to-log-analytics
   - Fill in the rest of the values as shown below and click "Save".
 
-![Send logs to the log analytics workspace](media/log-analytics-setting.png)
+  ![Send logs to the log analytics workspace](media/log-analytics-setting.png)
 
 ---
