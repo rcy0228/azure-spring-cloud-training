@@ -13,9 +13,9 @@ curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eur
 ```
 2. Navigate to the path `C:\Users\demouser\gateway` to find the gateway folder 
 
-![gateway](media/gateway.png)
+   ![gateway](media/gateway.png)
 
-    > We use the `Cloud Gateway`, `Eureka Discovery Client` and the `Config Client` components.
+   > **Note**: We use the `Cloud Gateway`, `Eureka Discovery Client` and the `Config Client` components.
 
 ## Task 2 : Configure the application
 
@@ -76,17 +76,17 @@ cd ..
 
 4. Copy the public URL that is provided (there is a "Test Endpoint" like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
 
-![gateway url](media/gateway-url.png)
+   ![gateway url](media/gateway-url.png)
 
 5. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
 [The MICROSERVICE-ID must be in capital letters]
 
 6. Test the `city-service` microservice endpoint by doing: `curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
 
-![city output](media/output-city.png)
+   ![city output](media/output-city.png)
 
 7. Test the `weather-service` microservice endpoint by doing: `curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'` (replacing XXXXXXXX by the name of your gateway)
 
-![weather output](media/output-weather.png)
+   ![weather output](media/output-weather.png)
 
 ---
