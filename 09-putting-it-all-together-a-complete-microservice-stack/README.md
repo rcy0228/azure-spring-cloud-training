@@ -62,13 +62,11 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 ## Task 4 : Scale applications
 
-1. Now that distributed tracing is enabled, we can scale applications depending on our needs.
+Now that distributed tracing is enabled, we can scale applications depending on our needs.
 
-2. Go to [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois).
-
-3. Go to the overview page of your Azure Spring Cloud server and select "Apps" in the menu.
+1. Go to the overview page of your Azure Spring Cloud server and select "Apps" in the menu.
   
-4. Select one service and click on "Scale Out" in the menu. Select the service that you want to scale out.  
+2. Select one service and click on "Scale Out" in the menu. Select the service that you want to scale out.  
 
 ![Application scaling](media/04-scale-out.png)
 
