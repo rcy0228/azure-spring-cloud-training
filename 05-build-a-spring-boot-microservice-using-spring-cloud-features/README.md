@@ -23,7 +23,7 @@ az login # Sign into an azure account
 az account show # See the currently signed-in account.
 ```
 
-![Git Bash](media/git-bash.png)
+  ![Git Bash](media/git-bash.png)
 
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
@@ -37,7 +37,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-
 
 1. Navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo`
 
-![Path](media/folder-path.png)
+   ![Path](media/folder-path.png)
 
 2. Open with notepad, then remove and paste the content with the below code in a new file:
 
@@ -62,7 +62,7 @@ public class HelloController {
 ```
 3. Save the file next to `DemoApplication.java` in the `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo` as `HelloController.java` by changing the **save as type** to all files and then **save** as shown below.
 
-![HelloController](media/hello-controller-java.png)
+   ![HelloController](media/hello-controller-java.png)
 
 ## Task 3 : Test the project locally
 
@@ -85,7 +85,7 @@ cd ..
 ```bash
 curl http://127.0.0.1:8080/hello
 ```
-![curl output](media/local-curl.png)
+  ![curl output](media/local-curl.png)
 
 4. Kill the locally running microservice:
 
@@ -116,13 +116,13 @@ cd ..
 
 2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](media/spring-cloud.png)
 
 3. Go to "Apps"
 
 4. Verify that `spring-cloud-microservice` has a `Registration status` of `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
-![Apps cloud microservice](media/apps-spring-cloud-microservice.png)
+   ![Apps cloud microservice](media/apps-spring-cloud-microservice.png)
 
 5. Select `spring-cloud-microservice` to have more information on the microservice.
 
@@ -132,7 +132,7 @@ cd ..
 
 8. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
 
-![configured](media/configured-by-spring-cloud.png)
+   ![configured](media/configured-by-spring-cloud.png)
 
 9. You can now use CURL again to test the `/hello` endpoint, this time it is served by Azure Spring Cloud and configured using the Spring Config Server from exercise 4.
 
@@ -143,7 +143,7 @@ Configured by Azure Spring Cloud
 ```
 11. If successful, you should see the message: `Configured by Azure Spring Cloud`.
 
-![curl-configured](media/curl-configured-by-spring.png)
+    ![curl-configured](media/curl-configured-by-spring.png)
 
 ## Task 6 : Stream application logs
 
@@ -157,7 +157,7 @@ _Please be aware it might take a couple of minutes for the logs to show up._
 
 2. You should see the console output of `spring-cloud-microservice` scroll by on your terminal:
 
-![Console output](media/updated-logs.png)
+   ![Console output](media/updated-logs.png)
 
 3. Press CTRL+C to stop following the output and return to the shell.
 
@@ -183,7 +183,7 @@ AppPlatformLogsforSpring
 | limit 50
 ```
 
-![Query logs](media/03-logs-query.png)
+  ![Query logs](media/03-logs-query.png)
 
 >💡 It can also take 1-2 minutes for the console output of an Azure Spring Cloud microservice to be read into Log Analytics.
 
