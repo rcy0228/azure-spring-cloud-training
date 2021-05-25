@@ -24,9 +24,11 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 3. In order to simplify this part, which is not relevant to understanding Spring Cloud, we have already built a running front-end:
 
-      __[https://spring-training.azureedge.net/](https://spring-training.azureedge.net/)__
+      ```https://spring-training.azureedge.net/```
 
-4. Go to [https://spring-training.azureedge.net/](https://spring-training.azureedge.net/), input your Spring Cloud Gateway's public URL (It should look like this `https://azure-spring-cloud-lab-DID-gateway.azuremicroservices.io`), in the text field and click on "Go". You should see the following screen:
+4. Go to ```https://spring-training.azureedge.net/```, input your Spring Cloud Gateway's public URL (It should look like this ```https://azure-spring-cloud-lab-DID-gateway.azuremicroservices.io```), in the text field and click on "Go". You should see the following screen:
+
+> Note: You can find the Spring Cloud Gateway's public URL in the *gateway* apps overview pane under **URL**
 
 ![VueJS front-end](media/01-vuejs-frontend.png)
 
@@ -34,11 +36,11 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 1. We have already enabled distributed tracing on our Azure Spring Cloud instance in exercise 1 by adding the `--enable-java-agent` flag to the create command.
 
-2. Now, you can use the VueJS application on [https://spring-training.azureedge.net/](https://spring-training.azureedge.net/) to generate some traffic on the microservices stack.
+2. Now, you can use the VueJS application on ```https://spring-training.azureedge.net/``` to generate some traffic on the microservices stack.
 
 >💡 Tracing data can take a couple of minutes to be ingested by the system, so use this time to generate some load.
 
-3. Navigate to your Azure spring cloud instance and under monitoring select "Application Insights"
+3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select "Application Insights"
 
 ![App insights](media/application-insights.png)
 
