@@ -16,7 +16,7 @@ az spring-cloud app create -n weather-service
 
 1. Navigate to Azure Database for MySQL instance named **sclabm-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
-![Sql](media/sql-in-rg.png)
+   ![Sql](media/sql-in-rg.png)
 
 2. Before we can use it however, we will need to perform several tasks:
 
@@ -80,7 +80,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 6. Click on `Create` to create the database binding
 
-![MySQL Service Binding](media/01-create-service-binding-mysql.png)
+   ![MySQL Service Binding](media/01-create-service-binding-mysql.png)
 
 ## Task 4 : Create a Spring Boot microservice
 
@@ -95,7 +95,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,clou
 
 ![city service](media/weather-service.png)
 
-> Note:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
+> **Note**:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
 
 ## Task 5 : Add Spring code to get the data from the database
 
