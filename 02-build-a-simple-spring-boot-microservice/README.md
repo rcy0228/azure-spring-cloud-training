@@ -105,7 +105,7 @@ cd ..
 
 ## Task 5 : Test the project in the cloud
 
-2. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
+2. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 ![Cloud Spring in rg](media/spring-cloud.png)
 
