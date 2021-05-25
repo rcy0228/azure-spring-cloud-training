@@ -49,7 +49,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 
 ![city service](media/city-service.png)
 
-    > We use the `Spring Webflux`, `Eureka Discovery Client` and the `Config Client` Spring Boot starters.
+> **Note**: We use the `Spring Webflux`, `Eureka Discovery Client` and the `Config Client` Spring Boot starters.
 
 ## Task 3 : Add the Cosmos DB API
 
