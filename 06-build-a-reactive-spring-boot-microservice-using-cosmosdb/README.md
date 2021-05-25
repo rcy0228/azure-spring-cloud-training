@@ -10,11 +10,11 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
-![Cosmos Db](media/cosmos-db-from-rg.png)
+   ![Cosmos Db](media/cosmos-db-from-rg.png)
 
 2. Click on the "Data Explorer" menu item
 
-![Data explorer](media/data-explorer.png)
+   ![Data explorer](media/data-explorer.png)
 
 3. Expand the container named `azure-spring-cloud-cosmosdb`.
 
@@ -34,7 +34,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
     }
     ```
 
-![Data explorer](media/02-data-explorer.png)
+   ![Data explorer](media/02-data-explorer.png)
 
 ## Task 2 : Create a Spring Webflux microservice
 
@@ -47,7 +47,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 ```
 2. Navigate to the path `C:\Users\demouser\city-service` to find the city service folder 
 
-![city service](media/city-service.png)
+   ![city service](media/city-service.png)
 
 > **Note**: We use the `Spring Webflux`, `Eureka Discovery Client` and the `Config Client` Spring Boot starters.
 
@@ -55,7 +55,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 
 1. Navigate to the path `C:\Users\demouser\city-service`, in the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency and Save.
 
-![pom](media/pom-edit.png)
+   ![pom](media/pom-edit.png)
 
 ```xml
         <dependency>
@@ -169,7 +169,7 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
   - In the drop-down list, select the primary master key
   - Click on `Create` to create the database binding
 
-![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
+   ![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
 
 ## Task 7 : Deploy the application
 
@@ -190,7 +190,7 @@ cd ..
 
 2. Verify that `city-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
-![City service](media/city-service-registration.png)
+   ![City service](media/city-service-registration.png)
 
 3. Select `city-service` to have more information on the microservice.
 
