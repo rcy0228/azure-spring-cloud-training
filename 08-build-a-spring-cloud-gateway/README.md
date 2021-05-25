@@ -47,7 +47,7 @@ spring:
 
 ## Task 3 : Create the application on Azure Spring Cloud
 
-1. Create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
+1. Navigate to Git Bas and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
 
 ```bash
 az spring-cloud app create -n gateway --is-public true
@@ -66,7 +66,9 @@ cd ..
 
 ## Task 5 : Test the project in the cloud
 
-1. Go to "Apps" in your Azure Spring Cloud instance.
+1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+
+2. Click on **Apps** under **Settings**.
 
 2. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
