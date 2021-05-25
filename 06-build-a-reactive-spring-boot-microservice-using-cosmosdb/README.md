@@ -151,15 +151,17 @@ az spring-cloud app create -n city-service
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
-1. Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
+Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
 
-2. Go to "Apps" in your Azure Spring Cloud instance.
+1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+
+2. Click on `Apps` under `settings`.
 
 3. Select the `city-service` application
 
-4. Go to `Service bindings`
+4. Go to `Service bindings` under `Settings`
 
-5. Click on `Create service binding`
+5. Click on `+ Create service binding`
 
   - Give your binding a name, for example `cosmosdb-city`
   - Select the Cosmos DB account and database we created and keep the default `sql` API type
@@ -170,7 +172,7 @@ az spring-cloud app create -n city-service
 
 ## Task 7 : Deploy the application
 
-1. You can now build your "city-service" project and send it to Azure Spring Cloud:
+1. You can now build your "city-service" project and send it to Azure Spring Cloud by running the below command on **Git Bash**
 
 ```bash
 cd city-service
