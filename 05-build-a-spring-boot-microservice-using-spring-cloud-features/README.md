@@ -173,7 +173,7 @@ __Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsfo
 
 3. Here is how to get its 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
 
-4. Insert this text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click "Run".
+4. Close other pop-up windows within the Logs and insert the below text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click "Run".
 
 ```sql
 AppPlatformLogsforSpring
