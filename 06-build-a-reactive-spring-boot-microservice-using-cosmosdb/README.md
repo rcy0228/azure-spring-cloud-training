@@ -143,7 +143,7 @@ public class CityController {
 
 ## Task 5 : Create the application on Azure Spring Cloud
 
-1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance:
+1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance by running the below command in Git Bash.
 
 ```bash
 az spring-cloud app create -n city-service
