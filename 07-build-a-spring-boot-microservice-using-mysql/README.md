@@ -95,7 +95,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,clou
 
 ![city service](media/weather-service.png)
 
-       > We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
+> Note:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
 
 ## Task 5 : Add Spring code to get the data from the database
 
