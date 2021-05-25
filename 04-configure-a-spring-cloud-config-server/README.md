@@ -21,11 +21,11 @@ A key feature of cloud-native applications is *externalized configuration* - the
 
 1. Browse to your **GitHub account** using the link `https://github.com/login` and create a new **private** repository named **spring-cloud-config**, where the Spring Boot configurations will be stored.
 
-![Add a repository](media/create-a-repo.png)
+   ![Add a repository](media/create-a-repo.png)
 
 2. In the new private GitHub repository, add a new `application.yml` file which will store configuration data for all our microservices.
 
-![Application](media/application-yml.png)
+   ![Application](media/application-yml.png)
 
 3. Typically, each Spring Boot application includes such a file within the application binaries to contain application settings. A Spring Cloud Configuration Server allow such settings to be stored at a single location and served from a single source.
 
@@ -44,11 +44,11 @@ application:
 
 2. Follow the [GitHub guide to create a personal token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) named `Azure Spring Cloud Config Server` and save your token. When asked to select scopes, check off the entire "repo" section (as shown below) and nothing else.
 
-![GitHub personal access token](media/01-github-personal-access-token.png)
+   ![GitHub personal access token](media/01-github-personal-access-token.png)
 
 3. Once the token is generated, Copy the personal access token and leave that tab open until the end of this section.
 
-![Personal access token copy](media/access-token-copy.png)
+   ![Personal access token copy](media/access-token-copy.png)
 
 ## Task 3 : Configure Azure Spring Cloud to access the Git repository
 
@@ -56,7 +56,7 @@ application:
 
 2. Go to the **Overview** page of Azure Spring Cloud server and select `Config server` in the menu under `Settings`
 
-![Config server](media/config-server.png)
+   ![Config server](media/config-server.png)
 
 3. Configure the repository we previously created:
 
@@ -74,7 +74,7 @@ application:
 
 5. Click on "Apply" and wait for the operation to succeed
 
-![Spring Cloud config server](media/02-config-server.png)
+   ![Spring Cloud config server](media/02-config-server.png)
 
 ## Review
 
