@@ -48,7 +48,7 @@ az spring-cloud app deployment create --name green --app weather-service --jar-p
 cd ..
 ```
 
-2. Once the application is deployed, if you go to [https://spring-training.azureedge.net/](https://spring-training.azureedge.net/) you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
+2. Once the application is deployed, if you go to `https://spring-training.azureedge.net/` you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
 
 3. Navigate to the Azure Spring Cloud instance in [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois) and click on "Deployments" (under Settings). You should now see the "green" deployment in the "Staging Deployment" column:
 
