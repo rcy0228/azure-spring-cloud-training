@@ -71,28 +71,4 @@ curl https://***.test.azuremicroservices.io/weather-service/green/weather/city?n
 
    > **Note**: we're not testing the green deployment through the `gateway` application. The purpose of a green deployment is to test changes to a microservice before routing production traffic to it. Therefore, if you access `weather-service` through the public Gateway URL, as you did in exercise 8, you will be routed to the original version of the service.
 
-6. To put this `green` deployment into production, you can use the command line:
-
-```bash
-az spring-cloud app set-deployment -n weather-service --deployment green
-```
-
-7. Another solution is to use [the Azure portal](https://portal.azure.com/):
-
-- Find your Azure Spring Cloud instance
-
-- Click on the "deployment" menu
-
-- Select the `weather-service` application and click on "Set deployment"
-
-> If you want to reuse a deployment name, you need first to delete the previous deployment under that name:
->
-> ```bash
-> az spring-cloud app deployment delete --name green --app weather-service
-> ```
-
-8. Once you have swapped deployments and see that `green` is active, you need to wait a few seconds for the Spring Cloud Service Registry to synchronize and use this new version from the `gateway` application. You will then be able to see the new modified data:
-
-   ![Green deployment](media/01-green-deployment.png)
-
 ---
