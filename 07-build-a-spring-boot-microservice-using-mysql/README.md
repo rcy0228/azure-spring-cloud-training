@@ -74,7 +74,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
   - Name : **weather-db**
   - Binding type : **Azure Database for MySQL**
   - Resource name : **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
-  - Database name : **azure-sprig-cloud-training**
+  - Database name : **azure-spring-cloud-training**
   - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Password : **Password.1!!**
 
