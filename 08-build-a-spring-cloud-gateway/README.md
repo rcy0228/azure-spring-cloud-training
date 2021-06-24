@@ -47,7 +47,7 @@ spring:
 
 ## Task 3 : Create the application on Azure Spring Cloud
 
-1. Navigate to Git Bas and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
+1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
 
 ```bash
 az spring-cloud app create -n gateway --is-public true
