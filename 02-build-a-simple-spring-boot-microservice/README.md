@@ -130,7 +130,7 @@ cd ..
 
    ![Error2](media/error02.png)
    
-8. Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
+   - Click on assign endpoint and wait until the endpoint has been assigned and unassign the endpoint soon after. 
 
    ![assign endpoint](media/simple-microservice-endpoint-assign.png)
 
