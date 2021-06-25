@@ -159,6 +159,8 @@ _Please be aware it might take a couple of minutes for the logs to show up._
 
    ![Console output](media/updated-logs.png)
 
+ >Note : If you do not see the application logs appear, press CTRL+C to stop the stream. The logs should be visible now, scroll up to view the logs.
+
 3. Press CTRL+C to stop following the output and return to the shell.
 
 ## Task 7 : Query application logs
