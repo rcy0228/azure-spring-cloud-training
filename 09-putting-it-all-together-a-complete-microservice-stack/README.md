@@ -66,7 +66,7 @@ Now that distributed tracing is enabled, we can scale applications depending on 
 
 1. Go to the overview page of your Azure Spring Cloud server and select "Apps" in the menu.
   
-2. Select one service and click on "Scale Out" in the menu. Select the service that you want to scale out.  
+2. Select one service and click on **Scale Out** under "Settings".  
 
    ![Application scaling](media/04-scale-out.png)
 
