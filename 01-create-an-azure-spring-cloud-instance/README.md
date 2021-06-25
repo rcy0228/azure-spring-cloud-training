@@ -48,8 +48,7 @@ az spring-cloud create \
     --enable-java-agent \
     --sku standard
 ```
-
-> Note : Please note that the above command will throw an **error: InvalidArgument** as shown below :
+<!--- > Note : Please note that the above command will throw an **error: InvalidArgument** as shown below :
          
    ![Error](media/Error-invalidargument.png)
          
@@ -67,8 +66,8 @@ az spring-cloud create \
     ![App insights](media/Navigate-Application-insights-1.png)
 
 8. Finally select **Save** to save the settings.
- 
-9. For the remainder of this workshop, we will be running Azure CLI commands referencing the same resource group and Azure Spring Cloud instance. So let's set them as defaults, so we don't have to specify them again:
+---> 
+6. For the remainder of this workshop, we will be running Azure CLI commands referencing the same resource group and Azure Spring Cloud instance. So let's set them as defaults, so we don't have to specify them again:
 
 ```bash
 az configure --defaults group=$AZ_RESOURCE_GROUP
