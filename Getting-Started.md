@@ -3,13 +3,13 @@
 
 1. Once the environment is provisioned, a virtual machine and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab.
 
-1. To get the lab environment details, you can select **Lab Environment** tab. Additionally, the credentials will also be emailed to your email address provided at registration.
+1. To get the lab environment details, you can select **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided at registration.
 
-   ![](media/environment-details.png "Lab Environment")
+   ![](media/environment-details1.png "Lab Environment")
   
 1. You can also open the Lab Guide on separate full window by selecting the **Split Window** icon at the bottom right corner.
 
-   ![](media/split-window.png "LAB Guide")
+   ![](media/split-window1.png "LAB Guide")
  
 ## Set default browser
 
