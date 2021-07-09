@@ -105,21 +105,21 @@ cd ..
 
 ## Task 5 : Test the project in the cloud
 
-2. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![Cloud Spring in rg](media/spring-cloud.png)
 
-3. Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
+2. Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
 
-4. Click on 'See more' to see "Test Endpoint"
+3. Click on 'See more' to see "Test Endpoint"
 
    ![See More](media/02-seemore.png)
 
-5. Mouse over the URL labeled as "Test Endpoint" and click the clipboard icon that appears.  
+4. Mouse over the URL labeled as "Test Endpoint" and click the clipboard icon that appears.  
 
    ![Endpoint](media/microservice-endpoint.png)
     
-6. This will give you something like:
+<!--- 6. This will give you something like:
 
    `https://primary:BBQM6nsYnmmdQREXQINityNx63kWUbjsP7SIvqKhOcWDfP6HJTqg27klMLaSfpTB@rwo1106f.test.azuremicroservices.io/simple-microservice/default/`
    >💡 Note the text between `https://` and `@`.  These are the basic authentication credentials, without which you will not be authorized to access the service.
@@ -134,17 +134,19 @@ cd ..
 
    ![assign endpoint](media/simple-microservice-endpoint-assign.png)
 
-9. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
+-->
 
-   ![Endpoint](media/hello-from-spring-cloud.png)
-
-10. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
+5. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
 
 ```bash
 curl https://primary:...simple-microservice/default/hello/
 ```
 
-11. If successful, you should see the message: `Hello from Azure Spring Cloud`.
+6. Append `hello/` at the end of the URL.  Failure to do this will result in a "404 not found".
+
+   <!--- ![Endpoint](media/hello-from-spring-cloud.png) -->
+
+7. If successful, you should see the message: `Hello from Azure Spring Cloud`.
 
     ![Endpoint](media/curl-hello-from-spring-cloud.png)
 
