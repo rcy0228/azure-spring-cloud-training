@@ -38,11 +38,11 @@ cd ..
 
 4. You now need to allow access from your GitHub workflow to your Azure Spring Cloud instance. Open up a terminal and type the following command.
 
+> Please ensure to replace the *DID* with the unique **Deployment ID**, it can be obtained from the **Environmnet Details** tab.
+
 ```
 AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
 ```
-
-> Please ensure to replace the *DID* with the unique **Deployment ID**, it can be obtained from the **Environmnet Details** tab.
 
 ```bash
 # Prevents a Git bash issue. Not necessary outside of Windows:
