@@ -1,17 +1,18 @@
 # Release Notes
 
 ### 02 August 2021
-  - Minor instruction updates in 11-configure-ci-cd/README.md
+* Exercise 11:
+  - In Task 1, updated the minor instruction for step-4 regarding replacing the Deployment ID.
+   
 -----------
 
 ### 27 July 2021
-  - Minor instruction updates in 06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md
------------
-
-### 09 July 2021
-  - Minor instruction updates in 02-build-a-simple-spring-boot-microservice/README.md
+* Exercise 6:
+  - In Task 6, updated the minor instruction in step-5 for creating service binding.
+  
 -----------
 
 ### 02 July 2021
-  - Updated the UI in Getting-Started.md
+* Getting-Started:
+  - Updated the UI and instructions for in Getting-Started file.
    
