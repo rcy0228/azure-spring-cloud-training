@@ -146,8 +146,9 @@ public class CityController {
 1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance by running the below command in Git Bash.
 
 ```bash
-az spring-cloud app create -n city-service
+az spring-cloud app create -n city-service -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
+>Note: Replace the DID with it's value, where you can find it from Environment details page.
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
