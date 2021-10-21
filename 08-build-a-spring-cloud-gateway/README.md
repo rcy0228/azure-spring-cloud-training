@@ -50,8 +50,9 @@ spring:
 1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
 
 ```bash
-az spring-cloud app create -n gateway --is-public true
+az spring-cloud app create -n gateway -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --is-public true
 ```
+ >Note: Replace the DID with it's value, where you can find it from Environment details page.
 
 ## Task 4 : Deploy the application
 
