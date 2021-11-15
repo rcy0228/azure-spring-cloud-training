@@ -98,9 +98,9 @@ kill %1
 1. As in exercise 2, we create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance:
 
 ```bash
-az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- >Note: Replace the DID with it's value, where you can find it from Environment details page.
+ >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 2. You can now build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
 
@@ -119,7 +119,9 @@ cd ..
 
    ![Cloud Spring in rg](media/spring-cloud.png)
 
-3. Go to "Apps"
+3. Click on the "Apps" link under "Settings" on the navigation sidebar.
+
+   ![Cloud Spring in rg](media/webapp-01.png)
 
 4. Verify that `spring-cloud-microservice` has a `Registration status` of `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
@@ -133,18 +135,18 @@ cd ..
 
 8. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
 
-   ![configured](media/configured-by-spring-cloud.png)
+   ![configured](media/config-web.png)
 
 9. You can now use CURL again to test the `/hello` endpoint, this time it is served by Azure Spring Cloud and configured using the Spring Config Server from exercise 4.
 
 10. As a result, requesting the `/hello` endpoint should return the message that we configured in the `application.yml` file, coming from the Spring Cloud Config Server:
 
 ```bash
-Configured by Azure Spring Cloud
+Configured by Spring Cloud Config Server
 ```
-11. If successful, you should see the message: `Configured by Azure Spring Cloud`.
+11. If successful, you should see the message: `Configured by Spring Cloud Config Server`.
 
-    ![curl-configured](media/curl-configured-by-spring.png)
+    ![curl-configured](media/Curl-config-web.png)
 
 ## Task 6 : Stream application logs
 
