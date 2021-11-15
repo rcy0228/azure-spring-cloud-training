@@ -71,7 +71,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 4. Click on "Service Bindings" under "Settings" and then select "+ Create Service Binding".
 
-   ![](media/create-service-binding.png)
+   ![](media/weather-service-binding.png)
 
 5. Populate the service binding fields as shown.
 
