@@ -146,9 +146,9 @@ public class CityController {
 1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance by running the below command in Git Bash.
 
 ```bash
-az spring-cloud app create -n city-service -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+az spring-cloud app create -n city-service -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
->Note: Replace the DID with it's value, where you can find it from Environment details page.
+>Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can find it from Environment details page.
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
@@ -158,11 +158,15 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
 2. Click on `Apps` under `settings`.
 
+   ![](media/webapp-01.png)
+
 3. Select the `city-service` application
 
-4. Go to `Service bindings` under `Settings`
+4. Go to `Service bindings` under `Settings` and click on `+ Create service binding`.
 
-5. Click on `+ Create service binding`
+   ![](media/create-service-binding.png)
+
+5. On `Create service binding` page, provide the following details.
 
   - Give your binding a name, for example `cosmosdb-city`
   - Select the available `Subscription` in the drop down list
