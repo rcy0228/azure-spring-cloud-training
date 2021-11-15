@@ -12,7 +12,7 @@ A key feature of cloud-native applications is *externalized configuration* - the
 
    ![Config server](media/MJA-ex4-01.png)
 
-3. Configure the repository by providing the public repository URL **https://github.com/Azure-Samples/spring-cloud-sample-public-config.git**
+3. Configure the repository by providing the public repository URL **https://github.com/Azure-Samples/spring-cloud-sample-public-config.git** inside URL field of **Default repository**
 
      >💡 Make sure you include the `.git` ending in the URL.
 
