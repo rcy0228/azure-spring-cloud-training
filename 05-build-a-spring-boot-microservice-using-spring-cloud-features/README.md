@@ -125,7 +125,7 @@ cd ..
 
 4. Verify that `spring-cloud-microservice` has a `Registration status` of `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
-   ![Apps cloud microservice](media/apps-spring-cloud-microservice.png)
+   ![Apps cloud microservice](media/Spring-cloud-Rstatus.png)
 
 5. Select `spring-cloud-microservice` to have more information on the microservice.
 
