@@ -71,15 +71,15 @@ This section shows how to create an app instance and then deploy your code to it
 
 1. In order to create the app instance graphically, you can use navigate back to Azure portal and Look for your Azure Spring Cloud instance in your resource group.
 
-   ![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](media/MJA-ex2-01.png)
 
 2. Click on the "Apps" link under "Settings" on the navigation sidebar.
 
-   ![Apps under cloud spring ](media/spring-cloud-apps.png)
+   ![Apps under cloud spring ](media/MJA-ex2-02.png)
 
 3. Click on "Create App" link at the top of the Apps page.
 
-   ![App creation ](media/spring-cloud-app-creation.png)
+   ![App creation ](media/MJA-ex2-03.png)
 
 4. Create a new application named "simple-microservice"
 
@@ -92,7 +92,7 @@ This section shows how to create an app instance and then deploy your code to it
 ```bash
 az spring-cloud app create -n simple-microservice -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- >Note: Replace the DID with it's value, where you can find it from Environment details page.
+ >Note: Replace the DID with <inject key="DeploymentID" enableCopy="True"/> value, you can also find it from Environment details page.
  
 6. Navigate back to Git Bash and now you can build your "simple-microservice" project and deploy it to Azure Spring Cloud by running the below command:
 
@@ -109,7 +109,7 @@ cd ..
 
 1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](media/MJA-ex2-01.png)
 
 2. Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
 
