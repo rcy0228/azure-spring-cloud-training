@@ -58,6 +58,7 @@ cd ..
 ```bash
 curl http://127.0.0.1:8080/hello
 ```
+   ![HelloController](media/MJA-ex2-04.png)
 
 3. Finally, kill running app:
 
