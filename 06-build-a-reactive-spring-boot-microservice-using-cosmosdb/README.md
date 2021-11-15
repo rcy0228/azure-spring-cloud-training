@@ -148,7 +148,7 @@ public class CityController {
 ```bash
 az spring-cloud app create -n city-service -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
->Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can find it from Environment details page.
+>Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
