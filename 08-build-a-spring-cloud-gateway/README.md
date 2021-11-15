@@ -52,7 +52,7 @@ spring:
 ```bash
 az spring-cloud app create -n gateway -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --is-public true
 ```
- >Note: Replace the DID with it's value, where you can find it from Environment details page.
+ >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ## Task 4 : Deploy the application
 
@@ -70,6 +70,8 @@ cd ..
 1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on **Apps** under **Settings**.
+
+   ![](media/webapp-01.png)
 
 2. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
