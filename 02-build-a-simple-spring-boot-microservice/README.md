@@ -91,7 +91,7 @@ This section shows how to create an app instance and then deploy your code to it
 >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier:
 
 ```bash
-az spring-cloud app create -n simple-microservice -s azure-spring-cloud-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+az spring-cloud app create -n simple-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
  >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
  
