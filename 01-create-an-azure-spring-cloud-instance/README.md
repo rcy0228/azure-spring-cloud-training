@@ -32,7 +32,7 @@ az account show # See the currently signed-in account.
 
 4. To limit typing, set the variable `AZ_RESOURCE_GROUP` to the name of the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. And set the variable `AZ_SPRING_CLOUD_NAME` to **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**
 
->🛑 Be sure to substitute your DID with **<inject key="DeploymentID" enableCopy="True"/>** in `AZ_RESOURCE_GROUP` and `AZ_SPRING_CLOUD_NAME`, where **DID** is the **DeploymentID** (Unique Id) which can be found from the **Environment Details** page.
+>🛑 Be sure to substitute the DID in the command with **<inject key="DeploymentID" enableCopy="True"/>** in `AZ_RESOURCE_GROUP` and `AZ_SPRING_CLOUD_NAME`, where **DID** is the **DeploymentID** (Unique Id) which can be found from the **Environment Details** page.
 
 ```bash
 AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
