@@ -25,7 +25,7 @@
 
 1. In the VM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![azure portal.](media/spring-cloud-vm2.png)
+   ![azure portal.](media/azure_portal.png)
    
 1. When you click on Azure portal, edge browser welcome screen will come up, select **Get started**.
 
