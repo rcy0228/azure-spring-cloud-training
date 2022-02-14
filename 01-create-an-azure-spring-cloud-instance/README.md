@@ -22,9 +22,6 @@ az login # Sign into an azure account
 az account show # See the currently signed-in account.
 ```
 
-2. Ensure your default subscription is the one you intend to use for this lab, and if not - set the subscription via 
-```az account set --subscription <SUBSCRIPTION_ID>```
-
 ### Task 2: Create an Azure Spring Cloud instance
 
 1. In this section, we will create our Azure Spring Cloud instance using Azure CLI.
