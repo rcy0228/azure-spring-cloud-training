@@ -15,6 +15,9 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
 
 ```bash
 az login # Sign into an azure account
+```
+
+```bash
 az account show # See the currently signed-in account.
 ```
 
