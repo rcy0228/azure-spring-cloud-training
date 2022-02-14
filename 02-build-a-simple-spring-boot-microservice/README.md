@@ -95,8 +95,8 @@ This section shows how to create an app instance and then deploy your code to it
 ```bash
 az spring-cloud app create -n simple-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- 
-6. Navigate back to Git Bash and now you can build your "simple-microservice" project and deploy it to Azure Spring Cloud by running the below command:
+
+6. Navigate back to Git Bash and now you can build your **simple-microservice** project and deploy it to Azure Spring Cloud by running the below command:
 
 ```bash
 cd simple-microservice
