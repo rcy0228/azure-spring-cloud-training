@@ -74,26 +74,27 @@ This section shows how to create an app instance and then deploy your code to it
 
    ![Cloud Spring in rg](media/MJA-ex2-01.png)
 
-2. Click on the "Apps" link under "Settings" on the navigation sidebar.
+2. Click on the **Apps** link under **Settings** on the navigation sidebar.
 
    ![Apps under cloud spring ](media/MJA-ex2-02.png)
 
-3. Click on "Create App" link at the top of the Apps page.
+3. Click on **"Create App"** link at the top of the **Apps** page.
 
    ![App creation ](media/MJA-ex2-03.png)
 
-4. Create a new application named "simple-microservice"
+4. Create a new application named **simple-microservice** and leave the remaining settings to default. 
 
    ![Create application](media/01-create-application.png)
 
-5. Click on "Create".
+5. Click on **Create**.
 
->💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier:
+>💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 5, skip this task and continue with Task 5.
+
+>**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
 az spring-cloud app create -n simple-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
  
 6. Navigate back to Git Bash and now you can build your "simple-microservice" project and deploy it to Azure Spring Cloud by running the below command:
 
@@ -112,13 +113,13 @@ cd ..
 
    ![Cloud Spring in rg](media/MJA-ex2-01.png)
 
-2. Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
+2. Click **"Apps"** in the **"Settings"** section of the navigation pane and select **"simple-microservice"**
 
-3. Click on 'See more' to see "Test Endpoint"
+3. Click on 'See more' to see **"Test Endpoint"**
 
    ![See More](media/02-seemore.png)
 
-4. Mouse over the URL labeled as "Test Endpoint" and click the clipboard icon that appears.  
+4. Mouse over the URL labeled as **"Test Endpoint"** and click the clipboard icon that appears.  
 
    ![Endpoint](media/microservice-endpoint.png)
     
