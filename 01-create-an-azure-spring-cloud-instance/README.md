@@ -16,7 +16,7 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
 ```bash
 az login # Sign into an azure account
 ```
-> **Note:** Once you run the command, you will be redirected to the default browser, and then enter the **AD username :**<inject key="AzureAdUserEmail"></inject> and **Password:** <inject key="AzureAdUserPassword"></inject>, close the tab when you see the successful login message and proceed with the next command.
+> **Note:** Once you run the command, you will be redirected to the default browser, and then enter the **AD username: **<inject key="AzureAdUserEmail"></inject> and **Password: ** <inject key="AzureAdUserPassword"></inject>, close the tab when you see the successful login message and proceed with the next command.
 
 ```bash
 az account show # See the currently signed-in account.
