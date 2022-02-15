@@ -20,6 +20,6 @@ There are actually three ways to access your application's logs: [Azure Storage]
   - Name : **write-to-log-analytics**
   - Fill in the rest of the values as shown below and click **Save**.
  
-    ![Send logs to the log analytics workspace](media/MJA-ex3-001.png)
+    ![Send logs to the log analytics workspace](media/diagonostic_setting.png)
 
 ---
