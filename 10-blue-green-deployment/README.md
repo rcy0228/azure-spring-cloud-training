@@ -52,9 +52,9 @@ cd ..
 
 3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-4. Click "Apps" in the "Settings" section of the navigation pane and select "weather-service".
+4. Click **Apps** in the **Settings** section of the navigation pane and select **weather-service**.
 
-5. Click "Deployments" under "Settings" and you should now see "green" deployment in **Staging** state.
+5. Click **Deployments** under *Settings* and you should now see **green** deployment in **Staging** state.
 
    ![Deployment Pane](media/02-deployment-pane1.png)
 
@@ -69,6 +69,6 @@ curl https://***.test.azuremicroservices.io/weather-service/green/weather/city?n
    > **{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"}**
 
 
-   > **Note**: we're not testing the green deployment through the `gateway` application. The purpose of a green deployment is to test changes to a microservice before routing production traffic to it. Therefore, if you access `weather-service` through the public Gateway URL, as you did in exercise 8, you will be routed to the original version of the service.
+   > **Note**: We're not testing the green deployment through the `gateway` application. The purpose of a green deployment is to test changes to a microservice before routing production traffic to it. Therefore, if you access `weather-service` through the public Gateway URL, as you did in exercise 8, you will be routed to the original version of the service.
 
 ---
