@@ -158,13 +158,13 @@ Configured by Spring Cloud Config Server
 az spring-cloud app logs --name spring-cloud-microservice -f
 ```
 
-_Please be aware it might take a couple of minutes for the logs to show up._
+> **Note**: Please be aware it might take a couple of minutes for the logs to show up.
 
 2. You should see the console output of `spring-cloud-microservice` scroll by on your terminal:
 
    ![Console output](media/updated-logs.png)
 
- >**Note** : If you do not see the application logs appear, press CTRL+C to stop the stream. The logs should be visible now, scroll up to view the logs.
+ >**Note**: If you do not see the application logs appear, press CTRL+C to stop the stream. The logs should be visible now, scroll up to view the logs.
 
 3. Press **CTRL+C** to stop following the output and return to the shell.
 
