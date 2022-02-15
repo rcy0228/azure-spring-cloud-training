@@ -113,13 +113,13 @@ cd ..
 
    ![Cloud Spring in rg](media/MJA-ex2-01.png)
 
-2. Click **"Apps"** in the **"Settings"** section of the navigation pane and select **"simple-microservice"**
+2. Click **Apps** in the **Settings** section of the navigation pane and select **simple-microservice**
 
-3. Click on 'See more' to see **"Test Endpoint"**
+3. Click on 'See more' to see **Test Endpoint**
 
    ![See More](media/02-seemore.png)
 
-4. Mouse over the URL labeled as **"Test Endpoint"** and click the clipboard icon that appears.  
+4. Mouse over the URL labeled as **Test Endpoint** and click the clipboard icon that appears.  
 
    ![Endpoint](media/microservice-endpoint.png)
     
