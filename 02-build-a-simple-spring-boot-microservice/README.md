@@ -78,7 +78,7 @@ This section shows how to create an app instance and then deploy your code to it
 
    ![Apps under cloud spring ](media/MJA-ex2-02.png)
 
-3. Click on **"Create App"** link at the top of the **Apps** page.
+3. Click on **+ Create App** link at the top of the **Apps** page.
 
    ![App creation ](media/MJA-ex2-03.png)
 
