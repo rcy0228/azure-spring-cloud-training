@@ -28,7 +28,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 4. Go to ```https://spring-training.azureedge.net/```, input your Spring Cloud Gateway's public URL (It should look like this ```https://azure-spring-cloud-lab-DID-gateway.azuremicroservices.io```), in the text field and click on "Go". You should see the following screen:
 
-   > **Note**: You can find the Spring Cloud Gateway's public URL in the *gateway* apps overview pane as **URL**
+   > **Note**: You can find the Spring Cloud Gateway's public URL in the **gateway** apps overview pane as **URL**
 
     ![VueJS front-end](media/01-vuejs-frontend.png)
 
@@ -40,7 +40,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 >💡 Tracing data can take a couple of minutes to be ingested by the system, so use this time to generate some load.
 
-3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select "Application Insights"
+3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select **Application Insights**
 
    ![App insights](media/application-insights.png)
 
@@ -64,9 +64,9 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 Now that distributed tracing is enabled, we can scale applications depending on our needs.
 
-1. Go to the overview page of your Azure Spring Cloud server and select "Apps" in the menu.
+1. Go to the overview page of your Azure Spring Cloud server and select **Apps** in the menu.
   
-2. Select one service and click on **Scale Out** under "Settings".  
+2. Select one service and click on **Scale Out** under **Settings**.  
 
    ![Application scaling](media/04-scale-out.png)
 
