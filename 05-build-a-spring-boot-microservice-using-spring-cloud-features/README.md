@@ -121,7 +121,7 @@ cd ..
 
    ![Cloud Spring in rg](media/spring-cloud.png)
 
-3. Click on the "Apps" link under "Settings" on the navigation sidebar.
+3. Click on the **Apps** link under **Settings** on the navigation sidebar.
 
    ![Cloud Spring in rg](media/webapp-01.png)
 
@@ -131,11 +131,11 @@ cd ..
 
 5. Select `spring-cloud-microservice` to have more information on the microservice.
 
-6. Click on 'See more' to see "Test Endpoint"
+6. Click on 'See more' to see **Test Endpoint**
 
-7. Copy the "Test Endpoint" that is provided.
+7. Copy the **Test Endpoint** that is provided.
 
-8. Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
+8. Append `hello/` to the URL.  Failure to do this will result in a **404 not found**.
 
    ![configured](media/config-web.png)
 
@@ -164,9 +164,9 @@ _Please be aware it might take a couple of minutes for the logs to show up._
 
    ![Console output](media/updated-logs.png)
 
- >Note : If you do not see the application logs appear, press CTRL+C to stop the stream. The logs should be visible now, scroll up to view the logs.
+ >**Note** : If you do not see the application logs appear, press CTRL+C to stop the stream. The logs should be visible now, scroll up to view the logs.
 
-3. Press CTRL+C to stop following the output and return to the shell.
+3. Press **CTRL+C** to stop following the output and return to the shell.
 
 ## Task 7 : Query application logs
 
