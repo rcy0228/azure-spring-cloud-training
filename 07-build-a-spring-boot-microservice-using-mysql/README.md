@@ -8,10 +8,12 @@ In this section, we'll build another data-driven microservice. This time, we wil
 
 1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Cloud instance:
 
+> **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 ```bash
 az spring-cloud app create -n weather-service -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+ 
 ## Task 2 : Configure the MySQL Server instance
 
 1. Navigate to Azure Database for MySQL instance named **sclabm-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
@@ -69,7 +71,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 3. Click on `weather-service`.
 
-4. Click on "Service Bindings" under "Settings" and then select "+ Create Service Binding".
+4. Click on **Service Bindings** under **Settings** and then select **+ Create Service Binding**.
 
    ![](media/weather-service-binding.png)
 
@@ -211,7 +213,7 @@ cd ..
 
 ## Task 8 : Test the project in the cloud
 
-1. Go to "Apps" in your Azure Spring Cloud instance.
+1. Go to **Apps** in your Azure Spring Cloud instance.
 
 2. Verify that `weather-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
