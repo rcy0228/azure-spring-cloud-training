@@ -97,10 +97,12 @@ kill %1
 
 1. As in exercise 2, we create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance:
 
+>**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 ```bash
 az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
 ```
- >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+ 
 
 2. You can now build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
 
