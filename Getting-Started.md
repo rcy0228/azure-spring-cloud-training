@@ -27,17 +27,13 @@
 
    ![azure portal.](media/azure_portal.png)
    
-1. When you click on Azure portal, edge browser welcome screen will come up, select **Get started**.
+1. When you click on Azure portal, edge browser welcome screen will come up, select **Start without your data**.
 
-   ![](media/task8.png "Get started")
+   ![](media/get_started.png "Get started")
    
-1. On next window, click on **Confirm**.
+1. On next window, click on **Confirm and start browsing**.
 
-   ![](./media/edge-confirm.png "Confirm")
-   
-1. Now, you can close the popup which is coming up.
-
-   ![](media/edge-continue.png "Confirm")
+   ![](./media/confirm.png "Confirm")
    
 1. Now, you will see two tabs in edge browser, close first tab named with **Microsoft Edge**.
    
