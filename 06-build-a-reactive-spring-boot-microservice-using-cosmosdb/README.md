@@ -12,7 +12,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
    ![Cosmos Db](media/cosmos-db-from-rg.png)
 
-2. Click on the "Data Explorer" menu item
+2. Click on the **Data Explorer** menu item
 
    ![Data explorer](media/data-explorer.png)
 
@@ -178,7 +178,7 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
 ## Task 7 : Deploy the application
 
-1. Navigate to Git Bash and now you can build your "city-service" project and send it to Azure Spring Cloud
+1. Navigate to Git Bash and now you can build your **city-service** project and send it to Azure Spring Cloud
 
 ```bash
 cd city-service
@@ -199,7 +199,7 @@ cd ..
 
 3. Select `city-service` to have more information on the microservice.
 
-4. Click on **see more** under overview blade, if the Test endpoint is not visible and copy the "Test Endpoint" that is provided.
+4. Click on **see more** under overview blade, if the Test endpoint is not visible and copy the **Test Endpoint** that is provided.
 
 5. Append `/cities` at the end. Now you can now use CURL to test the `/cities` endpoint, and it should give you the list of cities you created. For example, if you only created `Paris, France` and `London, UK` like it is shown in this guide, you should get:
 
