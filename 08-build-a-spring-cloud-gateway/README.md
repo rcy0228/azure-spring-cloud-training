@@ -49,11 +49,12 @@ spring:
 
 1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
 
+> **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 ```bash
 az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --is-public true
 ```
- >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
-
+ 
 ## Task 4 : Deploy the application
 
 1. You can now build your "gateway" project and send it to Azure Spring Cloud:
@@ -73,22 +74,22 @@ cd ..
 
    ![](media/webapp-01.png)
 
-2. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
+3. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
-3. Select `gateway` to have more information on the microservice.
+4. Select `gateway` to have more information on the microservice.
 
-4. Copy the public URL that is provided (there is a "Test Endpoint" like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
+5. Copy the public URL that is provided (there is a **Test Endpoint** like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
 
    ![gateway url](media/gateway-url.png)
 
-5. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
+6. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
 [The MICROSERVICE-ID must be in capital letters]
 
-6. Test the `city-service` microservice endpoint by doing: `curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
+7. Test the `city-service` microservice endpoint by doing: `curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
 
    ![city output](media/output-city.png)
 
-7. Test the `weather-service` microservice endpoint by doing: `curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'` (replacing XXXXXXXX by the name of your gateway)
+8. Test the `weather-service` microservice endpoint by doing: `curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'` (replacing XXXXXXXX by the name of your gateway)
 
    ![weather output](media/output-weather.png)
 
