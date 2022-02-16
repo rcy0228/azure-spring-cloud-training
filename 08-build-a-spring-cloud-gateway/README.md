@@ -57,7 +57,7 @@ az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cl
  
 ## Task 4 : Deploy the application
 
-1. You can now build your "gateway" project and send it to Azure Spring Cloud:
+1. Run the below command to build your "gateway" project and send it to Azure Spring Cloud:
 
 ```bash
 cd gateway
