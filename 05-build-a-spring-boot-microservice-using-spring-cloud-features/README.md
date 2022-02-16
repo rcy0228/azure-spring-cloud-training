@@ -69,26 +69,24 @@ public class HelloController {
 
 ## Task 3 : Test the project locally
 
-1. Before deploying the microservice to Azure Spring Cloud, let's run it locally.
+1. Run the below command in **Git Bash** before deploying the microservice to Azure Spring Cloud.
 
->💡 Do not be alarmed when you see exception stack traces:
-> ![Exception stack trace](media/01-exception-stack-trace.png)
->Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
-
-2. To run `simple-cloud-microservice` locally:
-
-```bash
-cd spring-cloud-microservice
-./mvnw spring-boot:run &
-cd ..
-```
+     ```bash
+        cd spring-cloud-microservice
+        ./mvnw spring-boot:run &
+        cd ..
+     ```
+     
+    >💡 Do not be alarmed when you see exception stack traces:
+    > ![Exception stack trace](media/01-exception-stack-trace.png)
+    >Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
 
 3. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
 
-```bash
-curl http://127.0.0.1:8080/hello
-```
-  ![curl output](media/local-curl.png)
+     ```bash
+        curl http://127.0.0.1:8080/hello
+     ```
+    ![curl output](media/local-curl.png)
 
 4. Kill the locally running microservice:
 
