@@ -16,14 +16,17 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 
 ## Task 1 : Create a simple Spring Cloud microservice
 
-1. Open Git bash from the start menu if not already open, and login by using the following command: 
+1. Open Git bash from the start menu if not already open., and login by using the following command: 
 
-```bash
-az login # Sign into an azure account
-az account show # See the currently signed-in account.
-```
+    ![Git Bash](media/git-bash.png)
+    
+2. Login to your Azure account by using the following command:
 
-  ![Git Bash](media/git-bash.png)
+
+    ```bash
+       az login # Sign into an azure account
+       az account show # See the currently signed-in account.
+    ```
 
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
@@ -35,11 +38,11 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-
 
 ## Task 2 : Add a new Spring MVC Controller
 
-1. Navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo`
+1. Now minimize the **Git Bash** window and navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo`in **File Explorer**
 
    ![Path](media/folder-path.png)
 
-2. Open with notepad, then remove and paste the content with the below code in a new file:
+2. Open a notepad, then paste the below code in a new file:
 
 ```java
 package com.example.demo;
