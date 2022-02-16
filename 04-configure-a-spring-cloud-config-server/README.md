@@ -22,7 +22,9 @@ A key feature of cloud-native applications is *externalized configuration* - the
      
       ![Spring Cloud config server](media/MJA-ex4-02.png)
    
-5. Click on "Apply" and wait for the operation to succeed
+5. Click on "Apply" and wait for the operation to succeed.
+
+     ![apply](media/apply1.png)
 
 ## Review
 
