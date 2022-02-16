@@ -96,23 +96,23 @@ kill %1
 
 ## Task 4 : Create and deploy the application on Azure Spring Cloud
 
-1. As in exercise 2, we create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance:
+1. As in exercise 2, you create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance by running the below command in **Git Bash**
 
->**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+    >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
-```bash
-az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
-```
+      ```bash
+         az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+      ```
  
 
-2. You can now build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
+2. Run the below command to build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
 
-```bash
-cd spring-cloud-microservice
-./mvnw clean package -DskipTests
-az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
-cd ..
-```
+    ```bash
+       cd spring-cloud-microservice
+       ./mvnw clean package -DskipTests
+       az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+       cd ..
+   ```
 
 ## Task 5 : Test the project in the cloud
 
