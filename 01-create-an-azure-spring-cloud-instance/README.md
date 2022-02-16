@@ -5,22 +5,23 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
 ---
 ### Task 1: Verify Azure Subscription
 
-1. Minimize the Azure portal and search for **git** in the Search Box.
-2. Select **Git Bash** and run the below commands.
-
->💡 Make sure you enter these commands and all others that follow in **Git Bash**. **Do not use WSL, CloudShell, or any other shell.**, Ensure your Azure CLI is logged into your Azure subscription.
-
+1. Minimize the Azure portal and search for **git** in the Search Box then select it.
 
    ![Git bash](media/git-bash.png)
+   
+2. In **Git Bash** run the below commands.
 
-```bash
-az login # Sign into an azure account
-```
-> **Note:** Once you run the command, you will be redirected to the default browser, and then enter the **AD username:** <inject key="AzureAdUserEmail"></inject> and **Password:** <inject key="AzureAdUserPassword"></inject>, close the tab when you see the successful login message and proceed with the next command.
+    >💡 Make sure you enter these commands and all others that follow in **Git Bash**. **Do not use WSL, CloudShell, or any other shell.**, Ensure your Azure CLI is logged into your Azure subscription.
 
-```bash
-az account show # See the currently signed-in account.
-```
+
+     ```bash
+        az login # Sign into an azure account
+     ```
+    > **Note:** Once you run the command, you will be redirected to the default browser, and then enter the **AD username:** <inject key="AzureAdUserEmail"></inject> and **Password:** <inject key="AzureAdUserPassword"></inject>, close the tab when you see the successful login message and proceed with the next command.
+
+    ```bash
+       az account show # See the currently signed-in account.
+    ```
 
 ### Task 2: Create an Azure Spring Cloud instance
 
