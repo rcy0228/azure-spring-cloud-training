@@ -6,11 +6,11 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 
 ## Task 1 : Create a Spring Cloud Gateway
 
-1. To create our gateway, we will invoke the Spring Initalizer service from the command line:
+1. Run the below command to create gateway, where you will invoke the Spring Initalizer service.
 
-```bash
-curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
-```
+    ```bash
+       curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+    ```
 2. Navigate to the path `C:\Users\demouser\gateway` to find the gateway folder 
 
    ![gateway](media/gateway.png)
@@ -57,7 +57,7 @@ az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cl
  
 ## Task 4 : Deploy the application
 
-1. You can now build your "gateway" project and send it to Azure Spring Cloud:
+1. Run the below command to build your "gateway" project and send it to Azure Spring Cloud:
 
 ```bash
 cd gateway

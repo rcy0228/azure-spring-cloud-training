@@ -16,14 +16,17 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 
 ## Task 1 : Create a simple Spring Cloud microservice
 
-1. Open Git bash from the start menu if not already open, and login by using the following command: 
+1. Open Git bash from the start menu if not already open., and login by using the following command: 
 
-```bash
-az login # Sign into an azure account
-az account show # See the currently signed-in account.
-```
+    ![Git Bash](media/git-bash.png)
+    
+2. Login to your Azure account by using the following command:
 
-  ![Git Bash](media/git-bash.png)
+
+    ```bash
+       az login # Sign into an azure account
+       az account show # See the currently signed-in account.
+    ```
 
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
@@ -35,11 +38,11 @@ curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-
 
 ## Task 2 : Add a new Spring MVC Controller
 
-1. Navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo`
+1. Now minimize the **Git Bash** window and navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo`in **File Explorer**
 
    ![Path](media/folder-path.png)
 
-2. Open with notepad, then remove and paste the content with the below code in a new file:
+2. Open a notepad, then paste the below code in a new file:
 
 ```java
 package com.example.demo;
@@ -66,26 +69,24 @@ public class HelloController {
 
 ## Task 3 : Test the project locally
 
-1. Before deploying the microservice to Azure Spring Cloud, let's run it locally.
+1. Run the below command in **Git Bash** before deploying the microservice to Azure Spring Cloud.
 
->💡 Do not be alarmed when you see exception stack traces:
-> ![Exception stack trace](media/01-exception-stack-trace.png)
->Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
-
-2. To run `simple-cloud-microservice` locally:
-
-```bash
-cd spring-cloud-microservice
-./mvnw spring-boot:run &
-cd ..
-```
+     ```bash
+        cd spring-cloud-microservice
+        ./mvnw spring-boot:run &
+        cd ..
+     ```
+     
+    >💡 Do not be alarmed when you see exception stack traces:
+    > ![Exception stack trace](media/01-exception-stack-trace.png)
+    >Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
 
 3. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
 
-```bash
-curl http://127.0.0.1:8080/hello
-```
-  ![curl output](media/local-curl.png)
+     ```bash
+        curl http://127.0.0.1:8080/hello
+     ```
+    ![curl output](media/local-curl.png)
 
 4. Kill the locally running microservice:
 
@@ -95,23 +96,23 @@ kill %1
 
 ## Task 4 : Create and deploy the application on Azure Spring Cloud
 
-1. As in exercise 2, we create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance:
+1. As in exercise 2, you create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance by running the below command in **Git Bash**
 
->**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+    >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
-```bash
-az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
-```
+      ```bash
+         az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+      ```
  
 
-2. You can now build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
+2. Run the below command to build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
 
-```bash
-cd spring-cloud-microservice
-./mvnw clean package -DskipTests
-az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
-cd ..
-```
+    ```bash
+       cd spring-cloud-microservice
+       ./mvnw clean package -DskipTests
+       az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+       cd ..
+   ```
 
 ## Task 5 : Test the project in the cloud
 
