@@ -30,9 +30,9 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
-```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
-```
+  ```bash
+  curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+  ```
 
 > This time, we add the `Eureka Discovery Client` and the `Config Client` Spring Boot starters, which will respectively automatically trigger the use of Spring Cloud Service Registry and the Spring Cloud Config Server.
 
@@ -90,9 +90,9 @@ public class HelloController {
 
 4. Kill the locally running microservice:
 
-  ```bash
-  kill %1
-  ```
+   ```bash
+   kill %1
+   ```
 
 ## Task 4 : Create and deploy the application on Azure Spring Cloud
 
@@ -108,10 +108,10 @@ public class HelloController {
 2. Run the below command to build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
 
     ```bash
-       cd spring-cloud-microservice
-       ./mvnw clean package -DskipTests
-       az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
-       cd ..
+    cd spring-cloud-microservice
+    ./mvnw clean package -DskipTests
+    az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    cd ..
    ```
 
 ## Task 5 : Test the project in the cloud
@@ -144,9 +144,9 @@ public class HelloController {
 
 10. As a result, requesting the `/hello` endpoint should return the message that we configured in the `application.yml` file, coming from the Spring Cloud Config Server:
 
-   ```bash
-   Configured by Spring Cloud Config Server
-   ```
+    ```bash
+    Configured by Spring Cloud Config Server
+    ```
 11. If successful, you should see the message: `Configured by Spring Cloud Config Server`.
 
     ![curl-configured](media/Curl-config-web.png)
@@ -155,9 +155,9 @@ public class HelloController {
 
 1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Cloud, you can also see its console output through Azure CLI:
 
-  ```bash
+   ```bash
    az spring-cloud app logs --name spring-cloud-microservice -f
-  ```
+   ```
 
 > **Note**: Please be aware it might take a couple of minutes for the logs to show up.
 
@@ -177,7 +177,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
 2. This workspace allows you to run queries on the aggregated logs. The most common query is to get the latest log from a specific application:
 
-__Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsforSpring` type.
+   __Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsforSpring` type.
 
 3. Here is how to get its 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
 
