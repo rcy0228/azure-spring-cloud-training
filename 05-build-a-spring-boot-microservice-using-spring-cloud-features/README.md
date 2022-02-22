@@ -23,10 +23,10 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 2. Login to your Azure account by using the following command:
 
 
-    ```bash
-       az login # Sign into an azure account
-       az account show # See the currently signed-in account.
-    ```
+ ```bash
+ az login # Sign into an azure account
+ az account show # See the currently signed-in account.
+ ```
 
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
@@ -72,9 +72,9 @@ public class HelloController {
 1. Run the below command in **Git Bash** before deploying the microservice to Azure Spring Cloud.
 
      ```bash
-        cd spring-cloud-microservice
-        ./mvnw spring-boot:run &
-        cd ..
+     cd spring-cloud-microservice
+     ./mvnw spring-boot:run &
+     cd ..
      ```
      
     >💡 Do not be alarmed when you see exception stack traces:
@@ -84,15 +84,15 @@ public class HelloController {
 3. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
 
      ```bash
-        curl http://127.0.0.1:8080/hello
+     curl http://127.0.0.1:8080/hello
      ```
     ![curl output](media/local-curl.png)
 
 4. Kill the locally running microservice:
 
-```bash
-kill %1
-```
+  ```bash
+  kill %1
+  ```
 
 ## Task 4 : Create and deploy the application on Azure Spring Cloud
 
@@ -101,7 +101,7 @@ kill %1
     >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
       ```bash
-         az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+      az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
       ```
  
 
@@ -144,9 +144,9 @@ kill %1
 
 10. As a result, requesting the `/hello` endpoint should return the message that we configured in the `application.yml` file, coming from the Spring Cloud Config Server:
 
-```bash
-Configured by Spring Cloud Config Server
-```
+   ```bash
+   Configured by Spring Cloud Config Server
+   ```
 11. If successful, you should see the message: `Configured by Spring Cloud Config Server`.
 
     ![curl-configured](media/Curl-config-web.png)
@@ -155,9 +155,9 @@ Configured by Spring Cloud Config Server
 
 1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Cloud, you can also see its console output through Azure CLI:
 
-```bash
-az spring-cloud app logs --name spring-cloud-microservice -f
-```
+  ```bash
+   az spring-cloud app logs --name spring-cloud-microservice -f
+  ```
 
 > **Note**: Please be aware it might take a couple of minutes for the logs to show up.
 
@@ -183,13 +183,13 @@ __Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsfo
 
 4. Close other pop-up windows within the Logs and insert the below text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click **Run**.
 
-```sql
-AppPlatformLogsforSpring
-| where AppName == "spring-cloud-microservice"
-| project TimeGenerated, Log
-| order by TimeGenerated desc
-| limit 50
-```
+  ```sql
+  AppPlatformLogsforSpring
+  | where AppName == "spring-cloud-microservice"
+  | project TimeGenerated, Log
+  | order by TimeGenerated desc
+  | limit 50
+  ```
 
   ![Query logs](media/03-logs-query.png)
 
