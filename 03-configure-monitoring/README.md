@@ -29,6 +29,6 @@ There are actually three ways to access your application's logs: [Azure Storage]
   - Under **Destination details**, check the box next to **Send to Log Analytics workspace** **(4)**
   - Click **Save** **(5)**.
  
-    ![Send logs to the log analytics workspace](media/diagsett.png)
+  ![Send logs to the log analytics workspace](media/diagsett.png)
 
 ---

@@ -13,14 +13,15 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
 
     >💡 Make sure you enter these commands and all others that follow in **Git Bash**. **Do not use WSL, CloudShell, or any other shell.**, Ensure your Azure CLI is logged into your Azure subscription.
 
-
-     ```bash
-        az login # Sign into an azure account
-     ```
+           
+           
+      ```bash
+      az login # Sign into an azure account
+      ```
     > **Note:** Once you run the command, you will be redirected to the default browser, and then enter the **AD username:** <inject key="AzureAdUserEmail"></inject> and **Password:** <inject key="AzureAdUserPassword"></inject>, close the tab when you see the successful login message and proceed with the next command.
 
     ```bash
-       az account show # See the currently signed-in account.
+    az account show # See the currently signed-in account.
     ```
 
 ### Task 2: Create an Azure Spring Cloud instance
@@ -36,19 +37,19 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
     >🛑 Be sure to substitute the DID with **<inject key="DeploymentID" enableCopy="True"/>** in `AZ_RESOURCE_GROUP` and `AZ_SPRING_CLOUD_NAME`. Run the below mentioned command in **Git Bash**.
 
     ```bash
-       AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
-       AZ_SPRING_CLOUD_NAME=azure-spring-cloud-lab-DID
-       az config set extension.use_dynamic_install=yes_without_prompt
+    AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
+    AZ_SPRING_CLOUD_NAME=azure-spring-cloud-lab-DID
+    az config set extension.use_dynamic_install=yes_without_prompt
     ```
 
 5. With these variables set, we can now create the Azure Spring Cloud instance by running the below commands. To enable the Java in-process monitoring agent, we add the `enable-java-agent` flag.
 
     ```bash
-        az spring-cloud create \
-        -g "$AZ_RESOURCE_GROUP" \
-        -n "$AZ_SPRING_CLOUD_NAME" \
-        --enable-java-agent \
-        --sku standard
+    az spring-cloud create \
+    -g "$AZ_RESOURCE_GROUP" \
+    -n "$AZ_SPRING_CLOUD_NAME" \
+    --enable-java-agent \
+    --sku standard
     ```
   <!--- > Note : Please note that the above command will throw an **error: InvalidArgument** as shown below :
          
