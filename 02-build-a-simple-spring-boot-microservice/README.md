@@ -87,7 +87,7 @@ This section shows how to create an app instance and then deploy your code to it
       ![Create application](media/appname.png)
 
 
-   >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 4, skip this task and continue with Task 5.
+   >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 4, skip this Note and continue with Step 5.
 
    >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
 
