@@ -28,7 +28,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
  az account show # See the currently signed-in account.
  ```
 
-2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+3. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
   ```bash
   curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
