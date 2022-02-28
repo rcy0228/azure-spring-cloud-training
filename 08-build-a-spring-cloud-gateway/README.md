@@ -85,11 +85,11 @@ cd ..
 6. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
 [The MICROSERVICE-ID must be in capital letters]
 
-7. Test the `city-service` microservice endpoint by doing: `curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
+7. Test the `city-service` microservice endpoint by by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
 
    ![city output](media/output-city.png)
 
-8. Test the `weather-service` microservice endpoint by doing: `curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'` (replacing XXXXXXXX by the name of your gateway)
+8. Test the `weather-service` microservice endpoint by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France` (replacing XXXXXXXX by the name of your gateway)
 
    ![weather output](media/output-weather.png)
 
