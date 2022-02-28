@@ -173,15 +173,25 @@ public class HelloController {
 
 Streaming the console output as we just did may be helpful in understanding the immediate state of a microservice. However, sometimes it's necessary to look further into the past or to look for something specific. This is easily done with Log Analytics. In exercise 3, we enabled log aggregation in Azure Log Analytics. Such settings changes can take 1-2 minutes to apply, so by now, you should be able to query Azure Log Analytics.
 
-1. Open the Azure Portal and navigate to your Azure Spring Cloud instance. Click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
+1. In the Azure Portal, search for **Azure Spring Cloud** in the search box and select it. 
 
-2. This workspace allows you to run queries on the aggregated logs. The most common query is to get the latest log from a specific application:
+   ![Azure Spring Cloud](media/azure-springcloud-search.png)
+
+2. Now click on **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
+
+   ![Resource ASC](media/select-azure-springcloud.png)
+
+3. In the **Azure Spring Cloud** resource pane, click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
+
+   ![ASC Logs](media/logs-azurre-springcloud.png)
+
+4. This workspace allows you to run queries on the aggregated logs. The most common query is to get the latest log from a specific application:
 
    __Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsforSpring` type.
 
-3. Here is how to get its 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
+5. Here is how to get its 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
 
-4. Close other pop-up windows within the Logs and insert the below text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click **Run**.
+6. Close other pop-up windows within the Logs and insert the below text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click **Run**.
 
   ```sql
   AppPlatformLogsforSpring
