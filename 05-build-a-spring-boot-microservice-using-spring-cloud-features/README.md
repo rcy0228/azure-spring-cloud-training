@@ -25,7 +25,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 
  ```bash
  az login # Sign into an azure account
- az account show # See the currently signed-in account.
+ az account show # See the currently signed-in account
  ```
 
 3. To create our microservice, we will invoke the Spring Initalizer service from the command line:
