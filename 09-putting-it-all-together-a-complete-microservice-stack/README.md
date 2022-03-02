@@ -44,9 +44,13 @@ Now that we have made two microservices publicly available, we will incorporate 
 
    ![App insights](media/application-insights.png)
 
-4. In the "Application Insights" menu in Azure Portal, you should now have access to a full application map, as well as a search engine that allows you to find performance bottlenecks.
+4. On the "Application Insights" pane, select **Application Insights** again. 
 
-   ![Distributed tracing](media/application-map.png)
+   ![Application insights](media/app-insights-asc.png)
+
+5. You are navigated to the **Application Insights** resource **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**. Then click on **Application map** under **Investigate** to access the full application map, as well as a search engine that allows you to find performance bottlenecks.
+
+   ![Distributed tracing](media/app-map-asc.png)
 
 > 💡 If your application map looks different from the one above, select the hierarchical view from the layout switch in the top-right corner:
 >
@@ -54,11 +58,15 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 ## Task 3 : Review the performance metrics
 
-1. Open a more holistic view at the `Performance` blade where you can see response times and request counts for operations exposed by your applications.
+1. In the same page, click on **Performanace** under **Investigate** to view the operational performance of the resource.
+
+   ![Performance App Insights](media/performance-app-insights.png)
+
+2. On `Performance` blade you can see response times and request counts for operations exposed by your applications.
 
    ![Trace detail](media/03-trace-detail.png)
 
-2. For even more detailed data, navigate to the `Dependencies` tab in the `Performance` blade where you can see all your dependencies and their response times and request counts.
+3. For even more detailed data, navigate to the `Dependencies` tab in the `Performance` blade where you can see all your dependencies and their response times and request counts.
 
 ## Task 4 : Scale applications
 
