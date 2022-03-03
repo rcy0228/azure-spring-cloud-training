@@ -16,7 +16,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 
 ## Task 1 : Create a simple Spring Cloud microservice
 
-1.  Navigate to opened Git Bash pane. If not open Git bash from the start menu and login by using the following command: 
+1.  Navigate to opened Git Bash pane. If Git Bash is not opened, then open Git bash from the start menu and login by using the following command: 
 
     ![Git Bash](media/git-bash.png)
     
