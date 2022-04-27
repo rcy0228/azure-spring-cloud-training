@@ -11,21 +11,11 @@
 
    ![](media/split-window1.png "LAB Guide")
  
-## Set default browser
-
-1. In the VM, search for "Default Apps". 
-
-   ![](media/default-apps.png)
-   
-1. Scroll down to the web browser option at the bottom and select "Microsoft Edge".
-
-   ![](media/default-web-browser.png)
- 
 ## Login to Azure Portal
 
 1. In the VM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![azure portal.](media/azure_portal.png)
+   ![azure portal.](media/azure_portalv1.png)
    
 1. When you click on Azure portal, edge browser welcome screen will come up, select **Start without your data**.
 
