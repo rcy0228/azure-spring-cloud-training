@@ -224,9 +224,11 @@ cd ..
 
 ## Task 6 : Test the project in the cloud
 
-1. You can use the gateway created in exercise 8 to access the all-cities-weather-service directly.
+1. You can use the gateway created in exercise 8 to access the all-cities-weather-service directly. Open below url
 
 >💡__Note:__ the trailing slash (`/`) is not optional.
+
+   * gateway URL:  https://azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io
 
 ```bash
 https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
