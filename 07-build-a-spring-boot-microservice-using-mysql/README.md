@@ -83,10 +83,9 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
   - Database name : **azure-spring-cloud-training**
   - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Password : **Password.1!!**
+  - Click on **Create** to create the database binding
 
-6. Click on `Create` to create the database binding
-
-   ![MySQL Service Binding](media/01-create-service-binding-mysql.png)
+   ![MySQL Service Binding](media/servicebinding.png)
 
 ## Task 4 : Create a Spring Boot microservice
 
