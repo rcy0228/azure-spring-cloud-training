@@ -85,7 +85,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
   - Password : **Password.1!!**
   - Click on **Create** to create the database binding
 
-   ![MySQL Service Binding](media/servicebinding.png)
+    ![MySQL Service Binding](../media/servicebinding.png)
 
 ## Task 4 : Create a Spring Boot microservice
 
