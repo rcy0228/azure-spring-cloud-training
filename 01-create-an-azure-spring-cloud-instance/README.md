@@ -5,7 +5,7 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
 ---
 ### Task 1: Verify Azure Subscription
 
-1. Minimize the Azure portal and search for **git** in the Search Box then select it.
+1. Minimize the Azure portal and search for **git** in the Search Box then select **Git Bash**.
 
    ![Git bash](media/git-bash.png)
    
