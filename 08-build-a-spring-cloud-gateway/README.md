@@ -72,7 +72,7 @@ cd ..
 
 2. Click on **Apps** under **Settings**.
 
-   ![](media/webapp-01.png)
+   ![](media/mja3.png)
 
 3. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 

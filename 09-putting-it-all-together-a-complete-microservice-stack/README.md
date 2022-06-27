@@ -73,6 +73,8 @@ Now that we have made two microservices publicly available, we will incorporate 
 Now that distributed tracing is enabled, we can scale applications depending on our needs.
 
 1. Go to the overview page of your Azure Spring Cloud server and select **Apps** in the menu.
+
+   ![Trace detail](media/mja3.png)
   
 2. Select one service and click on **Scale Out** under **Settings**.  
 
