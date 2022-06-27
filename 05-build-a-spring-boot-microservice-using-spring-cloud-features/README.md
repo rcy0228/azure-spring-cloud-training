@@ -81,14 +81,16 @@ public class HelloController {
     > ![Exception stack trace](media/01-exception-stack-trace.png)
     >Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
 
-3. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
+1. While the microservice is being deployed, control will be checking for the available port to host endpoint. You can press enter to make the process run in backgorund and proceed to next steps to access the endpoint.
+
+1. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
 
      ```bash
      curl http://127.0.0.1:8080/hello
      ```
     ![curl output](media/local-curl.png)
 
-4. Kill the locally running microservice:
+1. Kill the locally running microservice:
 
    ```bash
    kill %1
