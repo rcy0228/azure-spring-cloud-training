@@ -67,7 +67,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 2. Click on Apps under **Settings**.
 
-   ![](media/mja-1.png)
+   ![](media/mja1.png)
 
 3. Click on `weather-service`.
 
