@@ -53,6 +53,8 @@ public class HelloController {
     cd ..
    ```
 
+   > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is beacuse control will be checking for the available port to host the endpoint.
+   
 2. Run the `curl` command for requesting the `/hello` endpoint where it should return the "Hello from Azure Spring Cloud" as the message.
 
     ```bash
