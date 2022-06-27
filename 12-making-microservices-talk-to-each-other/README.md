@@ -203,7 +203,7 @@ feign.client.config.default.readTimeout=160000000
 
 ## Task 4 : Create the application on Azure Spring Cloud
 
-1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Cloud instance:
+1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Cloud instance by running the below mentioned command in git:
 
 ```bash
 az spring-cloud app create -n all-cities-weather-service
@@ -211,7 +211,7 @@ az spring-cloud app create -n all-cities-weather-service
 
 ## Task 5 : Deploy the application
 
-1. You can now build your "all-cities-weather-service" project and send it to Azure Spring Cloud:
+1. You can now build your "all-cities-weather-service" project and send it to Azure Spring Cloud by running the below mentioned commands in git:
 
 >💡__Note:__ Open a new instance of Git Bash and login again using `az login` before running the following commands.
 
@@ -228,7 +228,7 @@ cd ..
 
 >💡__Note:__ the trailing slash (`/`) is not optional.
 
-   * gateway URL:  https://azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io
+   * gateway URL:  **https://azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io**
 
 ```bash
 https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
