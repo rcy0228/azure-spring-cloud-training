@@ -82,7 +82,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
   - Resource name : **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
   - Database name : **azure-spring-cloud-training**
   - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
-  - Password : **Password.1!!**
+  - Password : **<inject key="MySQL Server Password" />**
   - Click on **Create** to create the database binding
 
     ![MySQL Service Binding](../media/servicebinding.png)
