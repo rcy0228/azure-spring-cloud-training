@@ -1,5 +1,21 @@
 # Release Notes
 
+### 27 June 2022
+- Major update in the Lab Guide.
+- In Exercise-1 Task-2, updated the instruction by adding inject keys.
+- In Exercise-2 Task-3 and Exercise-5 Task-3, added a Note for creating project locally.
+- Updated the screenshot for selecting Apps in Azure Spring Apps for Exercise-6 Task-6, Exercise-7 Task-3, Exercise-8 Task-5, and Exercise-9 Task-4.
+- In Exercise-12 Task 4 and 5, updated instructions for creating and deploying the application on Azure Spring Cloud.
+
+### 09 May 2022
+- Minor update in Lab Guide.
+ - In [Exercise-7 Task-3](https://github.com/CloudLabsAI-Azure/azure-spring-cloud-training/tree/master/07-build-a-spring-boot-microservice-using-mysql), updated instruction and screenshot for creating service binding.
+
+### 28 April 2022
+- Minor update in the Lab Guide.
+ - In [Exercise-11 Task-2](https://github.com/CloudLabsAI-Azure/azure-spring-cloud-training/tree/master/11-configure-ci-cd), added inject keys.
+ - In [Exercise-12 Task-6](https://github.com/CloudLabsAI-Azure/azure-spring-cloud-training/tree/master/12-making-microservices-talk-to-each-other), updated the instruction and added gateway URL in Note.
+
 ### 17 March 2022
 - Minor update in the Lab Guide.
  - In [Exercise-11 Task-1](https://github.com/CloudLabsAI-Azure/azure-spring-cloud-training/tree/master/11-configure-ci-cd), instructions have been updated with the new GitHub UI updates for adding New Secret.
