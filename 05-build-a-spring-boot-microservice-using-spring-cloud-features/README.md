@@ -31,7 +31,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 3. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
   ```bash
-  curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+  curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
   ```
 
 > This time, we add the `Eureka Discovery Client` and the `Config Client` Spring Boot starters, which will respectively automatically trigger the use of Spring Apps Service Registry and the Spring Apps Config Server.
@@ -119,13 +119,13 @@ public class HelloController {
 
 1. Navigate back to Azure Portal.
 
-2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Apps instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+2. From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![Cloud Spring in rg](media/spring-cloud.png)
+   ![Cloud Spring in rg](../media/azurespringapps.png)
 
 3. Click on the **Apps** link under **Settings** on the navigation sidebar.
 
-   ![Cloud Spring in rg](media/webapp-01.png)
+   ![Cloud Spring in rg](../media/selectapps.png)
 
 4. Verify that `spring-cloud-microservice` has a `Registration status` of `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
 
