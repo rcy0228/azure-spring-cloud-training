@@ -1,20 +1,20 @@
-# Exercise 5 - Build a Spring Boot microservice using Spring Cloud features
+# Exercise 5 - Build a Spring Boot microservice using Spring Apps features
 
-In this exercise, we'll build a similar service to the one from exercise 2, but with the addition of two important Spring Cloud features. First, we'll add this service to Spring Cloud registry for discovery by other services. Second, we'll use Spring Cloud Config to inject a setting from a Git repository into the application and display it on the screen.
+In this exercise, we'll build a similar service to the one from exercise 2, but with the addition of two important Spring Apps features. First, we'll add this service to Spring Apps registry for discovery by other services. Second, we'll use Spring Cloud Config to inject a setting from a Git repository into the application and display it on the screen.
 
 ---
 
 ## What we are going to build
 
-1. We are going to build again a simple Spring Boot microservice like in exercise 2, but this time it will use two major Spring Cloud features:
+1. We are going to build again a simple Spring Boot microservice like in exercise 2, but this time it will use two major Spring Apps features:
 
-2. It will be connected to a Spring Cloud Service Registry so it can discover other microservices, as well as being discovered itself!
+2. It will be connected to a Spring Apps Service Registry so it can discover other microservices, as well as being discovered itself!
 
-3. It will get its configuration from the Spring Cloud Config server that we configured in exercise 4.
+3. It will get its configuration from the Spring Apps Config server that we configured in exercise 4.
 
-4. For both features, it will just be a matter of adding an official Spring Boot starter, and Azure Spring Cloud will take care of everything else.
+4. For both features, it will just be a matter of adding an official Spring Boot starter, and Azure Spring Apps will take care of everything else.
 
-## Task 1 : Create a simple Spring Cloud microservice
+## Task 1 : Create a simple Spring Apps microservice
 
 1.  Open Git bash from the start menu if not already opened.
 
@@ -34,7 +34,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
   curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
   ```
 
-> This time, we add the `Eureka Discovery Client` and the `Config Client` Spring Boot starters, which will respectively automatically trigger the use of Spring Cloud Service Registry and the Spring Cloud Config Server.
+> This time, we add the `Eureka Discovery Client` and the `Config Client` Spring Boot starters, which will respectively automatically trigger the use of Spring Apps Service Registry and the Spring Apps Config Server.
 
 ## Task 2 : Add a new Spring MVC Controller
 
@@ -97,9 +97,9 @@ public class HelloController {
    kill %1
    ```
 
-## Task 4 : Create and deploy the application on Azure Spring Cloud
+## Task 4 : Create and deploy the application on Azure Spring Apps
 
-1. As in exercise 2, you create a specific `spring-cloud-microservice` application in your Azure Spring Cloud instance by running the below command in **Git Bash**
+1. As in exercise 2, you create a specific `spring-cloud-microservice` application in your Azure Spring Apps instance by running the below command in **Git Bash**
 
     >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
@@ -108,7 +108,7 @@ public class HelloController {
       ```
  
 
-2. Run the below command to build your "spring-cloud-microservice" project and send it to Azure Spring Cloud:
+2. Run the below command to build your "spring-cloud-microservice" project and send it to Azure Spring Apps:
 
     ```bash
     cd spring-cloud-microservice
@@ -121,7 +121,7 @@ public class HelloController {
 
 1. Navigate back to Azure Portal.
 
-2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+2. From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. Select the Azure Spring Apps instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![Cloud Spring in rg](media/spring-cloud.png)
 
@@ -156,7 +156,7 @@ public class HelloController {
 
 ## Task 6 : Stream application logs
 
-1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Cloud, you can also see its console output through Azure CLI:
+1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Apps, you can also see its console output through Azure CLI:
 
    ```bash
    az spring-cloud app logs --name spring-cloud-microservice -f
@@ -176,15 +176,15 @@ public class HelloController {
 
 Streaming the console output as we just did may be helpful in understanding the immediate state of a microservice. However, sometimes it's necessary to look further into the past or to look for something specific. This is easily done with Log Analytics. In exercise 3, we enabled log aggregation in Azure Log Analytics. Such settings changes can take 1-2 minutes to apply, so by now, you should be able to query Azure Log Analytics.
 
-1. In the Azure Portal, search for **Azure Spring Cloud** in the search box and select it. 
+1. In the Azure Portal, search for **Azure Spring Apps** in the search box and select it. 
 
-   ![Azure Spring Cloud](media/azure-springcloud-search.png)
+   ![Azure SpringApps](media/azure-springcloud-search.png)
 
 2. Now click on **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
 
    ![Resource ASC](media/select-azure-springcloud.png)
 
-3. In the **Azure Spring Cloud** resource pane, click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
+3. In the **Azure Spring Apps** resource pane, click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
 
    ![ASC Logs](media/logs-azurre-springcloud.png)
 
@@ -206,10 +206,10 @@ Streaming the console output as we just did may be helpful in understanding the 
 
   ![Query logs](media/03-logs-query.png)
 
->💡 It can also take 1-2 minutes for the console output of an Azure Spring Cloud microservice to be read into Log Analytics.
+>💡 It can also take 1-2 minutes for the console output of an Azure Spring Apps microservice to be read into Log Analytics.
 
 ## Conclusion
 
-Congratulations, you have deployed a complete Spring Cloud microservice, using Spring Cloud Service Registry and Spring Cloud Config Server!
+Congratulations, you have deployed a complete Spring Apps microservice, using Spring Apps Service Registry and Spring Apps Config Server!
 
 ---
