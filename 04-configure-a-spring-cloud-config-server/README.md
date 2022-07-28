@@ -6,7 +6,7 @@ A key feature of cloud-native applications is *externalized configuration* - the
 
 ## Task 1 : Configure Azure Spring Apps to access the Git repository
 
-1. Navigate to [Azure Portal](https://portal.azure.com). From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps Instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate to [Azure Portal](https://portal.azure.com). From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps Instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Go to the **Overview** page of Azure Spring Apps server and select `Config server` in the menu under `Settings`
 
