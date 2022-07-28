@@ -116,19 +116,16 @@ This section shows how to create an app instance and then deploy your code to it
 
 ## Task 5 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![Cloud Spring in rg](media/MJA-ex2-01.png)
+    ![Cloud Spring in rg](../media/azurespringapps.png)
 
 2. Click **Apps** in the **Settings** section of the navigation pane and select **simple-microservice**
 
-3. Click on 'See more' to see **Test Endpoint**
 
-   ![See More](media/seemore.png)
+3. From the **Overview** tab, mouse over the URL labeled as **Test Endpoint** and click the clipboard icon that appears.  
 
-4. Mouse over the URL labeled as **Test Endpoint** and click the clipboard icon that appears.  
-
-   ![Endpoint](media/microservice-endpoint.png)
+   ![Endpoint](../media/copytestendpoint.png)
     
 <!--- 6. This will give you something like:
 
