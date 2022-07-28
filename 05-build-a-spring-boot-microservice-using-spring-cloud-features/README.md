@@ -102,7 +102,7 @@ public class HelloController {
     >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
       ```bash
-      az spring-cloud app create -n spring-cloud-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+      az spring app create -n spring-cloud-microservice -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
       ```
  
 
