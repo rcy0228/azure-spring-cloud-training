@@ -34,17 +34,17 @@ In this section, we'll create an Azure Spring Apps instance using Azure CLI. Whi
    * Make sure to substitute the DID with **<inject key="DeploymentID" enableCopy="True"/>** in `AZ_RESOURCE_GROUP` and `AZ_SPRING_CLOUD_NAME`. Run the below mentioned command in **Git Bash**.
 
     ```bash
-    AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
-    AZ_SPRING_CLOUD_NAME=azure-spring-cloud-lab-DID
+    AZ_RESOURCE_GROUP=spring-apps-workshop-DID
+    AZ_SPRING_APPS_NAME=azure-spring-apps-lab-DID
     az config set extension.use_dynamic_install=yes_without_prompt
     ```
 
 5. With these variables set, we can now create the Azure Spring Apps instance by running the below commands. To enable the Java in-process monitoring agent, we add the `enable-java-agent` flag.
 
     ```bash
-    az spring-cloud create \
+    az spring-apps create \
     -g "$AZ_RESOURCE_GROUP" \
-    -n "$AZ_SPRING_CLOUD_NAME" \
+    -n "$AZ_SPRING_APPS_NAME" \
     --enable-java-agent \
     --sku standard
     ```
