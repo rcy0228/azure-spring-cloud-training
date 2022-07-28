@@ -53,7 +53,7 @@ In this section, we'll create an Azure Spring Apps instance using Azure CLI. Whi
 
    ```
    az configure --defaults group=$AZ_RESOURCE_GROUP
-   az configure --defaults spring-cloud=$AZ_SPRING_CLOUD_NAME
+   az configure --defaults spring-cloud=$AZ_SPRING_APPS_NAME
    ```
 
 ---
