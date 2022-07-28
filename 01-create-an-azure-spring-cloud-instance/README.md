@@ -1,6 +1,6 @@
-# Exercise 1 - Create an Azure Spring Cloud instance
+# Exercise 1 - Create an Azure Spring Apps instance
 
-In this section, we'll create an Azure Spring Cloud instance using Azure CLI. While there are other ways of creating Azure resources, Azure CLI is the quickest and simplest method.
+In this section, we'll create an Azure Spring Apps instance using Azure CLI. While there are other ways of creating Azure resources, Azure CLI is the quickest and simplest method.
 
 ---
 ### Task 1: Verify Azure Subscription
@@ -21,13 +21,13 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
     az account show # See the currently signed-in account.
     ```
 
-### Task 2: Create an Azure Spring Cloud instance
+### Task 2: Create an Azure Spring Apps instance
 
-1. In this section, we will create our Azure Spring Cloud instance using Azure CLI.
+1. In this section, we will create our Azure Spring Apps instance using Azure CLI.
 
-2. First, you will need to come up with a name for your Azure Spring Cloud instance.
+2. First, you will need to come up with a name for your Azure Spring Apps instance.
 
-3. The name must be unique among all Azure Spring Cloud instances across all of Azure. Consider using **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />** as a name for your Azure Spring Cloud instance.
+3. The name must be unique among all Azure Spring Apps instances across all of Azure. Consider using **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />** as a name for your Azure Spring Apps instance.
 
 4. To limit typing, set the variable `AZ_RESOURCE_GROUP` to the name of the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. And set the variable `AZ_SPRING_CLOUD_NAME` to **azure-spring-cloud-lab-<inject key="Deployment ID" enableCopy="false"/>**
 
@@ -39,7 +39,7 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
     az config set extension.use_dynamic_install=yes_without_prompt
     ```
 
-5. With these variables set, we can now create the Azure Spring Cloud instance by running the below commands. To enable the Java in-process monitoring agent, we add the `enable-java-agent` flag.
+5. With these variables set, we can now create the Azure Spring Apps instance by running the below commands. To enable the Java in-process monitoring agent, we add the `enable-java-agent` flag.
 
     ```bash
     az spring-cloud create \
@@ -49,7 +49,7 @@ In this section, we'll create an Azure Spring Cloud instance using Azure CLI. Wh
     --sku standard
     ```
 
-6. For the remainder of this workshop, we will be running Azure CLI commands referencing the same resource group and Azure Spring Cloud instance. So let's set them as defaults, so we don't have to specify them again.
+6. For the remainder of this workshop, we will be running Azure CLI commands referencing the same resource group and Azure Spring Apps instance. So let's set them as defaults, so we don't have to specify them again.
 
    ```
    az configure --defaults group=$AZ_RESOURCE_GROUP
