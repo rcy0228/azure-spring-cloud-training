@@ -42,7 +42,7 @@ In this section, we'll create an Azure Spring Apps instance using Azure CLI. Whi
 5. With these variables set, we can now create the Azure Spring Apps instance by running the below commands. To enable the Java in-process monitoring agent, we add the `enable-java-agent` flag.
 
     ```bash
-    az spring-apps create \
+    az spring create \
     -g "$AZ_RESOURCE_GROUP" \
     -n "$AZ_SPRING_APPS_NAME" \
     --enable-java-agent \
