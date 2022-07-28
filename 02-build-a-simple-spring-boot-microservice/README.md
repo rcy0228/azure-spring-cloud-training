@@ -72,21 +72,27 @@ public class HelloController {
 
 This section shows how to create an app instance and then deploy your code to it.
 
-1. In order to create the app instance graphically, you can navigate back to Azure portal and look for your Azure Spring Cloud instance in your resource group.
+1. In order to create the app instance graphically, you can navigate back to Azure portal and look for your Azure Spring Apps instance in your resource group.
 
-   ![Cloud Spring in rg](media/MJA-ex2-01.png)
+   ![Cloud Spring in rg](../media/azurespringapps.png)
 
 2. Click on the **Apps** under **Settings** on the navigation sidebar.
 
-   ![Apps under cloud spring ](media/MJA-ex2-02.png)
+   ![Apps under cloud spring ](../media/selectapps.png)
 
 3. Click on **+ Create App** link at the top of the **Apps** page.
 
-   ![App creation ](media/createapp.png)
+   ![App creation ](../media/createnewapp.png)
 
-4. Create a new application named **simple-microservice (1)** and leave the remaining settings to default then click on **Create (2)**
+4. On **Create App** page, follow the below details:
 
-      ![Create application](media/appname.png)
+    - **App Name** : Enter **simple-microservice (1)**
+    - **Deployment Type** : Choose **Artifacts(Java/.Net core) (2)** from the drop-down
+    - **Runtime Platform** : Choose **Java 17 (3)** from the drop-down
+    - Click on **Create (4)**
+    
+
+      ![Create application](../media/createapp1.png)
 
 
    >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 4, skip this Note and continue with Step 5.
