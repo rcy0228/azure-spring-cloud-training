@@ -100,7 +100,7 @@ This section shows how to create an app instance and then deploy your code to it
    >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
 
    ```bash
-   az spring app create -n simple-microservice -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+   az spring app create -n simple-microservice -s azure-spring-cloud-lab-DID --runtime-version Java_17
    ```
 
 5. Now you can build your **simple-microservice** project and deploy it to Azure Spring Apps by running the below command.
