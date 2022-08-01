@@ -179,7 +179,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
 1. In the Azure Portal, search for **Azure Spring Apps** in the search box and select it. 
 
-   ![Azure SpringApps](media/azure-springcloud-search.png)
+   ![Azure SpringApps](../media/azurespringappsserch.png)
 
 2. Now click on **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
 
