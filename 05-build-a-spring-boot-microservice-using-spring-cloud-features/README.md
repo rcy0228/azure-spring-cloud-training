@@ -183,7 +183,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
 2. Now click on **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
 
-   ![Resource ASC](media/select-azure-springcloud.png)
+   ![Resource ASC](../media/selecspringapp.png)
 
 3. In the **Azure Spring Apps** resource pane, click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
 
