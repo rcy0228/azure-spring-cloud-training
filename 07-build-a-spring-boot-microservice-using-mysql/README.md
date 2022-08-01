@@ -64,7 +64,7 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 
 As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Cloud microservices.
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on Apps under **Settings**.
 
