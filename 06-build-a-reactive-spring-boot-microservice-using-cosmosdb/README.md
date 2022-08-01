@@ -10,7 +10,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![Cosmos Db](media/cosmos-db-from-rg.png)
+   ![Cosmos Db](../media/sclabc.png)
 
 2. Click on the **Data Explorer** menu item
 
@@ -43,7 +43,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\city-service` to find the city service folder 
 
@@ -61,7 +61,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-cosmos</artifactId>
-            <version>4.5.0</version>
+            <version>4.30.1</version>
         </dependency>
 ```
 
@@ -148,7 +148,7 @@ public class CityController {
 >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring-cloud app create -n city-service -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+az spring app create -n city-service -s azure-spring-apps-lab-DID --runtime-version Java_17
 ```
 
 
