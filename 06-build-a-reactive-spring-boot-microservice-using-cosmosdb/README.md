@@ -14,7 +14,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 2. Click on the **Data Explorer** menu item
 
-   ![Data explorer](media/data-explorer.png)
+   ![Data explorer](../media/dataexplorer.png)
 
 3. Expand the container named `azure-spring-cloud-cosmosdb`.
 
