@@ -160,7 +160,7 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
 2. Click on `Apps` under `settings`.
 
-   ![](media/mja3.png)
+   ![](../media/selectapps.png)
 
 3. Select the `city-service` application
 
