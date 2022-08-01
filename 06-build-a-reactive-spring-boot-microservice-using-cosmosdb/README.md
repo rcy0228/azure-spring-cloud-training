@@ -186,13 +186,15 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 ```bash
 cd city-service
 ./mvnw clean package -DskipTests
-az spring-cloud app deploy -n city-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n city-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
+ >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 ## Task 8 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select `Apps` under `Settings`.
 
