@@ -102,7 +102,7 @@ public class HelloController {
     >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
       ```bash
-      az spring app create -n spring-cloud-microservice -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+      az spring app create -n spring-cloud-microservice -s azure-spring-apps-lab-DID --runtime-version Java_17
       ```
  
 
@@ -111,9 +111,12 @@ public class HelloController {
     ```bash
     cd spring-cloud-microservice
     ./mvnw clean package -DskipTests
-    az spring-cloud app deploy -n spring-cloud-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    az spring-cloud app deploy -n spring-cloud-microservice -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
     cd ..
    ```
+   
+   >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 
 ## Task 5 : Test the project in the cloud
 
