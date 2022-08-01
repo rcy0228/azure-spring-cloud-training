@@ -160,7 +160,7 @@ public class HelloController {
 1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Apps, you can also see its console output through Azure CLI:
 
    ```bash
-   az spring-cloud app logs --name spring-cloud-microservice -f
+   az spring app logs --name spring-cloud-microservice -f
    ```
 
 > **Note**: Please be aware it might take a couple of minutes for the logs to show up.
