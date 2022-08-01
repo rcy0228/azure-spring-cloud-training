@@ -187,7 +187,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
 3. In the **Azure Spring Apps** resource pane, click on **Logs** under **Monitoring**. This is a shortcut to the Log Analytics workspace that was created earlier. If a tutorial appears, feel free to skip it for now.
 
-   ![ASC Logs](media/logs-azurre-springcloud.png)
+   ![ASC Logs](../media/selectlogs.png)
 
 4. This workspace allows you to run queries on the aggregated logs. The most common query is to get the latest log from a specific application:
 
