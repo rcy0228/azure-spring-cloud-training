@@ -7,7 +7,7 @@ In this section, we'll create an Azure Spring Apps instance using Azure CLI. Whi
 
 1. Minimize the Azure portal and search for **git** in the Search Box then select **Git Bash**.
 
-   ![Git bash](media/git-bash.png)
+   ![Git bash](../media/git-bash.png)
    
 2. In **Git Bash** run the below commands. Make sure you enter these commands and all others that follow in **Git Bash**. **Do not use WSL, CloudShell, or any other shell.**, Ensure your Azure CLI is logged into your Azure subscription.           
            
