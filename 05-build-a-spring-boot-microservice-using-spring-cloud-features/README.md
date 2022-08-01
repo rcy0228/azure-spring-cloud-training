@@ -111,7 +111,7 @@ public class HelloController {
     ```bash
     cd spring-cloud-microservice
     ./mvnw clean package -DskipTests
-    az spring-cloud app deploy -n spring-cloud-microservice -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    az spring app deploy -n spring-cloud-microservice -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
     cd ..
    ```
    
