@@ -8,7 +8,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 ## Task 1 : Prepare the Cosmos DB database
 
-1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![Cosmos Db](../media/sclabc.png)
 
