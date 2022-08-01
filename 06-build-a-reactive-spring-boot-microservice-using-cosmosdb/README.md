@@ -156,7 +156,7 @@ az spring app create -n city-service -s azure-spring-apps-lab-DID --runtime-vers
 
 Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on `Apps` under `settings`.
 
