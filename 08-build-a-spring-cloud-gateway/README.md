@@ -9,7 +9,7 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 1. Run the below command to create gateway, where you will invoke the Spring Initalizer service.
 
     ```bash
-    curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+    curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
     ```
 2. Navigate to the path `C:\Users\demouser\gateway` to find the gateway folder 
 
@@ -23,8 +23,6 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 
 ```yaml
 spring:
-  main:
-    allow-bean-definition-overriding: true
   cloud:
     gateway:
       discovery:
@@ -36,6 +34,7 @@ spring:
             allowedOrigins: "*"
             allowedMethods:
               - GET
+
 
 ```
 
@@ -52,7 +51,7 @@ spring:
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --is-public true
+az spring app create -n gateway -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
 ```
  
 ## Task 4 : Deploy the application
@@ -62,7 +61,7 @@ az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cl
 ```bash
 cd gateway
 ./mvnw clean package -DskipTests
-az spring-cloud app deploy -n gateway --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n gateway --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
