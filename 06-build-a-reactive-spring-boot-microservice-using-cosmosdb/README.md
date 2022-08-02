@@ -141,9 +141,9 @@ public class CityController {
 }
 ```
 
-## Task 5 : Create the application on Azure Spring Cloud
+## Task 5 : Create the application on Azure Spring Apps
 
-1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance by running the below command in Git Bash.
+1. As in exercise 2, create a specific `city-service` application in your Azure Spring Apps instance by running the below command in Git Bash.
 
 >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
@@ -154,9 +154,9 @@ az spring app create -n city-service -s azure-spring-apps-lab-DID --runtime-vers
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
-Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
+Azure Spring Apps can automatically bind the Cosmos DB database we created to our microservice.
 
-1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on `Apps` under `settings`.
 
@@ -181,7 +181,7 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
 ## Task 7 : Deploy the application
 
-1. Navigate to Git Bash and now you can build your **city-service** project and send it to Azure Spring Cloud
+1. Navigate to Git Bash and now you can build your **city-service** project and send it to Azure Spring Apps
 
 ```bash
 cd city-service
@@ -194,7 +194,7 @@ cd ..
 
 ## Task 8 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select `Apps` under `Settings`.
 
