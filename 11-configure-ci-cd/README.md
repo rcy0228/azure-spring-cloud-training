@@ -37,7 +37,7 @@ git push origin master
 cd ..
 ```
 
-4. You now need to allow access from your GitHub workflow to your Azure Spring Cloud instance. Open up a terminal and type the following command.
+4. You now need to allow access from your GitHub workflow to your Azure Spring Apps instance. Open up a terminal and type the following command.
 
 > Please ensure to replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, it can also be obtained from the **Environmnet Details** tab.
 
