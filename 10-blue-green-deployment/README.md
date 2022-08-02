@@ -44,9 +44,11 @@ public class WeatherController {
 ```bash
 cd weather-service
 ./mvnw clean package -DskipTests
-az spring app deployment create --name green --app weather-service --runtime-version Java_17 --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deployment create --name green --app weather-service --runtime-version Java_17 -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
+
+> Note: Replace the DID with **<inject key="DeploymentID" enableCopy="false"/>** value, you can also find it from Environment details page.
 
 2. Once the application is deployed, if you go to `https://spring-training.azureedge.net/` you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
 
