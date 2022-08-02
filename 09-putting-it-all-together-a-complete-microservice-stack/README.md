@@ -26,7 +26,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
       ```https://spring-training.azureedge.net/```
 
-4. Go to ```https://spring-training.azureedge.net/```, input your Spring Cloud Gateway's public URL (It should look like this ```https://azure-spring-cloud-lab-DID-gateway.azuremicroservices.io```), in the text field and click on "Go". You should see the following screen:
+4. Go to ```https://spring-training.azureedge.net/```, input your Spring Cloud Gateway's public URL (It should look like this ```https://azure-spring-apps-lab-DID-gateway.azuremicroservices.io```), in the text field and click on "Go". You should see the following screen:
 
    > **Note**: You can find the Spring Cloud Gateway's public URL in the **gateway** apps overview pane as **URL**
 
