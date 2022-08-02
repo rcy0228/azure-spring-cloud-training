@@ -172,12 +172,12 @@ Azure Spring Apps can automatically bind the Cosmos DB database we created to ou
 
   - Give your binding a name, for example `cosmosdb-city`
   - Select the available `Subscription` in the drop down list
-  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-cloud-cosmosdb` for the Database name we created and keep the default `sql` API type
+  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-apps-cosmosdb` for the Database name we created and keep the default `sql` API type
   - Select **sclabc-<inject key="DeploymentID" enableCopy="false"/>** as Resource name.
   - In the drop-down list, select the primary master key
   - Click on `Create` to create the database binding
 
-   ![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
+   ![Bind Cosmos DB database](../media/createservicebinding.png)
 
 ## Task 7 : Deploy the application
 
