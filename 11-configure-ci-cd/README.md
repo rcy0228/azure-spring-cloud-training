@@ -1,6 +1,6 @@
 # Exercise 11 - Configure CI/CD
 
-In this section, we will use GitHub Actions to implement continuous deployment to Azure Spring Cloud. For simplicity, we will not implement blue-green deployments in this section, but don't hesitate to come back and add blue-green deployments after completing the remainder of the tutorial.
+In this section, we will use GitHub Actions to implement continuous deployment to Azure Spring Apps. For simplicity, we will not implement blue-green deployments in this section, but don't hesitate to come back and add blue-green deployments after completing the remainder of the tutorial.
 
 ---
 
