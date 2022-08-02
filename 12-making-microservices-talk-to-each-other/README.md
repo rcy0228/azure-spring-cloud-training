@@ -17,7 +17,7 @@ Note how the code we create in this section is endpoint-agnostic. All we specify
 1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=cloud-feign,web,cloud-eureka,cloud-config-client -d baseDir=all-cities-weather-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=cloud-feign,web,cloud-eureka,cloud-config-client -d baseDir=all-cities-weather-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\all-cities-weather-service` to find the all-cities-weather-service
 
@@ -102,6 +102,7 @@ public interface CityServiceClient{
     List<List<City>> getAllCities();
 }
 
+
 ```
 
 4. Create a similar OpenFeign client interface for the weather service, named `WeatherServiceClient.java`.
@@ -109,21 +110,18 @@ public interface CityServiceClient{
 ```java
 package com.example.demo;
 
-import com.example.demo.Weather;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
 @FeignClient("weather-service")
-@RequestMapping("/weather")
-public interface WeatherServiceClient{
+public interface WeatherServiceClient {
 
-    @GetMapping("/city")
+    @GetMapping("/weather/city")
     Weather getWeatherForCity(@RequestParam("name") String cityName);
 }
+
 
 ```
 
@@ -201,26 +199,30 @@ feign.client.config.default.connectTimeout=160000000
 feign.client.config.default.readTimeout=160000000
 ```
 
-## Task 4 : Create the application on Azure Spring Cloud
+## Task 4 : Create the application on Azure Spring Apps
 
 1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Cloud instance by running the below mentioned command in git:
 
 ```bash
-az spring-cloud app create -n all-cities-weather-service
+az spring app create -n all-cities-weather-service -s azure-spring-apps-lab-DID --runtime-version Java_17
 ```
+
+> Note: Replace the DID with value **<inject key="DeploymentID" enableCopy="false" />**, you can also find it from Environment details page and run the below given command in Git Bash
 
 ## Task 5 : Deploy the application
 
-1. You can now build your "all-cities-weather-service" project and send it to Azure Spring Cloud by running the below mentioned commands in git:
+1. You can now build your "all-cities-weather-service" project and send it to Azure Spring Apps by running the below mentioned commands in git:
 
 >💡__Note:__ Open a new instance of Git Bash and login again using `az login` before running the following commands.
 
 ```bash
 cd all-cities-weather-service
 ./mvnw clean package -DskipTests
-az spring-cloud app deploy -n all-cities-weather-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n all-cities-weather-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
+
+> Note: Replace the DID with value **<inject key="DeploymentID" enableCopy="false" />**, you can also find it from Environment details page and run the below given command in Git Bash
 
 ## Task 6 : Test the project in the cloud
 
