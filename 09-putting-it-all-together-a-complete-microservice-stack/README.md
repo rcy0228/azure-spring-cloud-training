@@ -40,9 +40,9 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 >💡 Tracing data can take a couple of minutes to be ingested by the system, so use this time to generate some load.
 
-3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select **Application Insights**
+3. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select **Application Insights**
 
-   ![App insights](media/application-insights.png)
+   ![App insights](../media/applicationinsights.png)
 
 4. On the "Application Insights" pane, select **Application Insights** again. 
 
