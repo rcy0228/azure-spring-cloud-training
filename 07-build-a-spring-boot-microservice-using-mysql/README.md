@@ -4,9 +4,9 @@ In this section, we'll build another data-driven microservice. This time, we wil
 
 ---
 
-## Task 1 : Create the application on Azure Spring Cloud
+## Task 1 : Create the application on Azure Spring Apps
 
-1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Cloud instance:
+1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Apps instance:
 
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
@@ -23,7 +23,7 @@ az spring app create -n weather-service -s azure-spring-apps-lab-DID --runtime-v
 2. Before we can use it however, we will need to perform several tasks:
 
     - Create a MySQL firewall rule to allow connections from our local environment.
-    - Create a MySQL firewall rule to allow connections from Azure Services. This will enable connections from Azure Spring Cloud.
+    - Create a MySQL firewall rule to allow connections from Azure Services. This will enable connections from Azure Spring Apps.
     - Create a MySQL database.
  
 3. Run the following commands in **Git Bash**. Make sure you are logged in to your Azure account. If not log in using `az login`.
@@ -62,9 +62,9 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 ```
 ## Task 3 : Bind the MySQL database to the application
 
-As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Cloud microservices.
+As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Apps microservices.
 
-1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on Apps under **Settings**.
 
@@ -90,7 +90,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 ## Task 4 : Create a Spring Boot microservice
 
-Now that we've provisioned the Azure Spring Cloud instance and configured the service binding, let's get the code for `weather-service` ready.
+Now that we've provisioned the Azure Spring Apps instance and configured the service binding, let's get the code for `weather-service` ready.
 
 1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
@@ -202,7 +202,7 @@ INSERT INTO `azure-spring-cloud-training`.`weather` (`city`, `description`, `ico
 
 ## Task 7 : Deploy the application
 
-1. Navigate back to Gitbash and run the below commands to now build your "weather-service" project and send it to Azure Spring Cloud.
+1. Navigate back to Gitbash and run the below commands to now build your "weather-service" project and send it to Azure Spring Apps.
 
 ```bash
 cd weather-service
@@ -215,7 +215,7 @@ cd ..
 
 ## Task 8 : Test the project in the cloud
 
-1. Go to **Apps** in your Azure Spring Cloud instance.
+1. Go to **Apps** in your Azure Spring Apps instance.
 
 2. Verify that `weather-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
