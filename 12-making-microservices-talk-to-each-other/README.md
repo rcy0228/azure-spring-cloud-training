@@ -201,7 +201,7 @@ feign.client.config.default.readTimeout=160000000
 
 ## Task 4 : Create the application on Azure Spring Apps
 
-1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Cloud instance by running the below mentioned command in git:
+1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Apps instance by running the below mentioned command in git:
 
 ```bash
 az spring app create -n all-cities-weather-service -s azure-spring-apps-lab-DID --runtime-version Java_17
@@ -239,8 +239,8 @@ https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
 2. You should get the JSON output with the weather for all the cities:
 
 ```json
-[{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"},
-{"city":"London, UK","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"}]
+[{"city":"Paris, France","description":"It's always sunny on Azure Spring Apps","icon":"weather-sunny"},
+{"city":"London, UK","description":"It's always sunny on Azure Spring Apps","icon":"weather-sunny"}]
 ```
    ![output](media/all-cities-weather-service-output.png)
 
