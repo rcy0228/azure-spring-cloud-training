@@ -66,6 +66,12 @@ public class HelloController {
 3. Save the file next to `DemoApplication.java` in the `C:\Users\demouser\spring-cloud-microservice\src\main\java\com\example\demo` as `HelloController.java` by changing the **save as type** to all files and then **save** as shown below.
 
    ![HelloController](media/hello-controller-java.png)
+   
+4. Navigate to the path `C:\Users\demouser\spring-cloud-microservice\src\main\resources\application.properties` and add the following line then save the file.
+
+```java
+spring.config.import=optional:configserver:
+```
 
 ## Task 3 : Test the project locally
 
