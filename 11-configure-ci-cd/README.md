@@ -42,7 +42,7 @@ cd ..
 > Please ensure to replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, it can also be obtained from the **Environmnet Details** tab.
 
 ```
-AZ_RESOURCE_GROUP=spring-cloud-workshop-DID
+AZ_RESOURCE_GROUP=spring-apps-workshop-DID
 ```
 
 ```bash
@@ -70,7 +70,7 @@ az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOUR
 >🛑 You must substitute the name of your Azure Spring Cloud instance for `<AZ_SPRING_CLOUD_NAME>` as **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />** and the name of the resource group for `<AZ_RESOURCE_GROUP>` as **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false" />** in the YAML below.
 
 ```yaml
-name: Build and deploy to Azure Spring Cloud
+name: Build and deploy to Azure Spring Apps
 
 on: [push]
 
@@ -79,20 +79,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - name: Set up Java
+      uses: actions/setup-java@v2
       with:
-        java-version: 1.8
+        distribution: 'temurin'
+        java-version: 17
+        check-latest: false
+        cache: 'maven'
     - name: Build with Maven
       run: mvn package -DskipTests
-    - name: Login to Azure Spring Cloud
+    - name: Login to Azure Spring Apps
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Install Azure Spring Cloud extension
-      run: az extension add -y --name spring-cloud
-    - name: Deploy to Azure Spring Cloud
-      run: az spring-cloud app deploy --resource-group <AZ_RESOURCE_GROUP> --service <AZ_SPRING_CLOUD_NAME> --name weather-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    - name: Get Subscription ID
+      run: |
+        echo "SUBSCRIPTION_ID=$(az account show --query id --output tsv --only-show-errors)" >> $GITHUB_ENV
+      shell: bash
+    - name: Deploy to Azure Spring Apps
+      uses: azure/spring-cloud-deploy@v1
+      with:
+        action: deploy
+        azure-subscription: ${{ env.SUBSCRIPTION_ID }}
+        service-name: <AZ_SPRING_APPS_NAME>
+        app-name: weather-service
+        use-staging-deployment: false
+        package: target/demo-0.0.1-SNAPSHOT.jar
+
 ```
 
 3. This workflow does the following:
