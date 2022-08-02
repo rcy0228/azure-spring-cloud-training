@@ -29,7 +29,7 @@ public class WeatherController {
     @GetMapping("/city")
     public @ResponseBody Weather getWeatherForCity(@RequestParam("name") String cityName) {
         return weatherRepository.findById(cityName).map(weather -> {
-            weather.setDescription("It's always sunny on Azure Spring Cloud");
+            weather.setDescription("It's always sunny on Azure Spring Apps");
             weather.setIcon("weather-sunny");
             return weather;
         }).get();
@@ -44,7 +44,7 @@ public class WeatherController {
 ```bash
 cd weather-service
 ./mvnw clean package -DskipTests
-az spring-cloud app deployment create --name green --app weather-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deployment create --name green --app weather-service --runtime-version Java_17 --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
