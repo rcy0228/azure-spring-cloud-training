@@ -75,7 +75,7 @@ spring.config.import=optional:configserver:
 
 ## Task 3 : Test the project locally
 
-1. Run the below command in **Git Bash** before deploying the microservice to Azure Spring Cloud.
+1. Run the below command in **Git Bash** before deploying the microservice to Azure Spring Apps.
 
      ```bash
      cd spring-cloud-microservice
