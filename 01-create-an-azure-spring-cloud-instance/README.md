@@ -27,9 +27,9 @@ In this section, we'll create an Azure Spring Apps instance using Azure CLI. Whi
 
 2. First, you will need to come up with a name for your Azure Spring Apps instance.
 
-3. The name must be unique among all Azure Spring Apps instances across all of Azure. Consider using **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />** as a name for your Azure Spring Apps instance.
+3. The name must be unique among all Azure Spring Apps instances across all of Azure. Consider using **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false" />** as a name for your Azure Spring Apps instance.
 
-4. To limit typing, set the variable `AZ_RESOURCE_GROUP` to the name of the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**. And set the variable `AZ_SPRING_CLOUD_NAME` to **azure-spring-cloud-lab-<inject key="Deployment ID" enableCopy="false"/>**
+4. To limit typing, set the variable `AZ_RESOURCE_GROUP` to the name of the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**. And set the variable `AZ_SPRING_CLOUD_NAME` to **azure-spring-apps-lab-<inject key="Deployment ID" enableCopy="false"/>**
 
    * Make sure to substitute the DID with **<inject key="DeploymentID" enableCopy="True"/>** in `AZ_RESOURCE_GROUP` and `AZ_SPRING_CLOUD_NAME`. Run the below mentioned command in **Git Bash**.
 
