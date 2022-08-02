@@ -150,7 +150,7 @@ spring.config.import=optional:configserver:
 
    ![configured](media/config-web.png)
 
-9. You can now use CURL again to test the `/hello` endpoint, this time it is served by Azure Spring Cloud and configured using the Spring Config Server from exercise 4.
+9. You can now use CURL again to test the `/hello` endpoint, this time it is served by Azure Spring Apps and configured using the Spring Config Server from exercise 4.
 
 10. As a result, requesting the `/hello` endpoint should return the message that we configured in the `application.yml` file, coming from the Spring Cloud Config Server:
 
