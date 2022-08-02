@@ -58,7 +58,7 @@ cd ..
 
 5. Click **Deployments** under *Settings* and you should now see **green** deployment in **Staging** state.
 
-   ![Deployment Pane](media/02-deployment-pane1.png)
+   ![Deployment Pane](../media/staging.png)
 
 4. You can test the `green` deployment by invoking the same URL as in exercise 7, but replacing the deployment name `default` with `green`:
 
