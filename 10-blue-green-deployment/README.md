@@ -50,7 +50,7 @@ cd ..
 
 2. Once the application is deployed, if you go to `https://spring-training.azureedge.net/` you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
 
-3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+3. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 4. Click **Apps** in the **Settings** section of the navigation pane and select **weather-service**.
 
