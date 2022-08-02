@@ -18,11 +18,11 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 - We've already built a VueJS application.
 
-- This front-end could be hosted in Azure Spring Cloud, using the same domain name (this won't be the case in this guide, and that's why we enabled CORS in our gateway earlier).
+- This front-end could be hosted in Azure Spring Apps, using the same domain name (this won't be the case in this guide, and that's why we enabled CORS in our gateway earlier).
   
 - If you are familiar with NodeJS and Vue CLI, you can run this application locally by typing `npm install && vue ui`.
 
-3. In order to simplify this part, which is not relevant to understanding Spring Cloud, we have already built a running front-end:
+3. In order to simplify this part, which is not relevant to understanding Spring Apps, we have already built a running front-end:
 
       ```https://spring-training.azureedge.net/```
 
@@ -34,13 +34,13 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 ## Task 2 : Review the distributed tracing to better understand the architecture
 
-1. We have already enabled distributed tracing on our Azure Spring Cloud instance in exercise 1 by adding the `--enable-java-agent` flag to the create command.
+1. We have already enabled distributed tracing on our Azure Spring Apps instance in exercise 1 by adding the `--enable-java-agent` flag to the create command.
 
 2. Now, you can use the VueJS application on ```https://spring-training.azureedge.net/``` to generate some traffic on the microservices stack.
 
 >💡 Tracing data can take a couple of minutes to be ingested by the system, so use this time to generate some load.
 
-3. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Cloud instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select **Application Insights**
+3. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**, select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>** and under monitoring select **Application Insights**
 
    ![App insights](../media/applicationinsights.png)
 
@@ -72,7 +72,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 Now that distributed tracing is enabled, we can scale applications depending on our needs.
 
-1. Go to the overview page of your Azure Spring Cloud server and select **Apps** in the menu.
+1. Go to the overview page of your Azure Spring Apps server and select **Apps** in the menu.
 
    ![Trace detail](../media/selectapps.png)
   
