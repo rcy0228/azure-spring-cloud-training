@@ -60,7 +60,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 1. In the same page, click on **Performanace** under **Investigate** to view the operational performance of the resource.
 
-   ![Performance App Insights](media/performance-app-insights.png)
+   ![Performance App Insights](../media/performance.png)
 
 2. On `Performance` blade you can see response times and request counts for operations exposed by your applications.
 
