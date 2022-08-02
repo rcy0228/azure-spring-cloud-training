@@ -46,7 +46,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 4. On the "Application Insights" pane, select **Application Insights** again. 
 
-   ![Application insights](media/app-insights-asc.png)
+   ![Application insights](../media/applicationinsights1.png)
 
 5. You are navigated to the **Application Insights** resource **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**. Then click on **Application map** under **Investigate** to access the full application map, as well as a search engine that allows you to find performance bottlenecks.
 
