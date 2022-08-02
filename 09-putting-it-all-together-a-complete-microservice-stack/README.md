@@ -50,7 +50,7 @@ Now that we have made two microservices publicly available, we will incorporate 
 
 5. You are navigated to the **Application Insights** resource **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**. Then click on **Application map** under **Investigate** to access the full application map, as well as a search engine that allows you to find performance bottlenecks.
 
-   ![Distributed tracing](media/app-map-asc.png)
+   ![Distributed tracing](../media/applicationmap.png)
 
 > 💡 If your application map looks different from the one above, select the hierarchical view from the layout switch in the top-right corner:
 >
