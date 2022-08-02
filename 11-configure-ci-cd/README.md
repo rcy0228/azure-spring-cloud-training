@@ -63,7 +63,7 @@ az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOUR
 
 ## Task 2 : Create a GitHub Action
 
-1. Inside the `weather-service` directory, create a new directory called `.github/workflows` and add a file called `azure-spring-cloud.yml` in it. This file is a GitHub workflow and will use the secret we just configured above to deploy the application to your Azure Spring Cloud instance.
+1. Inside the `weather-service` directory, create a new directory called `.github/workflows` and add a file called `azure-spring-cloud.yml` in it. This file is a GitHub workflow and will use the secret we just configured above to deploy the application to your Azure Spring Apps instance.
 
 2. In that file, copy/paste the following content, performing the indicated substitutions:
 
@@ -114,11 +114,11 @@ jobs:
 
 - It compiles and packages the application using Maven
 
-- It authenticates to Azure Spring Cloud using the credentials we just configured
+- It authenticates to Azure Spring Apps using the credentials we just configured
 
-- It adds the Azure Spring Cloud extensions to the Azure CLI (this step should disappear when the service is in final release)
+- It adds the Azure Spring Apps extensions to the Azure CLI (this step should disappear when the service is in final release)
 
-- It deploys the application to your Azure Spring Cloud instance
+- It deploys the application to your Azure Spring Apps instance
 
 This workflow is configured to be triggered whenever code is pushed to the repository.
 There are many other [events that trigger GitHub actions](https://help.github.com/en/articles/events-that-trigger-workflows). You could, for example, deploy each time a new tag is created on the project.
@@ -127,12 +127,12 @@ There are many other [events that trigger GitHub actions](https://help.github.co
 
 1. You can now commit and push the `azure-spring-cloud.yml` file we just created.
 
-2. Going to the `Actions` tab of your  GitHub project, you should see that your project is automatically built and deployed to your Azure Spring Cloud instance:
+2. Going to the `Actions` tab of your  GitHub project, you should see that your project is automatically built and deployed to your Azure Spring Apps instance:
 
    ![GitHub workflow](media/01-github-workflow.png)
 
 
-> **NOTE!** If the Build fails, delete the exisiting `azure-spring-cloud.yml` from `.github/workflows` and create it again, make sure to substitute the name of your Azure Spring Cloud instance and resource group. 
+> **NOTE!** If the Build fails, delete the exisiting `azure-spring-cloud.yml` from `.github/workflows` and create it again, make sure to substitute the name of your Azure Spring Apps instance and resource group. 
 
 Congratulations! Each time you `git push` your code, your microservice is now automatically deployed to production.
 
