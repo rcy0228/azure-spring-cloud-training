@@ -10,7 +10,7 @@
 -------------------------------
 
 ### 05 June 2022
-- Minor update in lab Guide.
+- Minor update in Lab Guide.
 - In Exercise-7 Task-3, updated the Password parameter for creating service binding in Azure Spring Apps with auto-generated password using inject keys.
 
 ---------------------------------
