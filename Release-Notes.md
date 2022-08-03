@@ -1,5 +1,14 @@
 # Release Notes
 
+### 03 August 2022
+
+  - Major update in the Lab Guide.
+  - Updated the JDK version from 1.8 to 17 in the pre-requisites.
+  - As the resource **Azure spring cloud** has been renamed to **Azure Spring Apps**, updated the instructions and screenshots in the lab guide accordingly.
+  - Updated the Git Bash commands for creating the Azure Spring Apps according to new releases.
+
+-------------------------------
+
 ### 05 June 2022
 - Minor update in lab Guide.
 - In Exercise-7 Task-3, updated the Password parameter for creating service binding in Azure Spring Apps with auto-generated password using inject keys.
