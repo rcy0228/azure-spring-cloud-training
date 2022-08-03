@@ -9,7 +9,7 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 1. Run the below command to create gateway, where you will invoke the Spring Initalizer service.
 
     ```bash
-    curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+    curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
     ```
 2. Navigate to the path `C:\Users\demouser\gateway` to find the gateway folder 
 
@@ -23,8 +23,6 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 
 ```yaml
 spring:
-  main:
-    allow-bean-definition-overriding: true
   cloud:
     gateway:
       discovery:
@@ -37,38 +35,39 @@ spring:
             allowedMethods:
               - GET
 
+
 ```
 
   - The `spring.main.allow-bean-definition-overriding=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Discovery Server bean configured in the Azure Spring Cloud Client library.
  
   - The `spring.cloud.gateway.discovery.locator.enabled=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Service Registry to discover the available microservices.
   
-  - The `spring.cloud.gateway.globalcors.corsConfiguration` part is to allow CORS requests to our gateway. This will be helpful in the next guide, when we will add a front-end that is not hosted on Azure Spring Cloud.
+  - The `spring.cloud.gateway.globalcors.corsConfiguration` part is to allow CORS requests to our gateway. This will be helpful in the next guide, when we will add a front-end that is not hosted on Azure Spring Apps.
 
-## Task 3 : Create the application on Azure Spring Cloud
+## Task 3 : Create the application on Azure Spring Apps
 
-1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
+1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Apps instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
 
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring-cloud app create -n gateway -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --is-public true
+az spring app create -n gateway -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
 ```
  
 ## Task 4 : Deploy the application
 
-1. Run the below command to build your "gateway" project and send it to Azure Spring Cloud:
+1. Run the below command to build your "gateway" project and send it to Azure Spring Apps:
 
 ```bash
 cd gateway
 ./mvnw clean package -DskipTests
-az spring-cloud app deploy -n gateway --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n gateway --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
 ## Task 5 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on **Apps** under **Settings**.
 
@@ -85,7 +84,7 @@ cd ..
 6. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
 [The MICROSERVICE-ID must be in capital letters]
 
-7. Test the `city-service` microservice endpoint by by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
+7. Test the `city-service` microservice endpoint by by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Apps instance)
 
    ![city output](media/output-city.png)
 

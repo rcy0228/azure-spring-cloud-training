@@ -1,6 +1,6 @@
 # Exercise 2 - Build a simple Spring Boot microservice
 
-In this section, we'll build a simple Spring boot microservice and deploy it to Azure Spring Cloud. This will give us a starting point for adding Spring Cloud technologies in later sections.
+In this section, we'll build a simple Spring boot microservice and deploy it to Azure Spring Apps. This will give us a starting point for adding Spring Apps technologies in later sections.
 
 ## Task 1 : Create a simple Spring Boot microservice
 
@@ -9,7 +9,7 @@ In this section, we'll build a simple Spring boot microservice and deploy it to 
 1. In an __empty__ directory in git bash execute the curl command line mentioned below:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 
 > **Info :** We force the Spring Boot version to be 2.3.8.
@@ -33,7 +33,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello from Azure Spring Cloud\n";
+        return "Hello from Azure Spring Apps\n";
     }
 }
 ```
@@ -55,7 +55,7 @@ public class HelloController {
 
    > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is beacuse control will be checking for the available port to host the endpoint.
    
-2. Run the `curl` command for requesting the `/hello` endpoint where it should return the "Hello from Azure Spring Cloud" as the message.
+2. Run the `curl` command for requesting the `/hello` endpoint where it should return the "Hello from Azure Spring Apps" as the message.
 
     ```bash
     curl http://127.0.0.1:8080/hello
@@ -68,25 +68,31 @@ public class HelloController {
      kill %1
      ```
 
-## Task 4 : Create and deploy the application on Azure Spring Cloud
+## Task 4 : Create and deploy the application on Azure Spring Apps
 
 This section shows how to create an app instance and then deploy your code to it.
 
-1. In order to create the app instance graphically, you can navigate back to Azure portal and look for your Azure Spring Cloud instance in your resource group.
+1. In order to create the app instance graphically, you can navigate back to Azure portal and look for your Azure Spring Apps instance in your resource group.
 
-   ![Cloud Spring in rg](media/MJA-ex2-01.png)
+   ![Cloud Spring in rg](../media/azurespringapps.png)
 
 2. Click on the **Apps** under **Settings** on the navigation sidebar.
 
-   ![Apps under cloud spring ](media/MJA-ex2-02.png)
+   ![Apps under cloud spring ](../media/selectapps.png)
 
 3. Click on **+ Create App** link at the top of the **Apps** page.
 
-   ![App creation ](media/createapp.png)
+   ![App creation ](../media/createnewapp.png)
 
-4. Create a new application named **simple-microservice (1)** and leave the remaining settings to default then click on **Create (2)**
+4. On **Create App** page, follow the below details:
 
-      ![Create application](media/appname.png)
+    - **App Name** : Enter **simple-microservice (1)**
+    - **Deployment Type** : Choose **Artifacts(Java/.Net core) (2)** from the drop-down
+    - **Runtime Platform** : Choose **Java 17 (3)** from the drop-down
+    - Click on **Create (4)**
+    
+
+      ![Create application](../media/createapp1.png)
 
 
    >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 4, skip this Note and continue with Step 5.
@@ -94,15 +100,17 @@ This section shows how to create an app instance and then deploy your code to it
    >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
 
    ```bash
-   az spring-cloud app create -n simple-microservice -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+   az spring app create -n simple-microservice -s azure-spring-apps-lab-DID --runtime-version Java_17
    ```
 
-5. Now you can build your **simple-microservice** project and deploy it to Azure Spring Cloud by running the below command.
+5. Now you can build your **simple-microservice** project and deploy it to Azure Spring Apps by running the below command.
+
+   >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
 
      ```bash
      cd simple-microservice
      ./mvnw clean package
-     az spring-cloud app deploy -n simple-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+     az spring app deploy -n simple-microservice -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
      cd ..
      ```
 
@@ -110,19 +118,16 @@ This section shows how to create an app instance and then deploy your code to it
 
 ## Task 5 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![Cloud Spring in rg](media/MJA-ex2-01.png)
+    ![Cloud Spring in rg](../media/azurespringapps.png)
 
 2. Click **Apps** in the **Settings** section of the navigation pane and select **simple-microservice**
 
-3. Click on 'See more' to see **Test Endpoint**
 
-   ![See More](media/seemore.png)
+3. From the **Overview** tab, mouse over the URL labeled as **Test Endpoint** and click the clipboard icon that appears.  
 
-4. Mouse over the URL labeled as **Test Endpoint** and click the clipboard icon that appears.  
-
-   ![Endpoint](media/microservice-endpoint.png)
+   ![Endpoint](../media/copytestendpoint.png)
     
 <!--- 6. This will give you something like:
 
@@ -141,7 +146,7 @@ This section shows how to create an app instance and then deploy your code to it
 
 -->
 
-5. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
+5. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Apps.  For example.
 
 ```bash
 curl https://primary:...simple-microservice/default/hello/
@@ -151,10 +156,10 @@ curl https://primary:...simple-microservice/default/hello/
 
    <!--- ![Endpoint](media/hello-from-spring-cloud.png) -->
 
-7. If successful, you should see the message: `Hello from Azure Spring Cloud`.
+7. If successful, you should see the message: `Hello from Azure Spring Apps`.
 
     ![Endpoint](media/curl-hello-from-spring-cloud.png)
 
 ## Conclusion
 
-Congratulations, you have deployed your first Spring Boot microservice to Azure Spring Cloud!
+Congratulations, you have deployed your first Spring Boot microservice to Azure Spring Apps!

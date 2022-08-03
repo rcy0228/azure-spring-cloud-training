@@ -1,16 +1,16 @@
-# Exercise 4 - Configure a Spring Cloud Config server
+# Exercise 4 - Configure a Spring Apps Config server
 
-A key feature of cloud-native applications is *externalized configuration* - the ability to store, manage, and version configuration separately from the application code. In this section, we'll configure a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config) to enable this functionality. In the next section, you'll see how Spring Cloud Config can inject configuration from a Git repository into your application.
+A key feature of cloud-native applications is *externalized configuration* - the ability to store, manage, and version configuration separately from the application code. In this section, we'll configure a [Spring Apps Config Server](https://cloud.spring.io/spring-cloud-config) to enable this functionality. In the next section, you'll see how Spring Apps Config can inject configuration from a Git repository into your application.
 
 ---
 
-## Task 1 : Configure Azure Spring Cloud to access the Git repository
+## Task 1 : Configure Azure Spring Apps to access the Git repository
 
-1. Navigate to [Azure Portal](https://portal.azure.com). From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud Instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate to [Azure Portal](https://portal.azure.com). From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps Instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
-2. Go to the **Overview** page of Azure Spring Cloud server and select `Config server` in the menu under `Settings`
+2. Go to the **Overview** page of Azure Spring Apps server and select `Config server` in the menu under `Settings`
 
-   ![Config server](media/MJA-ex4-01.png)
+   ![Config server](../media/configserver.png)
 
 3. On the **Config Server** page, follow the below mentioned instructions:
 
@@ -20,15 +20,15 @@ A key feature of cloud-native applications is *externalized configuration* - the
  
      - Click on "Validate" and wait for the operation to succeed  
      
-      ![Spring Cloud config server](media/MJA-ex4-02.png)
+      ![Spring Cloud config server](../media/validate1.png)
    
 5. Click on "Apply" and wait for the operation to succeed.
 
-     ![apply](media/apply1.png)
+     ![apply](../media/applynew.png)
 
 ## Review
 
-We have now created a private configuration repository. We have enabled Azure Spring Cloud to create a configuration server with the configuration files from this repository.
+We have now created a private configuration repository. We have enabled Azure Spring Apps to create a configuration server with the configuration files from this repository.
 
 In the next section, we will create an application that consumes this configuration, specifically the custom message we defined in `application.yml`.
 

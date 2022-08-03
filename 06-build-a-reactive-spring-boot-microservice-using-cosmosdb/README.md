@@ -8,13 +8,13 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 ## Task 1 : Prepare the Cosmos DB database
 
-1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate to your CosmosDB account named **sclabc-<inject key="DeploymentID" enableCopy="false"/>** in the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![Cosmos Db](media/cosmos-db-from-rg.png)
+   ![Cosmos Db](../media/sclabc.png)
 
 2. Click on the **Data Explorer** menu item
 
-   ![Data explorer](media/data-explorer.png)
+   ![Data explorer](../media/dataexplorer.png)
 
 3. Expand the container named `azure-spring-cloud-cosmosdb`.
 
@@ -43,7 +43,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\city-service` to find the city service folder 
 
@@ -55,13 +55,13 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 
 1. Navigate to the path `C:\Users\demouser\city-service`, in the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency and Save.
 
-   ![pom](media/pom-edit.png)
+   ![pom](../media/cosmosversion.png)
 
 ```xml
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-cosmos</artifactId>
-            <version>4.5.0</version>
+            <version>4.30.1</version>
         </dependency>
 ```
 
@@ -141,26 +141,26 @@ public class CityController {
 }
 ```
 
-## Task 5 : Create the application on Azure Spring Cloud
+## Task 5 : Create the application on Azure Spring Apps
 
-1. As in exercise 2, create a specific `city-service` application in your Azure Spring Cloud instance by running the below command in Git Bash.
+1. As in exercise 2, create a specific `city-service` application in your Azure Spring Apps instance by running the below command in Git Bash.
 
 >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring-cloud app create -n city-service -s azure-spring-cloud-lab-DID -g spring-cloud-workshop-DID --assign-endpoint true --cpu 1 --memory 1Gi --instance-count 1
+az spring app create -n city-service -s azure-spring-apps-lab-DID --runtime-version Java_17
 ```
 
 
 ## Task 6 : Bind the Cosmos DB database to the application
 
-Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
+Azure Spring Apps can automatically bind the Cosmos DB database we created to our microservice.
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 2. Click on `Apps` under `settings`.
 
-   ![](media/mja3.png)
+   ![](../media/selectapps.png)
 
 3. Select the `city-service` application
 
@@ -172,27 +172,29 @@ Azure Spring Cloud can automatically bind the Cosmos DB database we created to o
 
   - Give your binding a name, for example `cosmosdb-city`
   - Select the available `Subscription` in the drop down list
-  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-cloud-cosmosdb` for the Database name we created and keep the default `sql` API type
+  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-apps-cosmosdb` for the Database name we created and keep the default `sql` API type
   - Select **sclabc-<inject key="DeploymentID" enableCopy="false"/>** as Resource name.
   - In the drop-down list, select the primary master key
   - Click on `Create` to create the database binding
 
-   ![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
+   ![Bind Cosmos DB database](../media/createservicebinding.png)
 
 ## Task 7 : Deploy the application
 
-1. Navigate to Git Bash and now you can build your **city-service** project and send it to Azure Spring Cloud
+1. Navigate to Git Bash and now you can build your **city-service** project and send it to Azure Spring Apps
 
 ```bash
 cd city-service
 ./mvnw clean package -DskipTests
-az spring-cloud app deploy -n city-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n city-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
+ >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+
 ## Task 8 : Test the project in the cloud
 
-1. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select `Apps` under `Settings`.
 

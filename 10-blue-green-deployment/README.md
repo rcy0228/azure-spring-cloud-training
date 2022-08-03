@@ -29,7 +29,7 @@ public class WeatherController {
     @GetMapping("/city")
     public @ResponseBody Weather getWeatherForCity(@RequestParam("name") String cityName) {
         return weatherRepository.findById(cityName).map(weather -> {
-            weather.setDescription("It's always sunny on Azure Spring Cloud");
+            weather.setDescription("It's always sunny on Azure Spring Apps");
             weather.setIcon("weather-sunny");
             return weather;
         }).get();
@@ -44,19 +44,21 @@ public class WeatherController {
 ```bash
 cd weather-service
 ./mvnw clean package -DskipTests
-az spring-cloud app deployment create --name green --app weather-service --jar-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deployment create --name green --app weather-service --runtime-version Java_17 -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
+> Note: Replace the DID with **<inject key="DeploymentID" enableCopy="false"/>** value, you can also find it from Environment details page.
+
 2. Once the application is deployed, if you go to `https://spring-training.azureedge.net/` you will still have the same data, as the new version of the microservice is now in a staging area and not in production yet.
 
-3. Navigate back to Azure Portal, From the resource group **spring-cloud-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Cloud instance named **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>**.
+3. Navigate back to Azure Portal, From the resource group **spring-apps-workshop-<inject key="DeploymentID" enableCopy="false"/>** select the Azure Spring Apps instance named **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false"/>**.
 
 4. Click **Apps** in the **Settings** section of the navigation pane and select **weather-service**.
 
 5. Click **Deployments** under *Settings* and you should now see **green** deployment in **Staging** state.
 
-   ![Deployment Pane](media/02-deployment-pane1.png)
+   ![Deployment Pane](../media/staging.png)
 
 4. You can test the `green` deployment by invoking the same URL as in exercise 7, but replacing the deployment name `default` with `green`:
 
