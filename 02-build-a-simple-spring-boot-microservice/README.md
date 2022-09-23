@@ -53,9 +53,9 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
     cd ..
    ```
 
-   > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is beacuse control will be checking for the available port to host the endpoint.
+   > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is because control will be checking for the available port to host the endpoint.
    
-   > Note: In somecases you may face an issue that project build failure due to Port already in use. You can terminate the process which is running in the port by running the below given commands in Command Prompt. After terminating the process, you need to re-run the Step-1 commands of Task-3 in Git Bash.
+   > Note: In somecases you may face an issue that the project build failure due to **Port already in use** , then you can terminate the process which is running in the port by running the below given commands in Command Prompt. After terminating the process, you need to re-run the Step-1 commands of Task-3 in Git Bash.
    
    ```bash
    netstat  -ano  |  findstr  < Enter Port Number > 
