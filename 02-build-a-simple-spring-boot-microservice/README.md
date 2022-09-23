@@ -22,21 +22,21 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
 
 2. Open a new notepad, and paste the below code :
 
-```java
-package com.example.demo;
+   ```java
+   package com.example.demo;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class HelloController {
+   @RestController
+   public class HelloController {
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello from Azure Spring Apps\n";
-    }
-}
-```
+       @GetMapping("/hello")
+       public String hello() {
+           return "Hello from Azure Spring Apps\n";
+       }
+   }
+   ```
 
 3. Save the file next to `DemoApplication.java` in the `C:\Users\demouser\simple-microservice\src\main\java\com\example\demo` as `HelloController.java` by changing the **save as type** to all files and then **save** as shown below.
 
@@ -54,6 +54,13 @@ public class HelloController {
    ```
 
    > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is beacuse control will be checking for the available port to host the endpoint.
+   
+   > Note: In somecases you may face an issue that project build failure due to Port already in use. You can terminate the process which is running in the port by running the below given commands in Command Prompt. After terminating the process, you need to re-run the Step-1 commands of Task-3 in Git Bash.
+   
+   ```bash
+   netstat  -ano  |  findstr  < Enter Port Number > 
+   taskkill  /F  /PID  < Enter Process Id >
+   ```
    
 2. Run the `curl` command for requesting the `/hello` endpoint where it should return the "Hello from Azure Spring Apps" as the message.
 
