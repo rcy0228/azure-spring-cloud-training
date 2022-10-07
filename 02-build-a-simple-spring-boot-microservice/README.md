@@ -74,7 +74,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-m
      ```bash
      kill %1
      ```
-  > **Note**: If the command gives BUILD FAILURE error, ignore and continue with the next task as the expected output is observed in Step-2.
+  > **Note**: If the command indicates a BUILD FAILURE error, you can Ignore it and continue with the next task as the expected output is observed in Step-2.
 
 ## Task 4 : Create and deploy the application on Azure Spring Apps
 
