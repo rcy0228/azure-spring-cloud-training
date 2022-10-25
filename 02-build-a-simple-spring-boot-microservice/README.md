@@ -9,7 +9,7 @@ In this section, we'll build a simple Spring boot microservice and deploy it to 
 1. In an __empty__ directory in git bash execute the curl command line mentioned below:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web -d type=maven-project -d baseDir=simple-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 
 > **Info :** We force the Spring Boot version to be 2.3.8.
