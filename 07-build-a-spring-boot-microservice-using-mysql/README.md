@@ -95,7 +95,7 @@ Now that we've provisioned the Azure Spring Apps instance and configured the ser
 1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d baseDir=weather-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d type=maven-project -d baseDir=weather-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
 
