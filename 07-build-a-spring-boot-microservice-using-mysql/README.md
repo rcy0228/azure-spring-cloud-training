@@ -92,11 +92,10 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 Now that we've provisioned the Azure Spring Apps instance and configured the service binding, let's get the code for `weather-service` ready.
 
-1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+1. To create our microservice, we will navigate to https://start.spring.io/, add the dependencies **Spring Web**, **Spring Data JPA**, **MySQL Driver**, **Eureka Discovery Client** and the **Config Client** and click on **Generate**. This will download a zip file named **demo**, extract the files to `C:\Users\demouser` and rename the **demo** folder to **weather-service**.
 
-```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d type=maven-project -d baseDir=weather-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
-```
+![city service](media/weather-service-dependencies.png)
+
 2. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
 
 ![city service](media/weather-service.png)
