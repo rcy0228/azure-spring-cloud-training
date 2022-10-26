@@ -94,11 +94,11 @@ Now that we've provisioned the Azure Spring Apps instance and configured the ser
 
 1. To create our microservice, we will navigate to https://start.spring.io/, add the dependencies **Spring Web**, **Spring Data JPA**, **MySQL Driver**, **Eureka Discovery Client** and the **Config Client** and click on **Generate**. This will download a zip file named **demo**, extract the files to `C:\Users\demouser` and rename the **demo** folder to **weather-service**.
 
-![city service](media/weather-service-dependencies.png)
+    ![city service](media/weather-service-dependencies-01.png)
 
 2. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
 
-![city service](media/weather-service.png)
+   ![city service](media/weather-service.png)
 
 > **Note**:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
 
