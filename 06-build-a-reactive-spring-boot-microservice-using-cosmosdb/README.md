@@ -148,7 +148,7 @@ public class CityController {
 >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring app create -n city-service -s azure-spring-apps-lab-DID --runtime-version Java_17
+az spring app create -n city-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
 ```
 
 
@@ -186,7 +186,7 @@ Azure Spring Apps can automatically bind the Cosmos DB database we created to ou
 ```bash
 cd city-service
 ./mvnw clean package -DskipTests
-az spring app deploy -n city-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n city-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
