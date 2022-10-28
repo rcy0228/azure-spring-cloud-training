@@ -51,7 +51,7 @@ spring:
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring app create -n gateway -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
+az spring app create -n gateway -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
 ```
  
 ## Task 4 : Deploy the application
@@ -61,7 +61,7 @@ az spring app create -n gateway -s azure-spring-apps-lab-DID --runtime-version J
 ```bash
 cd gateway
 ./mvnw clean package -DskipTests
-az spring app deploy -n gateway --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n gateway -g spring-apps-workshop-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
