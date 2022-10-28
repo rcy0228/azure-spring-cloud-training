@@ -201,6 +201,15 @@ public class WeatherController {
 }
 ```
 
+1. Navigate to the path `C:\Users\demouser\weather-service`, in the application's pom.xml file, add the version for **MYSQL-Connector** dependency after the artifactId and Save.
+
+   
+   ```bash
+   <version>8.0.31</version>
+   ```
+   
+    ![](media/version.png)
+   
 ## Task 6 : Add sample data in MySQL
 
 1. In order to have Hibernate automatically create your database, open up the `C:\Users\demouser\weather-service\src\main\resources\` and application.properties file and add:
@@ -223,7 +232,7 @@ INSERT INTO `azure-spring-cloud-training`.`weather` (`city`, `description`, `ico
 ```bash
 cd weather-service
 ./mvnw clean package -DskipTests
-az spring app deploy -n weather-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n weather-service -g spring-apps-workshop-774881 -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
