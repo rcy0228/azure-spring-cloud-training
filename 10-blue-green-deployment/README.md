@@ -44,7 +44,7 @@ public class WeatherController {
 ```bash
 cd weather-service
 ./mvnw clean package -DskipTests
-az spring app deployment create --name green --app weather-service --runtime-version Java_17 -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deployment create --name green --app weather-service --runtime-version Java_17 -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
