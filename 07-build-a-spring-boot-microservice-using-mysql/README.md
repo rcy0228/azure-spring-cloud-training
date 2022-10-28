@@ -11,7 +11,7 @@ In this section, we'll build another data-driven microservice. This time, we wil
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
 ```bash
-az spring app create -n weather-service -s azure-spring-apps-lab-DID --runtime-version Java_17
+az spring app create -n weather-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
 ```
  
 ## Task 2 : Configure the MySQL Server instance
@@ -34,32 +34,47 @@ MYSQL_INFO=$(az mysql server list --query '[0]')
 MYSQL_SERVERNAME=$(az mysql server list --query '[0].name' -o tsv)
 MYSQL_USERNAME="$(az mysql server list --query '[0].administratorLogin' -o tsv)@${MYSQL_SERVERNAME}"
 MYSQL_HOST="$(az mysql server list --query '[0].fullyQualifiedDomainName' -o tsv)"
-
+```
+```baash
 # Create a firewall rule to allow connections from your machine:
 MY_IP=$(curl whatismyip.akamai.com 2>/dev/null)
+```
+
+```bash
 az mysql server firewall-rule create \
     --server-name $MYSQL_SERVERNAME \
+    --resource-group "spring-apps-workshop-DID" \
     --name "connect-from-lab" \
     --start-ip-address "$MY_IP" \
     --end-ip-address "$MY_IP"
+```
+>**Note:** Replace the **DID** with value, you can also find it from Environment details page and run the below given command in **Git Bash**.
 
+```bash
 # Create a firewall rule to allow connections from Azure services:
 az mysql server firewall-rule create \
     --server-name $MYSQL_SERVERNAME \
+    --resource-group "spring-apps-workshop-DID" \
     --name "connect-from-azure" \
     --start-ip-address "0.0.0.0" \
     --end-ip-address "0.0.0.0"
+```
+>**Note:** Replace the **DID** with value, you can also find it from Environment details page and run the below given command in **Git Bash**.
 
+```bash
 # Create a MySQL database
 az mysql db create \
     --name "azure-spring-cloud-training" \
+    --resource-group "spring-apps-workshop-DID" \
     --server-name $MYSQL_SERVERNAME
+```
+>**Note:** Replace the **DID** with value, you can also find it from Environment details page and run the below given command in **Git Bash**.
 
+```bash
 # Display MySQL username (to be used in the next section)
 echo "Your MySQL username is: ${MYSQL_USERNAME}"
-
-
 ```
+
 ## Task 3 : Bind the MySQL database to the application
 
 As we did for CosmosDB in the previous exercise, create a service binding for the MySQL database to make it available to Azure Spring Apps microservices.
@@ -92,15 +107,17 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 Now that we've provisioned the Azure Spring Apps instance and configured the service binding, let's get the code for `weather-service` ready.
 
-1. To create our microservice, we will navigate to https://start.spring.io/, add the dependencies **Spring Web**, **Spring Data JPA**, **MySQL Driver**, **Eureka Discovery Client** and the **Config Client** and click on **Generate**. This will download a zip file named **demo**, extract the files to `C:\Users\demouser` and rename the **demo** folder to **weather-service**.
+1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
-    ![city service](media/weather-service-dependencies-01.png)
+   ```bash
+   curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client,actuator -d type=maven-project -d baseDir=weather-        service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+   ```
 
 2. Navigate to the path `C:\Users\demouser\weather-service` to find the weather-service  folder 
 
    ![city service](media/weather-service.png)
 
-> **Note**:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
+> **Note**:  We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Spring Actuator`, `Eureka Discovery Client` and the `Config Client` components.
 
 ## Task 5 : Add Spring code to get the data from the database
 
