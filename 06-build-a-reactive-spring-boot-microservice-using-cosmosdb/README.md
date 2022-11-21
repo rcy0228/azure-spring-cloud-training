@@ -43,7 +43,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d type=maven-project -d baseDir=city-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\city-service` to find the city service folder 
 

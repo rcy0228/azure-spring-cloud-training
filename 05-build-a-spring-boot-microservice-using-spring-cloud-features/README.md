@@ -31,7 +31,7 @@ In this exercise, we'll build a similar service to the one from exercise 2, but 
 3. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
   ```bash
-  curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d type=maven-project -d baseDir=spring-cloud-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+  curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
   ```
 
 > This time, we add the `Eureka Discovery Client` and the `Config Client` Spring Boot starters, which will respectively automatically trigger the use of Spring Apps Service Registry and the Spring Apps Config Server.

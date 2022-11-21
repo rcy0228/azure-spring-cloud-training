@@ -9,7 +9,7 @@ In this section, we'll build a simple Spring boot microservice and deploy it to 
 1. In an __empty__ directory in git bash execute the curl command line mentioned below:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web -d type=maven-project -d baseDir=simple-microservice -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
 ```
 
 > **Info :** We force the Spring Boot version to be 2.3.8.
@@ -118,7 +118,7 @@ This section shows how to create an app instance and then deploy your code to it
      ```bash
      cd simple-microservice
      ./mvnw clean package
-     az spring app deploy -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
+     az spring app deploy -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
      cd ..
      ```
 
