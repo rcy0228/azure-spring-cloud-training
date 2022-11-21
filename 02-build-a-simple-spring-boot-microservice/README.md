@@ -118,7 +118,7 @@ This section shows how to create an app instance and then deploy your code to it
      ```bash
      cd simple-microservice
      ./mvnw clean package
-     az spring app deploy -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
+     az spring app deploy -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
      cd ..
      ```
 
