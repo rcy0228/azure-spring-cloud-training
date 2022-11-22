@@ -17,7 +17,7 @@ Note how the code we create in this section is endpoint-agnostic. All we specify
 1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=cloud-feign,web,cloud-eureka,cloud-config-client -d type=maven-project -d baseDir=all-cities-weather-service -d bootVersion=2.7.0 -d javaVersion=17 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=cloud-feign,web,cloud-eureka,cloud-config-client -d baseDir=all-cities-weather-service -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
 ```
 2. Navigate to the path `C:\Users\demouser\all-cities-weather-service` to find the all-cities-weather-service
 
@@ -230,7 +230,7 @@ cd ..
 
 >💡__Note:__ the trailing slash (`/`) is not optional.
 
-   * gateway URL:  **https://azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io**
+   * gateway URL:  **https://azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io**
 
 ```bash
 https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
