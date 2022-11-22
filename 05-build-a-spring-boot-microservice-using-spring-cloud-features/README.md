@@ -117,9 +117,9 @@ spring.config.import=optional:configserver:
     ```bash
     cd spring-cloud-microservice
     ./mvnw clean package -DskipTests
-    az spring app deploy -n spring-cloud-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    az spring app deploy -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
     cd ..
-   ```
+    ```
    
    >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
