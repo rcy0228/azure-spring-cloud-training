@@ -67,7 +67,7 @@ az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOUR
 
 2. In that file, copy/paste the following content, performing the indicated substitutions:
 
->🛑 You must substitute the name of your Azure Spring App instance for `<AZ_SPRING_CLOUD_NAME>` as **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false" />** in the YAML below.
+>🛑 You must substitute the name of your Azure Spring App instance for `<AZ_SPRING_APPS_NAME>` as **azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false" />** in the YAML below.
 
 ```yaml
 name: Build and deploy to Azure Spring Apps
