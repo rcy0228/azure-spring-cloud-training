@@ -230,7 +230,7 @@ cd ..
 
 >💡__Note:__ the trailing slash (`/`) is not optional.
 
-   * gateway URL:  **https://azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io**
+   * gateway URL:  **https://azure-spring-apps-lab-<inject key="DeploymentID" enableCopy="false" />-gateway.azuremicroservices.io**
 
 ```bash
 https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
