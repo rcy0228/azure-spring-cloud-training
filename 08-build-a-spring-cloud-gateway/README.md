@@ -37,8 +37,6 @@ spring:
 
 
 ```
-
-  - The `spring.main.allow-bean-definition-overriding=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Discovery Server bean configured in the Azure Spring Cloud Client library.
  
   - The `spring.cloud.gateway.discovery.locator.enabled=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Service Registry to discover the available microservices.
   
@@ -46,7 +44,7 @@ spring:
 
 ## Task 3 : Create the application on Azure Spring Apps
 
-1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Apps instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
+1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Apps instance. As this application is a gateway, we add the `--assign-endpoint true` flag so it is exposed publicly.
 
 > **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
 
