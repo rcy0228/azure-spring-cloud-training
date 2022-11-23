@@ -171,3 +171,11 @@ curl https://primary:...simple-microservice/default/hello/
 ## Conclusion
 
 Congratulations, you have deployed your first Spring Boot microservice to Azure Spring Apps!
+If you need to check your code, the final project is available in the ["simple-microservice" folder](simple-microservice/).
+Here is the final script to build and deploy everything that was done in this guide:
+
+```
+curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
+cd simple-microservice
+cat > HelloController.java << EOF
+package com.example.demo;
