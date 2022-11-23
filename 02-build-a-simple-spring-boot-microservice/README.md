@@ -12,7 +12,7 @@ In this section, we'll build a simple Spring boot microservice and deploy it to 
 curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
 ```
 
-> **Info :** We force the Spring Boot version to be 2.3.8.
+> **Info :**We force the Spring Boot version to be 2.7.5, and keep default settings that use the `com.example.demo` package.
 
 ## Task 2 : Add a new Spring MVC Controller
 
