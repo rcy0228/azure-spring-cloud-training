@@ -40,7 +40,7 @@ We'll use the reactive programming paradigm to build our microservice in this se
 
 1. Minimise the browser and navigate back to Git Bash.
 
-2. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+2. To create our microservice, we will invoke the Spring Initializer service from the command line:
 
 ```bash
 curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
@@ -145,7 +145,7 @@ public class CityController {
 
 1. As in exercise 2, create a specific `city-service` application in your Azure Spring Apps instance by running the below command in Git Bash.
 
->Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+>Note: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 ```bash
 az spring app create -n city-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
@@ -190,7 +190,7 @@ az spring app deploy -n city-service -g spring-apps-workshop-DID -s azure-spring
 cd ..
 ```
 
- >Note: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+ >Note: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 ## Task 8 : Test the project in the cloud
 
@@ -204,7 +204,7 @@ cd ..
 
 3. Select `city-service` to have more information on the microservice.
 
-4. Click on **see more** under overview blade, if the Test endpoint is not visible and copy the **Test Endpoint** that is provided.
+4. Click on **see more** under the overview blade, if the Test endpoint is not visible and copy the **Test Endpoint** that is provided.
 
 5. Append `/cities` at the end. Now you can now use CURL to test the `/cities` endpoint, and it should give you the list of cities you created. For example, if you only created `Paris, France` and `London, UK` like it is shown in this guide, you should get:
 
