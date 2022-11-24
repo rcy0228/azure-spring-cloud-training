@@ -53,9 +53,9 @@ curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=w
     cd ..
    ```
 
-   > Note: When the control is stuck during the deployment process, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is because control will be checking for the available port to host the endpoint.
+   > Note: When the control is stuck during the deployment process, you can press enter to make the process run in background and proceed to the next steps to access the endpoint. This is because the control will be checking for the available port to host the endpoint.
    
-   > Note: In somecases you may face an issue that the project build failure due to **Port already in use** , then you can terminate the process which is running in the port by running the below given commands in Command Prompt. After terminating the process, you need to re-run the Step-1 commands of Task-3 in Git Bash.
+   > Note: In some cases, you may face an issue that the project builds failure due to **Port already in use** , then you can terminate the process which is running in the port by running the below given commands in Command Prompt. After terminating the process, you need to re-run the Step-1 commands of Task-3 in Git Bash.
    
    ```bash
    netstat  -ano  |  findstr  < Enter Port Number > 
@@ -80,7 +80,7 @@ curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=w
 
 This section shows how to create an app instance and then deploy your code to it.
 
-1. In order to create the app instance graphically, you can navigate back to Azure portal and look for your Azure Spring Apps instance in your resource group.
+1. In order to create the app instance graphically, you can navigate back to the Azure portal and look for your Azure Spring Apps instance in your resource group.
 
    ![Cloud Spring in rg](../media/azurespringapps.png)
 
@@ -88,15 +88,15 @@ This section shows how to create an app instance and then deploy your code to it
 
    ![Apps under cloud spring ](../media/selectapps.png)
 
-3. Click on **+ Create App** link at the top of the **Apps** page.
+3. Click on the **+ Create App** link at the top of the **Apps** page.
 
    ![App creation ](../media/createnewapp.png)
 
 4. On **Create App** page, follow the below details:
 
-    - **App Name** : Enter **simple-microservice (1)**
-    - **Deployment Type** : Choose **Artifacts(Java/.Net core) (2)** from the drop-down
-    - **Runtime Platform** : Choose **Java 17 (3)** from the drop-down
+    - **App Name**: Enter **simple-microservice (1)**
+    - **Deployment Type**: Choose **Artifacts(Java/.Net core) (2)** from the drop-down
+    - **Runtime Platform**: Choose **Java 17 (3)** from the drop-down
     - Click on **Create (4)**
     
 
@@ -105,7 +105,7 @@ This section shows how to create an app instance and then deploy your code to it
 
    >💡 __Note:__ Alternatively, you can use the command line to create the app instance, which is easier. If you performed till step 4, skip this Note and continue with Step 5.
 
-   >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
+   >**Note:** Replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page and run the below given command in **Git Bash**
 
    ```bash
    az spring app create -n simple-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
@@ -113,7 +113,7 @@ This section shows how to create an app instance and then deploy your code to it
 
 5. Now you can build your **simple-microservice** project and deploy it to Azure Spring Apps by running the below command.
 
-   >**Note:** Replace the **DID** with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page and run the below given command in **Git Bash**
+   >**Note:** Replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page and run the below given command in **Git Bash**
 
      ```bash
      cd simple-microservice
