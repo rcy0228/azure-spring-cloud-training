@@ -8,7 +8,7 @@ In this section, we'll build another data-driven microservice. This time, we wil
 
 1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Apps instance:
 
-> **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+> **Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 ```bash
 az spring app create -n weather-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
@@ -48,7 +48,7 @@ az mysql server firewall-rule create \
     --start-ip-address "$MY_IP" \
     --end-ip-address "$MY_IP"
 ```
->**Note:** Replace the **DID** with value, you can also find it from Environment details page and run the below given command in **Git Bash**.
+>**Note:** Replace the **DID** with value, you can also find it from the Environment details page and run the below given command in **Git Bash**.
 
 ```bash
 # Create a firewall rule to allow connections from Azure services:
@@ -59,7 +59,7 @@ az mysql server firewall-rule create \
     --start-ip-address "0.0.0.0" \
     --end-ip-address "0.0.0.0"
 ```
->**Note:** Replace the **DID** with value, you can also find it from Environment details page and run the below given command in **Git Bash**.
+>**Note:** Replace the **DID** with value, you can also find it from the Environment details page and run the below given command in **Git Bash**.
 
 ```bash
 # Create a MySQL database
@@ -85,7 +85,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
    ![](../media/selectapps.png)
 
-3. Click on `weather-service`.
+3. Click on the `weather-service`.
 
 4. Click on **Service Bindings** under **Settings** and then select **+ Create Service Binding**.
 
@@ -93,12 +93,12 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 5. Populate the service binding fields as shown.
 
-  - Name : **weather-db**
-  - Binding type : **Azure Database for MySQL**
-  - Resource name : **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
-  - Database name : **azure-spring-cloud-training**
-  - User name : **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
-  - Password : **<inject key="MySQL Server Password" />**
+  - Name: **weather-db**
+  - Binding type: **Azure Database for MySQL**
+  - Resource name: **sclabm-<inject key="DeploymentID" enableCopy="false"/>**
+  - Database name: **azure-spring-cloud-training**
+  - User name: **sqlAdmin@sclabm-<inject key="DeploymentID" enableCopy="false"/>**
+  - Password: **<inject key="MySQL Server Password" />**
   - Click on **Create** to create the database binding
 
     ![MySQL Service Binding](../media/servicebinding.png)
@@ -107,7 +107,7 @@ As we did for CosmosDB in the previous exercise, create a service binding for th
 
 Now that we've provisioned the Azure Spring Apps instance and configured the service binding, let's get the code for `weather-service` ready.
 
-1. To create our microservice, we will invoke the Spring Initalizer service from the command line:
+1. To create our microservice, we will invoke the Spring Initializer service from the command line:
 
    ```bash
    curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d baseDir=weather-service -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
@@ -235,7 +235,7 @@ cd weather-service
 az spring app deploy -n weather-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
-> **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+> **Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 
 ## Task 8 : Test the project in the cloud
