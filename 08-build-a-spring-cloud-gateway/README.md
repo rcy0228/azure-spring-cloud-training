@@ -69,7 +69,7 @@ cd ..
 
 2. Click on **Apps** under **Settings**.
 
-   ![](media/mja3.png)
+   ![](../media/selectapps.png)
 
 3. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
@@ -89,5 +89,3 @@ cd ..
 8. Test the `weather-service` microservice endpoint by browsing it on Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France` (replacing XXXXXXXX by the name of your gateway)
 
    ![weather output](media/output-weather.png)
-
----
