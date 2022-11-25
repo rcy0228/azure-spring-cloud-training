@@ -61,7 +61,7 @@ curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=w
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-cosmos</artifactId>
-            <version>4.38.1</version>
+            <version>4.30.1</version>
         </dependency>
 ```
 
