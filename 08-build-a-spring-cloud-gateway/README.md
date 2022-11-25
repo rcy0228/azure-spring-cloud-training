@@ -19,24 +19,25 @@ A Spring Cloud gateway allows you to selectively expose your microservices and r
 
 ## Task 2 : Configure the application
 
-1. Navigate to `C:\Users\demouser\gateway\src\main\resources` and rename the `application.properties` to `application.yml` and add the following configuration:
-
-```yaml
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-
-
-```
+1. Navigate to `C:\Users\demouser\gateway\src\main\resources`, open the `application.properties` file and add the following configuration. Click on File tab and select `Save As`. Enter the File name as `application.yml` and Save as type as `All Files`, then click on `Save`.
+   
+   ```yaml
+   spring:
+     cloud:
+       gateway:
+         discovery:
+           locator:
+             enabled: true
+         globalcors:
+           corsConfigurations:
+             '[/**]':
+               allowedOrigins: "*"
+               allowedMethods:
+                 - GET
+                 
+    ```
+ 
+    ![Save Application](media/ex8-applicatioyml.png)
  
   - The `spring.cloud.gateway.discovery.locator.enabled=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Service Registry to discover the available microservices.
   
@@ -46,22 +47,22 @@ spring:
 
 1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Apps instance. As this application is a gateway, we add the `--assign-endpoint true` flag so it is exposed publicly.
 
-> **Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
+   >**Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
-```bash
-az spring app create -n gateway -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
-```
+   ```bash
+   az spring app create -n gateway -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
+   ```
  
 ## Task 4 : Deploy the application
 
 1. Run the below command to build your "gateway" project and send it to Azure Spring Apps:
 
-```bash
-cd gateway
-./mvnw clean package -DskipTests
-az spring app deploy -n gateway -g spring-apps-workshop-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
-cd ..
-```
+   ```bash
+   cd gateway
+   ./mvnw clean package -DskipTests
+   az spring app deploy -n gateway -g spring-apps-workshop-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+   cd ..
+   ```
 
 ## Task 5 : Test the project in the cloud
 
@@ -77,15 +78,17 @@ cd ..
 
 5. Copy the public URL that is provided (there is a **Test Endpoint** like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
 
-   ![gateway url](media/gateway-url.png)
+   ![gateway url](media/ex8-gateway.png)
 
 6. As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
 [The MICROSERVICE-ID must be in capital letters]
 
 7. Test the `city-service` microservice endpoint by by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Apps instance)
 
-   ![city output](media/output-city.png)
+   ![city output](media/ex8-output1.png)
 
 8. Test the `weather-service` microservice endpoint by browsing it on Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France` (replacing XXXXXXXX by the name of your gateway)
 
-   ![weather output](media/output-weather.png)
+   ![weather output](media/ex8-output2.png)
+      
+---
