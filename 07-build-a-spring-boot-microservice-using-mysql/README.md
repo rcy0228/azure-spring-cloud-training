@@ -200,15 +200,6 @@ public class WeatherController {
     }
 }
 ```
-
-1. Navigate to the path `C:\Users\demouser\weather-service`, in the application's pom.xml file, add the version for **MYSQL-Connector** dependency after the artifactId and Save.
-
-   
-   ```bash
-   <version>8.0.31</version>
-   ```
-   
-    ![](media/version.png)
    
 ## Task 6 : Add sample data in MySQL
 
