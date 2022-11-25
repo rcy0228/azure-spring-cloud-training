@@ -1,12 +1,12 @@
 # Exercise 8 - Build a Spring Cloud Gateway
 
-A Spring Cloud gateway allows you to selectively expose your microservices and to route traffic to them and among them. In this section, we will create a Spring Cloud Gateway that will expose the microservices we created in the preceding two sections.
+A Spring Cloud gateway allows you to selectively expose your microservices and route traffic to them and among them. In this section, we will create a Spring Cloud Gateway that will expose the microservices we created in the preceding two sections.
 
 ---
 
 ## Task 1 : Create a Spring Cloud Gateway
 
-1. Run the below command to create gateway, where you will invoke the Spring Initalizer service.
+1. Run the below command to create a gateway, where you will invoke the Spring Initializer service.
 
     ```bash
     curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.7.5 -d javaVersion=17 | tar -xzvf -
@@ -15,7 +15,7 @@ A Spring Cloud gateway allows you to selectively expose your microservices and t
 
    ![gateway](media/gateway.png)
 
-   > **Note**: We use the `Cloud Gateway`, `Eureka Discovery Client` and the `Config Client` components.
+   > **Note**: We use the `Cloud Gateway`, `Eureka Discovery Client`, and the `Config Client` components.
 
 ## Task 2 : Configure the application
 
@@ -46,7 +46,7 @@ spring:
 
 1. Navigate to Git Bash and create a specific `gateway` application in your Azure Spring Apps instance. As this application is a gateway, we add the `--assign-endpoint true` flag so it is exposed publicly.
 
-> **Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+> **Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 ```bash
 az spring app create -n gateway -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17 --assign-endpoint true
@@ -73,7 +73,7 @@ cd ..
 
 3. Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
 
-4. Select `gateway` to have more information on the microservice.
+4. Select the `gateway` to have more information on the microservice.
 
 5. Copy the public URL that is provided (there is a **Test Endpoint** like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
 
@@ -86,7 +86,7 @@ cd ..
 
    ![city output](media/output-city.png)
 
-8. Test the `weather-service` microservice endpoint by browsing it Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France` (replacing XXXXXXXX by the name of your gateway)
+8. Test the `weather-service` microservice endpoint by browsing it on Microsoft Edge: `https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France` (replacing XXXXXXXX by the name of your gateway)
 
    ![weather output](media/output-weather.png)
 

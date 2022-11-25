@@ -86,7 +86,7 @@ spring.config.import=optional:configserver:
     >💡 Do not be alarmed when you see exception stack traces:
     > ![Exception stack trace](media/01-exception-stack-trace.png)
     >Spring Cloud is attempting to contact a local configuration server, which we have not provided. The application will still start using any available local settings and defaults.
-    > When you receive above warining, you can press enter to make the process run in backgorund and proceed to next steps to access the endpoint. This is beacuse control will be checking for the available port to host the endpoint.
+    > When you receive above warning, you can press enter to make the process run in the background and proceed to next steps to access the endpoint. This is because control will be checking for the available port to host the endpoint.
 
 1. Requesting the `/hello` endpoint should return the "Not configured by a Spring Cloud Server" message.
 
@@ -105,7 +105,7 @@ spring.config.import=optional:configserver:
 
 1. As in exercise 2, you create a specific `spring-cloud-microservice` application in your Azure Spring Apps instance by running the below command in **Git Bash**
 
-    >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+    >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
       ```bash
       az spring app create -n spring-cloud-microservice -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
@@ -121,7 +121,7 @@ spring.config.import=optional:configserver:
     cd ..
     ```
    
-   >**Note**: Replace the DID with **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from Environment details page.
+   >**Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
 
 
 ## Task 5 : Test the project in the cloud
@@ -187,7 +187,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
    ![Azure SpringApps](../media/azurespringappsserch.png)
 
-2. Now click on **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
+2. Now click on the **azure-spring-cloud-lab-<inject key="DeploymentID" enableCopy="false"/>** resource from the list.
 
    ![Resource ASC](../media/selecspringapp.png)
 
@@ -199,7 +199,7 @@ Streaming the console output as we just did may be helpful in understanding the 
 
    __Important:__ Spring Boot applications logs have a dedicated `AppPlatformLogsforSpring` type.
 
-5. Here is how to get its 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
+5. Here is how to get the 50 most recent logs of the `AppPlatformLogsforSpring` type for the microservice we just deployed:
 
 6. Close other pop-up windows within the Logs and insert the below text in the text area that states "Type your queries here or click on of the example queries to start".  Click the text of the query, then click **Run**.
 
