@@ -37,7 +37,7 @@ A Spring Cloud gateway allows you to selectively expose your microservices and r
                  
     ```
  
-    ![Save Application](media/ex8-applicatioyml.png)
+    ![Save Application](media/ex8-applicationyml.png)
  
   - The `spring.cloud.gateway.discovery.locator.enabled=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Service Registry to discover the available microservices.
   
