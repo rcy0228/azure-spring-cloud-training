@@ -163,10 +163,10 @@ spring.config.import=optional:configserver:
 
 ## Task 6 : Stream application logs
 
-1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Apps, you can also see its console output through Azure CLI:
+1. When you run an application on your machine, you can see its output in the console. When you run a microservice on Azure Spring Apps, you can also see its console output through Azure CLI. Make sure to update the given DeploymentID **<inject key="DeploymentID" enableCopy="true"/>** in the below command.
 
    ```bash
-   az spring app logs --name spring-cloud-microservice -f
+   az spring app logs -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --name spring-cloud-microservice -f
    ```
 
 > **Note**: Please be aware it might take a couple of minutes for the logs to show up.
