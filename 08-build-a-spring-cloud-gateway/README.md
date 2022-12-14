@@ -60,7 +60,7 @@ A Spring Cloud gateway allows you to selectively expose your microservices and r
    ```bash
    cd gateway
    ./mvnw clean package -DskipTests
-   az spring app deploy -n gateway -g spring-apps-workshop-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+   az spring app deploy -n gateway -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
    cd ..
    ```
 
