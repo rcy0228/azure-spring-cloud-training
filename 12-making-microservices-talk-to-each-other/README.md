@@ -204,7 +204,7 @@ feign.client.config.default.readTimeout=160000000
 1. As before, create a specific `all-cities-weather-service` application in your Azure Spring Apps instance by running the below mentioned command in git:
 
 ```bash
-az spring app create -n all-cities-weather-service -s azure-spring-apps-lab-DID --runtime-version Java_17
+az spring app create -n all-cities-weather-service -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --runtime-version Java_17
 ```
 
 > Note: Replace the DID with value **<inject key="DeploymentID" enableCopy="false" />**, you can also find it from Environment details page and run the below given command in Git Bash
@@ -218,7 +218,7 @@ az spring app create -n all-cities-weather-service -s azure-spring-apps-lab-DID 
 ```bash
 cd all-cities-weather-service
 ./mvnw clean package -DskipTests
-az spring app deploy -n all-cities-weather-service -s azure-spring-apps-lab-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n all-cities-weather-service -s azure-spring-apps-lab-DID -g spring-apps-workshop-DID --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 cd ..
 ```
 
