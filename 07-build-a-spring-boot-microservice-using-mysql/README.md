@@ -6,9 +6,9 @@ In this section, we'll build another data-driven microservice. This time, we wil
 
 ## Task 1 : Create the application on Azure Spring Apps
 
-1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Apps instance:
+1. Navigate back to Gitbash and run the below command to create a specific `weather-service` application in your Azure Spring Apps instance. Make sure to update the given DID **<inject key="DeploymentID" enableCopy="true"/>** in the below command.
 
-> **Note**: Replace the DID with the **<inject key="DeploymentID" enableCopy="True"/>** value, you can also find it from the Environment details page.
+> **Note**: Replace the DID with the value, you can also find it from the Environment details page.
 
 ```bash
 az spring app create -n weather-service -g spring-apps-workshop-DID -s azure-spring-apps-lab-DID --runtime-version Java_17
