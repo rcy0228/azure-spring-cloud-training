@@ -14,48 +14,49 @@ We are going to automate the deployment of the `weather-service` microservice th
 
    ![New Repo](media/new-repo.png)
 
-2. Open a fresh instance of Git Bash and login to your azure account using ```az login``` command.
+2. Open Command Prompt in the LAbVM and login to your azure account using ```az login``` command.
 
 3. Enter the following commands and substitute the username/email of your Github account.
 
    ```
-    git config --global user.email "user@mail.com"
-    git config --global user.name "username"
-
+   git config --global user.email "user@mail.com"
+   git config --global user.name "username"
    ```
 
-> 🛑 Make sure you substitute the Git URL from your own github repository (make sure you use the HTTPS URL, not the SSH URL). This should be a different repository than the one you used to store configuration in exercise 4. If a login dialog appears, log in with your regular GitHub credentials.
+   > 🛑 Make sure you substitute the Git URL from your own github repository (make sure you use the HTTPS URL, not the SSH URL). This should be a different repository than the one you used to store configuration in exercise 4. If a login dialog appears, log in with your regular GitHub credentials.
 
-```bash
-cd weather-service
-git init
-git add .
-git add -f .mvn
-git commit -m 'Initial commit'
-git remote add origin <GIT HTTPS URL HERE>
-git push origin master
-cd ..
-```
+   ```bash
+   cd weather-service
+   git init
+   git add .
+   git add -f .mvn
+   git commit -m 'Initial commit'
+   git remote add origin <GIT HTTPS URL HERE>
+   git push origin master
+   cd ..
+   ```
+
+   >**Note**: Press ```1```, when the authentication option appears.
 
 4. You now need to allow access from your GitHub workflow to your Azure Spring Apps instance. Open up a terminal and type the following command.
 
-> Please ensure to replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, it can also be obtained from the **Environmnet Details** tab.
+   > Please ensure to replace the **DID** with the **<inject key="DeploymentID" enableCopy="True"/>** value, it can also be obtained from the **Environmnet Details** tab.
 
-```
-AZ_RESOURCE_GROUP=spring-apps-workshop-DID
-```
+   ```
+   AZ_RESOURCE_GROUP=spring-apps-workshop-DID
+   ```
 
-```bash
-# Prevents a Git bash issue. Not necessary outside of Windows:
-export MSYS_NO_PATHCONV=1
+   ```bash
+   # Prevents a Git bash issue. Not necessary outside of Windows:
+   export MSYS_NO_PATHCONV=1
 
-# Get the ARM resource ID of the resource group
-RESOURCE_ID=$(az group show --name "$AZ_RESOURCE_GROUP" --query id -o tsv)
+   # Get the ARM resource ID of the resource group
+   RESOURCE_ID=$(az group show --name "$AZ_RESOURCE_GROUP" --query id -o tsv)
 
-# Create a service principal with a Contributor role to the resource group.
-SPNAME="sp-$(az spring list --query '[].name' -o tsv)"
-az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOURCE_ID" --sdk-auth
-```
+   # Create a service principal with a Contributor role to the resource group.
+   SPNAME="sp-$(az spring list --query '[].name' -o tsv)"
+   az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOURCE_ID" --sdk-auth
+   ```
 
 5. This should output a JSON text, that you need to copy.
 
