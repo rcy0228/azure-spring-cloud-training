@@ -53,7 +53,7 @@ curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=w
 
 ## Task 3 : Add the Cosmos DB API
 
-1. Navigate to the path `C:\Users\demouser\city-service`, in the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency and Save.
+1. Navigate to the path `C:\Users\demouser\city-service`.  In the application's right click on `pom.xml` file and select open with visual studio. Then add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency and Save.
 
    ![pom](../media/cosmosversion.png)
 
@@ -172,8 +172,8 @@ Azure Spring Apps can automatically bind the Cosmos DB database we created to ou
 
   - Give your binding a name, for example `cosmosdb-city`
   - Select the available `Subscription` in the drop down list
-  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-apps-cosmosdb` for the Database name we created and keep the default `sql` API type
   - Select **sclabc-<inject key="DeploymentID" enableCopy="false"/>** as Resource name.
+  - Select the `Azure Cosmos DB` as the `Binding type` and `azure-spring-apps-cosmosdb` for the Database name we created and keep the default `sql` API type
   - In the drop-down list, select the primary master key
   - Click on `Create` to create the database binding
 
@@ -208,7 +208,7 @@ cd ..
 
 5. Append `/cities` at the end. Now you can now use CURL to test the `/cities` endpoint, and it should give you the list of cities you created. For example, if you only created `Paris, France` and `London, UK` like it is shown in this guide, you should get:
 
-```json
-[[{"name":"Paris, France"},{"name":"London, UK"}]]
-```
+   ```json
+   [[{"name":"Paris, France"},{"name":"London, UK"}]]
+   ```
 ---
