@@ -142,7 +142,7 @@ This section shows how to create an app instance and then deploy your code to it
    `https://primary:BBQM6nsYnmmdQREXQINityNx63kWUbjsP7SIvqKhOcWDfP6HJTqg27klMLaSfpTB@rwo1106f.test.azuremicroservices.io/simple-microservice/default/`
    >💡 Note the text between `https://` and `@`.  These are the basic authentication credentials, without which you will not be authorized to access the service.
 
-7. If you get **"503 Service Temporarily Unavailable"** or **"WhiteLabel Error"** Page as shown below,
+4. If you get **"503 Service Temporarily Unavailable"** or **"WhiteLabel Error"** Page as shown below,
 
    ![Error](media/endpoint-error.png)
 
@@ -154,17 +154,17 @@ This section shows how to create an app instance and then deploy your code to it
 
 -->
 
-5. You can now use CURL again to test the `/hello` endpoint, this time served by Azure Spring Apps.  For example.
+4. You can now use CURL again to test the `/hello` endpoint in GitBash, this time served by Azure Spring Apps.  For example.
 
-```bash
-curl https://primary:...simple-microservice/default/hello/
-```
+   ```bash
+   curl https://primary:...simple-microservice/default/hello/
+   ```
 
-6. Append `hello/` at the end of the URL.  Failure to do this will result in a "404 not found".
+5. Append `hello/` at the end of the URL.  Failure to do this will result in a "404 not found".
 
    <!--- ![Endpoint](media/hello-from-spring-cloud.png) -->
 
-7. If successful, you should see the message: `Hello from Azure Spring Apps`.
+6. If successful, you should see the message: `Hello from Azure Spring Apps`.
 
     ![Endpoint](media/curl-hello-from-spring-cloud.png)
 
@@ -179,3 +179,4 @@ curl https://start.spring.io/starter.tgz -d type=maven-project -d dependencies=w
 cd simple-microservice
 cat > HelloController.java << EOF
 package com.example.demo;
+```
