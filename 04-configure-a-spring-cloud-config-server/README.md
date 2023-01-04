@@ -14,7 +14,7 @@ A key feature of cloud-native applications is *externalized configuration* - the
 
 3. On the **Config Server** page, follow the below mentioned instructions:
 
-      - Configure the repository by providing the public repository URL **https://github.com/Azure-Samples/spring-cloud-sample-public-config.git** inside URL field of **Default repository**
+      - Configure the repository by providing the public repository URI **https://github.com/Azure-Samples/spring-cloud-sample-public-config.git** inside URI field of **Default repository**
 
      >💡 Make sure you include the `.git` ending in the URL.
  
@@ -22,7 +22,7 @@ A key feature of cloud-native applications is *externalized configuration* - the
      
       ![Spring Cloud config server](../media/validate1.png)
    
-5. Click on "Apply" and wait for the operation to succeed.
+4. Click on "Apply" and wait for the operation to succeed.
 
      ![apply](../media/applynew.png)
 
