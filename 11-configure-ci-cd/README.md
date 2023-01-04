@@ -30,9 +30,9 @@ We are going to automate the deployment of the `weather-service` microservice th
    git init
    git add .
    git add -f .mvn
-   git commit -m 'Initial commit'
+   git commit -m "Initial commit"
    git remote add origin <GIT HTTPS URL HERE>
-   git push origin master
+   git push origin main
    cd ..
    ```
 
